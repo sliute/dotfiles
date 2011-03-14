@@ -32,14 +32,19 @@ colorscheme zenburn
 " write to files not owned by us
 cmap w!! w !sudo tee >/dev/null %
 
-" disable file encryption because I like to write code when under the influence
+" disable file encryption because I like to write code when under the influence          swfsfsfsf 
 map :X :x
 
 " highlight whitespace
 set showbreak=>\ \ \
 
 " show end of line marker
-set colorcolumn=81
+if exists("&colorcolumn")
+    set colorcolumn=81
+else
+    autocmd BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
+    autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 " quick toggles
 nmap <F1> :NERDTreeToggle<CR>
