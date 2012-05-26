@@ -53,4 +53,13 @@ function! SwitchWindow(dir)
 endfunction
 " /*}}}*/
 
+" automatically redraw the screen after running an external command
+command! -nargs=1 Silent
+\ | execute ':silent !'.<q-args>
+\ | execute ':redraw!'
 
+
+" handy Rails shortcuts
+:menu Rails.Run\ server <Esc>:Silent xterm -hold -e rails server &<CR>
+:menu Rails.Launch\ Ruby\ console <Esc>:Silent xterm -hold -e rails console &<CR>
+:menu Rails.Launch\ DB\ console <Esc>:Silent xterm -hold -e rails db &<CR>
