@@ -34,9 +34,8 @@ cmap w!! w !sudo tee >/dev/null %
 " highlight whitespace
 set showbreak=>\ \ \
 
-" show end of line marker, easily toggle text wrapping
+" show end of line marker
 set colorcolumn=81
-map <F2> :set wrap!<CR>
 
 " make window splits easier to navigate /*{{{*/
 nnoremap <A-Up> :normal <c-r>=SwitchWindow('+')<CR><CR>
@@ -44,6 +43,9 @@ nnoremap <A-Down> :normal <c-r>=SwitchWindow('-')<CR><CR>
 nnoremap <A-Left> :normal <c-r>=SwitchWindow('<')<CR><CR>
 nnoremap <A-Right> :normal <c-r>=SwitchWindow('>')<CR><CR>
 
+" quick toggles
+map <F2> :set wrap!<CR>
+map <F3> :NERDTreeToggle<CR>
 function! SwitchWindow(dir)
   let this = winnr()
   if '+' == a:dir

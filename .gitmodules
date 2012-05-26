@@ -4,3 +4,6 @@
 [submodule "vim/.vim/bundle/zenburn"]
 	path = vim/.vim/bundle/zenburn
 	url = https://github.com/vim-scripts/Zenburn.git
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
