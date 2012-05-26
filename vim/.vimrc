@@ -30,6 +30,10 @@ cmap w!! w !sudo tee >/dev/null %
 " highlight whitespace
 set showbreak=>\ \ \
 
+" show end of line marker, easily toggle text wrapping
+set colorcolumn=81
+map <F2> :set wrap!<CR>
+
 " make window splits easier to navigate /*{{{*/
 nnoremap <A-Up> :normal <c-r>=SwitchWindow('+')<CR><CR>
 nnoremap <A-Down> :normal <c-r>=SwitchWindow('-')<CR><CR>
