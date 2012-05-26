@@ -1,3 +1,7 @@
+" pathogen simplifies plugin management
+exec ':source ' . vimconfdir . '/.vim/bundle/vim-pathogen/autoload/pathogen.vim'
+call pathogen#infect(vimconfdir . '/.vim/bundle')
+
 " legacy code sucks
 set nocompatible
 
