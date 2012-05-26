@@ -62,6 +62,12 @@ command! -nargs=1 Silent
 \ | execute ':silent !'.<q-args>
 \ | execute ':redraw!'
 
+" hide redundant UI components
+set guioptions-=T " toolbar
+set guioptions-=r " right scrollbar
+
+" improve the file menu
+:amenu &File.Vertical\ Split-Open<Tab>:vsp :browse vsp<CR>
 
 " handy Rails shortcuts
 :menu Rails.Run\ server <Esc>:Silent xterm -hold -e rails server &<CR>
