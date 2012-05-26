@@ -37,31 +37,9 @@ set showbreak=>\ \ \
 " show end of line marker
 set colorcolumn=81
 
-" make window splits easier to navigate /*{{{*/
-nnoremap <A-Up> :normal <c-r>=SwitchWindow('+')<CR><CR>
-nnoremap <A-Down> :normal <c-r>=SwitchWindow('-')<CR><CR>
-nnoremap <A-Left> :normal <c-r>=SwitchWindow('<')<CR><CR>
-nnoremap <A-Right> :normal <c-r>=SwitchWindow('>')<CR><CR>
-
 " quick toggles
 map <F2> :set wrap!<CR>
 map <F3> :NERDTreeToggle<CR>
-function! SwitchWindow(dir)
-  let this = winnr()
-  if '+' == a:dir
-    execute "normal \<c-w>k"
-    elseif '-' == a:dir
-    execute "normal \<c-w>j"
-    elseif '>' == a:dir
-    execute "normal \<c-w>l"
-    elseif '<' == a:dir
-    execute "normal \<c-w>h"
-  else
-    echo "oops. check your ~/.vimrc"
-    return ""
-  endif
-endfunction
-" /*}}}*/
 
 " automatically redraw the screen after running an external command
 command! -nargs=1 Silent
