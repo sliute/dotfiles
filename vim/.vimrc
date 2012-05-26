@@ -53,6 +53,4 @@ function! SwitchWindow(dir)
 endfunction
 " /*}}}*/
 
-" save files with Ctrl-S
-imap <c-s> <c-o><c-s>
 
