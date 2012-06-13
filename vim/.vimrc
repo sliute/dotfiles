@@ -48,10 +48,8 @@ command! -nargs=1 Silent
 \ | execute ':redraw!'
 
 " hide redundant UI components
-set guioptions-=T " toolbar
-set guioptions-=b " bottom scrollbar
-set guioptions-=l " left scrollbar
-set guioptions-=r " right scrollbar
+set guioptions+=LlRrb
+set guioptions-=LlRrb
 
 " improve the file menu
 :amenu &File.Vertical\ Split-Open<Tab>:vsp :browse vsp<CR>
