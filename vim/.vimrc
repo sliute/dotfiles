@@ -38,9 +38,9 @@ set showbreak=>\ \ \
 set colorcolumn=81
 
 " quick toggles
-nmap <F2> :set wrap!<CR>
-nmap <F3> :NERDTreeToggle<CR>
-nmap <F4> :TagbarToggle<CR>
+nmap <F1> :NERDTreeToggle<CR>
+nmap <F2> :TagbarToggle<CR>
+nmap <F3> :set wrap!<CR>
 
 " automatically redraw the screen after running an external command
 command! -nargs=1 Silent

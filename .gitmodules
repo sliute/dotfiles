@@ -10,3 +10,6 @@
 [submodule "vim/.vim/bundle/tagbar"]
 	path = vim/.vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/.vim/bundle/cream-showinvisibles"]
+	path = vim/.vim/bundle/cream-showinvisibles
+	url = https://github.com/vim-scripts/cream-showinvisibles.git
