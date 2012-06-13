@@ -17,7 +17,7 @@ prompt_command () {
     fi
 
     local TIME=`fmt_time` # format time for prompt string
-    local LOAD="$(chkload)"
+    local LOAD="$(awk '{print $1}' /proc/loadavg)"
     local GREEN="\[\033[0;32m\]"
     local CYAN="\[\033[0;36m\]"
     local BCYAN="\[\033[1;36m\]"
@@ -43,9 +43,5 @@ fmt_time () {
         meridiem="am"
     fi
     date +"%l:%M:%S$meridiem" | sed 's/ //g'
-}
-
-chkload () { #gets the current 1m avg CPU load
-    echo "$(uptime | awk -F"[, \t]*" '{print $9}')"
 }
 

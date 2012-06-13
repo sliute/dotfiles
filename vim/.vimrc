@@ -49,6 +49,8 @@ command! -nargs=1 Silent
 
 " hide redundant UI components
 set guioptions-=T " toolbar
+set guioptions-=b " bottom scrollbar
+set guioptions-=l " left scrollbar
 set guioptions-=r " right scrollbar
 
 " improve the file menu
