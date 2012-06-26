@@ -9,8 +9,7 @@ prompt_command () {
     [ $? -ne 0 ] && local ERRPROMPT="[\$?] "
 
     # If we're in a Git repo, show our current branch
-    [ "$(type -t __git_ps1)" ] && local BRANCH="\$(__git_ps1 '[ %s ] ')"
-
+    [ "$(type -t __git_ps1)" ] && local BRANCH="\$(__git_ps1 '[%s] ')"
     # If we're using RVM, tell us what environment we're in
     [ "$(type -t rvm)" ] && local RVM_ENV="\$(rvm-prompt)"
 
