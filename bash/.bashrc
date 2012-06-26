@@ -1,22 +1,18 @@
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+[ -f /etc/bashrc ] && . /etc/bashrc
 
 # Shell prompt
 #
 # Inspired by http://brettterpstra.com/my-new-favorite-bash-prompt/
 prompt_command () {
-    if [ $? -eq 0 ]; then # set an error string for the prompt, if applicable
-        ERRPROMPT=" "
-    else
-        ERRPROMPT='->($?) '
-    fi
-    if [ "\$(type -t __git_ps1)" ]; then # if we're in a Git repo, show current branch
-        BRANCH="\$(__git_ps1 '[ %s ] ')"
-    fi
+    # If the last command failed, show its non-zero exit code
+    [ $? -ne 0 ] && local ERRPROMPT="->(\$?)"
 
-    local TIME=`fmt_time` # format time for prompt string
+    # If we're in a Git repo, show our current branch
+    [ "$(type -t __git_ps1)" ] && local BRANCH="\$(__git_ps1 '[ %s ] ')"
+
+    # Current time and system load
+    local TIME="$(fmt_time)"
     local LOAD="$(awk '{print $1}' /proc/loadavg)"
     local GREEN="\[\033[0;32m\]"
     local CYAN="\[\033[0;36m\]"
@@ -37,11 +33,7 @@ prompt_command () {
 PROMPT_COMMAND=prompt_command
 
 fmt_time () {
-    if [ "$(date +%p)" = "PM" ]; then
-        meridiem="pm"
-    else
-        meridiem="am"
-    fi
+    [ "$(date +%p)" = "PM" ] && local meridiem="pm" || local meridiem="am"
     date +"%l:%M:%S$meridiem" | sed 's/ //g'
 }
 
