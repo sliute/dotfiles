@@ -4,6 +4,17 @@ lolwut!?
 These are my configuration files. They make my life simpler. Maybe you'll love
 them too?
 
+Gnome Terminal
+--------------
+
+This is a relatively minor change to use the excellent zenburn colour scheme.
+Since Gnome Terminal is configured via GConf, the provided XML file is dump of
+the relevant key in GConf. To load it, do the following:
+
+```bash
+gconftool-2 --load $HOME/Projects/dotfiles/gnome-terminal/zenburn.xml
+```
+
 Vim
 ---
 
