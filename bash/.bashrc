@@ -6,28 +6,44 @@
 # Inspired by http://brettterpstra.com/my-new-favorite-bash-prompt/
 prompt_command () {
     # If the last command failed, show its non-zero exit code
-    [ $? -ne 0 ] && local ERRPROMPT="->(\$?)"
+    [ $? -ne 0 ] && local ERRPROMPT="[\$?] "
 
     # If we're in a Git repo, show our current branch
     [ "$(type -t __git_ps1)" ] && local BRANCH="\$(__git_ps1 '[ %s ] ')"
 
+    # If we're using RVM, tell us what environment we're in
+    [ "$(type -t rvm)" ] && local RVM_ENV="\$(rvm-prompt)"
+
     # Current time and system load
     local TIME="$(fmt_time)"
     local LOAD="$(awk '{print $1}' /proc/loadavg)"
-    local GREEN="\[\033[0;32m\]"
-    local CYAN="\[\033[0;36m\]"
-    local BCYAN="\[\033[1;36m\]"
+
+    # Pretty colours
+    local BLACK="\[\033[0;30m\]"
     local BLUE="\[\033[0;34m\]"
-    local GRAY="\[\033[0;37m\]"
-    local DKGRAY="\[\033[1;30m\]"
-    local WHITE="\[\033[1;37m\]"
+    local BROWN="\[\033[0;33m\]"
+    local CYAN="\[\033[0;36m\]"
+    local DARK_GRAY="\[\033[0;30m\]"
+    local GREEN="\[\033[0;32m\]"
+    local LIGHT_BLUE="\[\033[0;34m\]"
+    local LIGHT_CYAN="\[\033[0;36m\]"
+    local LIGHT_GREEN="\[\033[0;32m\]"
+    local LIGHT_GRAY="\[\033[0;37m\]"
+    local LIGHT_PURPLE="\[\033[0;35m\]"
+    local LIGHT_RED="\[\033[0;31m\]"
+    local PURPLE="\[\033[0;35m\]"
     local RED="\[\033[0;31m\]"
-    # return color to Terminal setting for text color
+    local YELLOW="\[\033[0;33m\]"
+    local WHITE="\[\033[0;37m\]"
     local DEFAULT="\[\033[0;39m\]"
-    # set the titlebar to the last 2 fields of pwd
-    export PS1="${CYAN}[ ${BCYAN}\u${GREEN}@${BCYAN}\
-\h${DKGRAY}(${LOAD}) ${WHITE}${TIME} ${CYAN}]${RED}$ERRPROMPT${GRAY}\
-\w\n${GREEN}${BRANCH}${DEFAULT}$ "
+
+    export PS1="${RED}${ERRPROMPT}\
+${LIGHT_CYAN}[\u@\h] \
+${WHITE}[${LOAD}@${TIME}] \
+${BROWN}[\w]\n\
+${GREEN}${BRANCH}\
+${RED}[${RVM_ENV}] \
+${DEFAULT}$ "
 }
 
 PROMPT_COMMAND=prompt_command
