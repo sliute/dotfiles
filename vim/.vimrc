@@ -31,6 +31,9 @@ colorscheme zenburn
 " write to files not owned by us
 cmap w!! w !sudo tee >/dev/null %
 
+" disable file encryption because I like to write code when under the influence
+map :X :x
+
 " highlight whitespace
 set showbreak=>\ \ \
 
