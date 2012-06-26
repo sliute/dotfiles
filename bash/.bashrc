@@ -11,8 +11,9 @@ prompt_command () {
     # If we're in a Git repo, show our current branch
     [ "$(type -t __git_ps1)" ] && local BRANCH="\$(__git_ps1 '[%s] ')"
 
-    # If we're using RVM, tell us what environment we're in
+    # If we're using RVM or virtualenv, show us our environment
     local RVM_ENV="\$(fmt_rvm_env)"
+    local PY_VENV="\$(fmt_py_venv)"
 
     # Current time and system load
     local TIME="$(fmt_time)"
@@ -42,6 +43,7 @@ ${LIGHT_CYAN}[\u@\h] \
 ${WHITE}[${LOAD}@${TIME}] \
 ${BROWN}[\w]\n\
 ${GREEN}${BRANCH}\
+${RED}${PY_VENV}\
 ${RED}${RVM_ENV}\
 ${DEFAULT}$ "
 }
@@ -53,8 +55,15 @@ fmt_time () {
     date +"%l:%M:%S$meridiem" | sed 's/ //g'
 }
 
+fmt_py_venv () {
+    if [ -n "$VIRTUAL_ENV" ]; then
+         local e="$(python -V 2>&1 | awk '{print $2}')"
+    fi
+    [ -n "$e" ] && echo "[${e}] "
+}
+
 fmt_rvm_env () {
     local e="$(rvm-prompt)"
-    [ -n "$e" ] && echo "[${e}]"
+    [ -n "$e" ] && echo "[${e}] "
 }
 
