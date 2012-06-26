@@ -4,6 +4,16 @@ lolwut!?
 These are my configuration files. They make my life simpler. Maybe you'll love
 them too?
 
+Bash
+----
+
+I'm not hipster enough to use ``zsh``, but I do have a pretty simple  ``bashrc``
+that gives me a detailed prompt. To use it, append this to your ``.bashrc``:
+
+```bash
+. $HOME/Projects/dotfiles/bash/.bashrc
+```
+
 Gnome Terminal
 --------------
 
