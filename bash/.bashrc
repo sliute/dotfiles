@@ -63,7 +63,9 @@ fmt_py_venv () {
 }
 
 fmt_rvm_env () {
-    local e="$(rvm-prompt)"
-    [ -n "$e" ] && echo "[${e}] "
+    if [ -n "$rvm_version" ]; then
+        local e="$(rvm-prompt)"
+        [ -n "$e" ] && echo "[${e}] "
+    fi
 }
 
