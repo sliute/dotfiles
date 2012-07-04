@@ -22,6 +22,7 @@ new = green bold
 added = green
 changed = yellow
 untracked = red
+
 [gui]
 fontdiff = -family \"Droid Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 
