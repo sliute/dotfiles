@@ -13,3 +13,6 @@
 [submodule "vim/.vim/bundle/cream-showinvisibles"]
 	path = vim/.vim/bundle/cream-showinvisibles
 	url = https://github.com/vim-scripts/cream-showinvisibles.git
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
