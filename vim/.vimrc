@@ -62,3 +62,4 @@ set guioptions-=LlRrb
 :menu Rails.Run\ server <Esc>:Silent xterm -hold -e rails server &<CR>
 :menu Rails.Launch\ Ruby\ console <Esc>:Silent xterm -hold -e rails console &<CR>
 :menu Rails.Launch\ DB\ console <Esc>:Silent xterm -hold -e rails db &<CR>
+
