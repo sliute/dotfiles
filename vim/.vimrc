@@ -9,6 +9,7 @@ set nocompatible
 au! BufWritePost .vimrc source %
 
 " miscellaneous editing preferences
+set cursorline
 set number
 set nowrap
 
