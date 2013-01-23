@@ -1,6 +1,6 @@
 [user]
-name = Luke Carrier
-email = hey@lukecarrier.me
+name = <%= @user_name %>
+email = <%= @user_email %>
 
 [color]
 branch = auto
@@ -27,7 +27,7 @@ untracked = red
 fontdiff = -family \"Droid Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 
 [core]
-excludesfile = /home/luke/.gitignore
+excludesfile = <%= @user_homedir %>/.gitignore
 
 [alias]
 a = add
