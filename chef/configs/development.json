@@ -2,6 +2,9 @@
     "name":        "development",
     "description": "Complete development environment",
 
-    "run_list": "recipe[lukecarrier::git]"
+    "run_list": [
+        "recipe[lukecarrier::git]",
+        "recipe[lukecarrier::sublime_text]"
+    ]
 }
 
