@@ -1,0 +1,9 @@
+{
+    "name":        "base",
+    "description": "Base system",
+
+    "run_list": [
+        "recipe[lukecarrier::last_fm_scrobbler]"
+    ]
+}
+
