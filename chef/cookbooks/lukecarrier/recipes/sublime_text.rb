@@ -1,3 +1,7 @@
+config   = File.join(node['user']['homedir'], '.config', 'sublime-text-2')
+license  = File.join(config, 'Settings', 'License.sublime_license')
+packages = File.join(config, 'Installed Packages')
+
 apt_repository 'sublime-text' do
   uri          'http://ppa.launchpad.net/webupd8team/sublime-text-2/ubuntu'
   distribution node['lsb']['codename']
@@ -14,24 +18,22 @@ end
 
 package 'sublime-text'
 
-script 'sublime-text --background' do
-  interpreter 'bash'
-  cwd         node['user']['homedir']
-  user        node['user']['login']
-  group       node['user']['group']
+unless File.directory?(config)
+  script 'sublime-text --background' do
+    interpreter 'bash'
+    cwd         node['user']['homedir']
+    user        node['user']['login']
+    group       node['user']['group']
 
-  code <<-EOF
-    sublime-text --background &
-    sleep 2
-    pkill sublime_text
-  EOF
+    code <<-EOF
+      sublime-text --background &
+      sleep 2
+      pkill sublime_text
+    EOF
 
-  returns 0
+    returns 0
+  end
 end
-
-config   = File.join(node['user']['homedir'], '.config', 'sublime-text-2')
-license  = File.join(config, 'Settings', 'License.sublime_license')
-packages = File.join(config, 'Installed Packages')
 
 remote_file File.join(packages, 'Package Control.sublime-package') do
   action :create_if_missing
@@ -52,4 +54,3 @@ if node['sublime_text']['license'].length > 0
     mode  0640
   end
 end
-
