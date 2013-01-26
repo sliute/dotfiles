@@ -3,6 +3,7 @@
     "description": "Base system",
 
     "run_list": [
+        "recipe[lukecarrier::landscape]",
         "recipe[lukecarrier::last_fm_scrobbler]"
     ]
 }
