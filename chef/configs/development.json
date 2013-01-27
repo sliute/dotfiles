@@ -5,6 +5,7 @@
     "run_list": [
         "recipe[lukecarrier::git]",
         "recipe[lukecarrier::meld]",
+        "recipe[lukecarrier::rbenv]",
         "recipe[lukecarrier::sublime_text]"
     ]
 }
