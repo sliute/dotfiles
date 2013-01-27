@@ -69,3 +69,8 @@ fmt_rvm_env () {
     fi
 }
 
+# Source local definitions
+[ -f "${HOME}/.bashrc" ] && . "${HOME}/.bashrc"
+for f in ~/.bash_profile.d/*; do
+    source $f;
+done

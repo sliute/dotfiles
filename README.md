@@ -24,16 +24,6 @@ $ sudo chef-solo -c solo.rb -j configs/<config>.json
 All the bootstrapper does is installs Chef. If you want to see what it's doing,
 you can tail the ``bootstrap.log`` file it writes.
 
-Bash
-----
-
-I'm not hipster enough to use ``zsh``, but I do have a pretty simple  ``bashrc``
-that gives me a detailed prompt. To use it, append this to your ``.bashrc``:
-
-```bash
-. $HOME/Projects/dotfiles/bash/.bashrc
-```
-
 Gnome Terminal
 --------------
 
