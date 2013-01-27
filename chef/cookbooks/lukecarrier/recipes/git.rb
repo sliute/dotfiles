@@ -13,3 +13,10 @@ template File.join(node['user']['homedir'], '.gitconfig') do
   mode 0640
 end
 
+cookbook_file File.join(node['user']['homedir'], '.gitignore') do
+  source 'gitignore'
+
+  owner node['user']['login']
+  group node['user']['group']
+  mode  0644
+end
