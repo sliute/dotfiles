@@ -5,6 +5,7 @@
     "run_list": [
         "recipe[lukecarrier::bash]",
         "recipe[lukecarrier::landscape]",
-        "recipe[lukecarrier::last_fm_scrobbler]"
+        "recipe[lukecarrier::last_fm_scrobbler]",
+        "recipe[lukecarrier::overlay_scrollbars]"
     ]
 }
