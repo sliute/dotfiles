@@ -12,17 +12,28 @@ to ease the pain of migrating between different machines. As I go, I'll be
 removing all of the other sections!
 
 My Chef cookbook and Chef Solo environment will get your machine configured in a
-matter of seconds. Assuming you're running Ubuntu (or Debian), the following
-should do it:
+matter of seconds. First off, grab a copy of Chef. Assuming you're running a
+recent Debian or Ubuntu release, the following should do it:
+
+```
+$ sudo apt-get install chef
+```
+
+Older distributions need not worry; the included ```bootstrap.sh``` will add the
+necessary repositories and install Chef for you:
 
 ```
 $ cd chef
 $ sudo ./bootstrap.sh
-$ sudo chef-solo -c solo.rb -j configs/<config>.json
 ```
 
 All the bootstrapper does is installs Chef. If you want to see what it's doing,
-you can tail the ``bootstrap.log`` file it writes.
+you can tail the ``bootstrap.log`` file it writes as it goes.
+
+```
+$ cd chef
+$ sudo chef-solo -c solo.rb -j configs/<config>.json
+```
 
 Gnome Terminal
 --------------
