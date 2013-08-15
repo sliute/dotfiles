@@ -9,9 +9,14 @@ package 'php5-intl'
 package 'php5-mysql'
 package 'php5-xmlrpc'
 package 'phpmyadmin'
+package 'w3m'
 
 execute 'enable mod_php5' do
   command 'a2enmod php5'
+end
+
+execute 'enable mod_status' do
+  command 'a2enmod status'
 end
 
 execute 'enable mod_suphp' do
@@ -56,4 +61,12 @@ end
 
 service 'apache2' do
   action :restart
+end
+
+cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'a2status') do
+  source 'bash_profile_a2status'
+
+  owner node['user']['login']
+  group node['user']['group']
+  mode  0644
 end
