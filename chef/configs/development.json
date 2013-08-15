@@ -6,6 +6,7 @@
         "recipe[lukecarrier::git]",
         "recipe[lukecarrier::lamp_development]",
         "recipe[lukecarrier::meld]",
+        "recipe[lukecarrier::node_development]",
         "recipe[lukecarrier::rbenv]",
         "recipe[lukecarrier::sublime_text]",
         "recipe[lukecarrier::virtualbox]"
