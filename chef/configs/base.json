@@ -8,6 +8,7 @@
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::landscape]",
         "recipe[lukecarrier::last_fm_scrobbler]",
+        "recipe[lukecarrier::mosh]",
         "recipe[lukecarrier::overlay_scrollbars]"
     ]
 }
