@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+_mosh() {
+    _init_completion -n : || return
+    _known_hosts_real -a "$cur"
+}
+shopt -u hostcomplete && complete -F _mosh mosh
