@@ -12,6 +12,14 @@ file File.join(node['user']['homedir'], '.bash_profile.d', '_') do
   mode  0644
 end
 
+cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'editor') do
+  owner node['user']['login']
+  group node['user']['group']
+  mode  0644
+
+  source 'bash_profile_editor'
+end
+
 cookbook_file File.join(node['user']['homedir'], '.bash_profile') do
   owner node['user']['login']
   group node['user']['group']
