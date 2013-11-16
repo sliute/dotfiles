@@ -1,0 +1,36 @@
+#!/bin/sh
+
+prompt_command_main () {
+    local cmd_exit=$?
+    [ -n "$1" ] && cmd_exit=$1
+    local git_branch="$(__git_ps1 '%s')"
+
+    local fg_black=$(tput setaf 0)
+    local fg_red=$(tput setaf 1)
+    local fg_green=$(tput setaf 2)
+    local fg_yellow=$(tput setaf 3)
+    local fg_blue=$(tput setaf 4)
+    local fg_magenta=$(tput setaf 5)
+    local fg_cyan=$(tput setaf 6)
+    local fg_white=$(tput setaf 7)
+    local reset=$(tput sgr0)
+
+    [ $cmd_exit -eq 0 ] && cmd_exit='' \
+                        || cmd_exit="# => \[${fg_red}\]${cmd_exit}\[${reset}\]\n\n"
+    [ -z "${git_branch}" ] && git_branch='' \
+                           || git_branch="on \[${fg_yellow}\]${git_branch}\[${reset}\] "
+    local user="\[${fg_cyan}\]\u\[${reset}\] "
+    local host="at \[${fg_green}\]\h\[${reset}\] "
+    dir="in \[${fg_magenta}\]\w\[${reset}\] "
+
+    export PROMPT_COMMAND=prompt_command_newline
+    export PS1="${cmd_exit}${user}${host}${dir}${git_branch}\n~> "
+}
+
+prompt_command_newline () {
+    local cmd_exit=$?
+    echo ''
+    prompt_command_main $cmd_exit
+}
+
+PROMPT_COMMAND=prompt_command_main
