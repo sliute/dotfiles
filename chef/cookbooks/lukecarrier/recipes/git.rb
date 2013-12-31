@@ -1,4 +1,5 @@
 package 'git-all'
+package 'git-cola'
 
 template File.join(node['user']['homedir'], '.gitconfig') do
   source 'gitconfig.erb'
