@@ -22,19 +22,27 @@
 # 0E    #b48ead  rgb(180, 142, 173)
 # 0F    #ab7967  rgb(171, 121, 103)
 
-dconf_dump = File.join(run_context.cookbook_collection[cookbook_name].root_dir,
-                       'files', 'default', 'gnome_terminal_profile_base16_ocean')
-dconf_key  = '/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/'
 
-script 'dconf reset -f && dconf load' do
+profile_name  = 'b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+dconf_dump    = File.join(run_context.cookbook_collection[cookbook_name].root_dir,
+                          'files', 'default', 'gnome_terminal_profile_base16_ocean')
+dconf_root    = '/org/gnome/terminal/legacy'
+dconf_default = "#{dconf_root}/profiles:/default"
+dconf_list    = "#{dconf_root}/profiles:/list"
+dconf_profile = "#{dconf_root}/profiles:/:#{profile_name}/"
+
+script 'dconf reset -f && dconf load && dconf write && dconf write' do
   interpreter 'bash'
   cwd         node['user']['homedir']
   user        node['user']['login']
   group       node['user']['group']
 
   code <<-EOF
-    dconf reset -f #{dconf_key}
-    dconf load     #{dconf_key} <#{dconf_dump}
+    dconf reset -f #{dconf_root}
+    dconf load     #{dconf_profile} <#{dconf_dump}
+
+    dconf write #{dconf_list}    "['#{profile_name}']"
+    dconf write #{dconf_default} "'#{profile_name}'"
   EOF
 
   returns 0
