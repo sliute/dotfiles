@@ -70,3 +70,15 @@ cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'a2status') 
   group node['user']['group']
   mode  0644
 end
+
+directory node['user']['homedir'] do
+  owner node['user']['login']
+  group node['user']['group']
+  mode  0701
+end
+
+directory File.join(node['user']['homedir'], 'Sites') do
+  owner node['user']['login']
+  group node['user']['group']
+  mode  0755
+end
