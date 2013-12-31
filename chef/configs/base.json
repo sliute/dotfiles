@@ -4,6 +4,7 @@
 
     "run_list": [
         "recipe[lukecarrier::bash]",
+        "recipe[lukecarrier::gnome]",
         "recipe[lukecarrier::java]",
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::landscape]",
