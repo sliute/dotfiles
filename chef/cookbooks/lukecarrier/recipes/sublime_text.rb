@@ -1,9 +1,9 @@
-config   = File.join(node['user']['homedir'], '.config', 'sublime-text-2')
-license  = File.join(config, 'Settings', 'License.sublime_license')
+config   = File.join(node['user']['homedir'], '.config', 'sublime-text-3')
+license  = File.join(config, 'Local', 'License.sublime_license')
 packages = File.join(config, 'Installed Packages')
 
 apt_repository 'sublime-text' do
-  uri          'http://ppa.launchpad.net/webupd8team/sublime-text-2/ubuntu'
+  uri          'http://ppa.launchpad.net/webupd8team/sublime-text-3/ubuntu'
   distribution node['lsb']['codename']
   components   ['main']
 
@@ -16,19 +16,19 @@ execute 'apt-get update' do
   returns 0
 end
 
-package 'sublime-text'
+package 'sublime-text-installer'
 
 unless File.directory?(config)
-  script 'sublime-text --background' do
+  script 'subl --background' do
     interpreter 'bash'
     cwd         node['user']['homedir']
     user        node['user']['login']
     group       node['user']['group']
 
     code <<-EOF
-      sublime-text --background &
+      subl --background &
       sleep 2
-      pkill sublime_text
+      pkill subl
     EOF
 
     returns 0
