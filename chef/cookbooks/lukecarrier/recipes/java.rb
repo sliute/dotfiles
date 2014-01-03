@@ -7,11 +7,6 @@ apt_repository 'oracle-java' do
   key       'EEA14886'
 end
 
-execute 'apt-get update' do
-  command 'apt-get update >/dev/null'
-  returns 0
-end
-
 execute 'debconf shared/accepted-oracle-license-v1-1 select true' do
   command 'echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections'
   returns 0

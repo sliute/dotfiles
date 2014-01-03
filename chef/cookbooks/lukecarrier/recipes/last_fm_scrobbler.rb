@@ -7,11 +7,6 @@ apt_repository 'lastfm' do
   key       'D49EEAA0'
 end
 
-execute 'apt-get update' do
-  command 'apt-get update >/dev/null'
-  returns 0
-end
-
 package 'lastfm-scrobbler'
 
 execute 'fix launcher path' do

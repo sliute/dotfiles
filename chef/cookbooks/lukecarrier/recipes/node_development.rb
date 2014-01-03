@@ -7,11 +7,6 @@ apt_repository 'chrislea-node' do
   key       'C7917B12'
 end
 
-execute 'apt-get update' do
-  command 'apt-get update >/dev/null'
-  returns 0
-end
-
 package 'nodejs'
 
 execute 'install shifter' do

@@ -17,11 +17,6 @@ apt_repository 'sublime-text' do
   key       'EEA14886'
 end
 
-execute 'apt-get update' do
-  command 'apt-get update >/dev/null'
-  returns 0
-end
-
 package 'sublime-text-installer'
 
 unless File.directory?(config)

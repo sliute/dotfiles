@@ -13,11 +13,6 @@ ppas.each do |ppa|
   end
 end
 
-execute 'apt-get update' do
-  command 'apt-get update >/dev/null'
-  returns 0
-end
-
 execute 'apt-get upgrade' do
   command 'apt-get upgrade -y >/dev/null'
   returns 0
