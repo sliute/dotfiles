@@ -1,5 +1,6 @@
 ppas          = %w[gnome3 gnome3-next gnome3-staging]
-gtk3_settings = File.join(node['user']['homedir'], '.config', 'gtk-3.0', 'settings.ini')
+gtk3_settings = File.join(node['user']['homedir'], '.config', 'gtk-3.0',
+                          'settings.ini')
 
 ppas.each do |ppa|
   apt_repository ppa do
