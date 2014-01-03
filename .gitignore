@@ -1,5 +1,7 @@
 chef/bootstrap.gpg
 chef/bootstrap.log
+chef/chef-client-running.pid
+chef/remote_file/
 chef-stacktrace.out
 
 vim/.vim/.netrwhist
