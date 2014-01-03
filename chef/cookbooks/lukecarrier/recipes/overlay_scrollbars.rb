@@ -1,12 +1,7 @@
-package 'overlay-scrollbar' do
-  action :purge
-end
+packages = %w[overlay-scrollbar overlay-scrollbar-gtk2 overlay-scrollbar-gtk3]
 
-package 'overlay-scrollbar-gtk2' do
-  action :purge
+packages.each do |name|
+  package name do
+	  action :purge
+	end
 end
-
-package 'overlay-scrollbar-gtk3' do
-  action :purge
-end
-

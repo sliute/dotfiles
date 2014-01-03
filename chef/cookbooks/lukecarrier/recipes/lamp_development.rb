@@ -1,15 +1,9 @@
-package 'libapache2-mod-php5'
-package 'libapache2-mod-suphp'
-package 'mysql-client'
-package 'mysql-server'
-package 'php5'
-package 'php5-cli'
-package 'php5-curl'
-package 'php5-intl'
-package 'php5-mysql'
-package 'php5-xmlrpc'
-package 'phpmyadmin'
-package 'w3m'
+packages = ['libapache2-mod-php5', 'libapache2-mod-suphp',
+            'mysql-client', 'mysql-server',
+            'php5', 'php5-cli', 'php5-curl', 'php5-intl', 'php5-mysql', 'php5-xmlrpc',
+            'phpmyadmin', 'w3m']
+
+packages.each {|name| package name}
 
 execute 'enable mod_php5' do
   command 'a2enmod php5'
