@@ -1,8 +1,0 @@
-[/]
-visible-name='Base16-Ocean'
-login-shell=true
-use-theme-colors=false
-background-color='rgb(43,48,59)'
-foreground-color='rgb(192,197,206)'
-bold-color-same-as-fg=true
-palette=['rgb(43,48,59)', 'rgb(52,61,70)', 'rgb(79,91,102)', 'rgb(101,115,126)', 'rgb(167,173,186)', 'rgb(192,197,206)', 'rgb(223,225,232)', 'rgb(239,241,245)', 'rgb(191,97,106)', 'rgb(208,135,112)', 'rgb(235,203,139)', 'rgb(163,190,140)', 'rgb(150,181,180)', 'rgb(143,161,179)', 'rgb(180,142,173)', 'rgb(171,121,103)']
