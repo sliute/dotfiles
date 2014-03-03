@@ -35,6 +35,14 @@ cookbook_file '/etc/httpd/conf.d/userdir.conf' do
   mode 0644
 end
 
+cookbook_file '/etc/suphp.conf' do
+  source 'suphp.conf'
+
+  owner 'root'
+  group 'root'
+  mode  0644
+end
+
 execute 'enable selinux httpd_enable_homedirs' do
   command 'setsebool -P httpd_enable_homedirs true'
 end
