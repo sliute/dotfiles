@@ -1,6 +1,6 @@
 package 'xchat'
 
-config   = File.join(node['user']['homedir'], '.xchat2')
+config   = File.join(node['user']['homedir'], '.config', 'xchat2')
 servlist = File.join(config, 'servlist_.conf')
 
 unless File.directory?(config)
