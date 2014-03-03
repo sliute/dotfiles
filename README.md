@@ -1,65 +1,59 @@
-lolwut!?
-========
+Luke's Chef configuration
+=========================
 
-These are my configuration files. They make my life simpler. Maybe you'll love
-them too?
+This repository contains my Chef Solo configuration. I use this repository to
+initially configure all of my machines, then I'll periodically update it with
+configuration changes and re-run it to ensure that all of my machines are
+configured as close to identically as possible. This set up enables me to be
+productive and avoid screwing around in terminals fixing configuration in paid
+time ;-)
 
-Chef
-----
+Warning
+-------
 
-I'm in the process of migrating all of my configuration files into Chef, largely
-to ease the pain of migrating between different machines. As I go, I'll be
-removing all of the other sections!
+My configuration is presently in the process of being ported to Fedora 20 from
+Ubuntu 13.10. This repository therefore contains somewhat broken code, and is
+likely to blow up from time to time.
 
-My Chef cookbook and Chef Solo environment will get your machine configured in a
-matter of seconds. First off, grab a copy of Chef. Assuming you're running a
-recent Debian or Ubuntu release, the following should do it:
+What's included
+---------------
 
-```
-$ sudo apt-get install chef
-```
+* Batteries ;-)
+* Bash - a microframework for loading configuration, pretty default prompt
+* Git - a few nifty aliases, also configures your identity
+* Gnome 3 - a few tweaks for the slickest desktop environment ever
+* Gnome Terminal - custom colour scheme, run as login shell
+* Last.fm - great application for music discovery
+* Java - Oracle JRE/JDK, because no matter how evil, it usually works
+* LAMP development environment - with ```mod_userdir``` and ```mod_itk```
+* Less - with added syntax highlighting!
+* Mosh - ideal if your employer's WiFi is way oversold
+* Meld - awesome diff tool
+* Node - plus Shifter, purely for my own selfish needs
+* ```rbenv``` - for sane Rubyists
+* Redshift - your eyes are important, don't screw them up
+* Sublime Text - courtesy of my own RPM specs, with my preferred theme
+* VirtualBox - for stupid applications
+* XChat - ```irssi``` just doesn't do it for me
 
-Older distributions need not worry; the included ```bootstrap.sh``` will add the
-necessary repositories and install Chef for you:
+Prerequisites
+-------------
 
-```
-$ cd chef
-$ sudo ./bootstrap.sh
-```
+Just install Chef on your machine and make sure ```chef-solo``` is on your
+```$PATH```. Although it's a total cop out and Opscode's "engineers" ought to
+hang their heads in shame at their own laziness, the Omnibus installer is
+presently the easiest way to do this.
 
-All the bootstrapper does is installs Chef. If you want to see what it's doing,
-you can tail the ``bootstrap.log`` file it writes as it goes.
+    $ sudo yum install -y bash curl
+    $ curl -L https://www.opscode.com/chef/install.sh | sudo bash
 
-```
-$ cd chef
-$ sudo chef-solo -c solo.rb -j configs/<config>.json
-```
+You'll also want to ensure you've customised your attributes, as by default
+you'll end up impersonating me and attempting to download my configuration files
+and licenses (which will fail).
 
-Gnome Terminal
---------------
+Execution
+---------
 
-This is a relatively minor change to use the excellent zenburn colour scheme.
-Since Gnome Terminal is configured via GConf, the provided XML file is dump of
-the relevant key in GConf. To load it, do the following:
+Just run ```chef-solo``` with your desired configuration.
 
-```bash
-gconftool-2 --load $HOME/Projects/dotfiles/gnome-terminal/zenburn.xml
-```
-
-Vim
----
-
-My Vim configuration is pretty minimal right now; it's only recently that I've
-started to make the jump from "traditional" IDEs (yup, I see the irony). To use
-it, clone this repository and replace your ``.vimrc`` with:
-
-```viml
-let vimconfdir = $HOME . '/Projects/dotfiles/vim'
-exec ':source ' . vimconfdir . '/.vimrc'
-```
-
-Your ``.vimrc`` is now merely a bootstrap. The ``vimconfdir`` variable is used
-within the ``.vimrc`` you just sourced; we use it to locate and initialise
-[Pathogen](https://github.com/tpope/vim-pathogen), which in turn loads all of
-our plugins.
-
+    $ sudo chef-solo -c solo.rb -j configs/<config>.json
