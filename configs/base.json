@@ -4,6 +4,7 @@
 
     "run_list": [
         "recipe[lukecarrier::bash]",
+        "recipe[lukecarrier::carrier_repo]",
         "recipe[lukecarrier::gnome_terminal]",
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::mosh]",
