@@ -8,10 +8,16 @@ cookbook_file File.join(node['user']['homedir'], '.bash_profile') do
   source 'bash_profile'
 end
 
-directory File.join(node['user']['homedir'], '.bash_profile.d') do
-  owner node['user']['login']
-  group node['user']['group']
-  mode  0755
+directories = %w[.bash_profile.d .local/bin]
+directories.map! {|current_directory| File.join(node['user']['homedir'], current_directory)}
+directories << node['user']['applicationdir']
+
+directories.each do |current_directory|
+  directory current_directory do
+    owner node['user']['login']
+    group node['user']['group']
+    mode  0755
+  end
 end
 
 file File.join(node['user']['homedir'], '.bash_profile.d', '_') do
