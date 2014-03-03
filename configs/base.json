@@ -5,9 +5,7 @@
     "run_list": [
         "recipe[lukecarrier::bash]",
         "recipe[lukecarrier::gnome_terminal]",
-        "recipe[lukecarrier::java]",
         "recipe[lukecarrier::less]",
-        "recipe[lukecarrier::last_fm_scrobbler]",
         "recipe[lukecarrier::mosh]",
         "recipe[lukecarrier::vim]",
         "recipe[lukecarrier::xchat]"
