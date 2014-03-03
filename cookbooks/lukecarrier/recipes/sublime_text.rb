@@ -4,18 +4,9 @@ packages      = File.join(config, 'Installed Packages')
 user_packages = File.join(config, 'Packages', 'User')
 
 user_prefs = {
-  "Preferences.sublime-settings"     => "user",
-  "Package Control.sublime-settings" => "package_control",
+  'Preferences.sublime-settings'     => 'user',
+  'Package Control.sublime-settings' => 'package_control',
 }
-
-apt_repository 'sublime-text' do
-  uri          'http://ppa.launchpad.net/webupd8team/sublime-text-3/ubuntu'
-  distribution node['lsb']['codename']
-  components   ['main']
-
-  keyserver 'keyserver.ubuntu.com'
-  key       'EEA14886'
-end
 
 package 'sublime-text-installer'
 
