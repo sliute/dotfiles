@@ -2,6 +2,7 @@ packages = [
   'httpd', 'mod_suphp',
   'mariadb', 'mariadb-server',
   'php', 'php-cli', 'php-curl', 'php-intl', 'php-mbstring', 'php-mcrypt', 'php-mysql', 'php-xmlrpc',
+  'php-pecl-xdebug',
   'phpmyadmin', 'w3m'
 ]
 
