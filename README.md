@@ -25,7 +25,7 @@ What's included
 * Gnome Terminal - custom colour scheme, run as login shell
 * Last.fm - great application for music discovery
 * Java - Oracle JRE/JDK, because no matter how evil, it usually works
-* LAMP development environment - with ```mod_userdir``` and ```mod_itk```
+* LAMP development environment - with ```mod_userdir``` and ```mod_suphp```
 * Less - with added syntax highlighting!
 * Mosh - ideal if your employer's WiFi is way oversold
 * Meld - awesome diff tool
