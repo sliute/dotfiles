@@ -22,3 +22,7 @@ cookbook_file File.join(node['user']['homedir'], '.gitignore') do
   group node['user']['group']
   mode  0644
 end
+
+link '/etc/profile.d/git-prompt.sh' do
+  to '/usr/share/git-core/contrib/completion/git-prompt.sh'
+end
