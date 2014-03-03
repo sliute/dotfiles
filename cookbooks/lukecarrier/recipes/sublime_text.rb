@@ -20,7 +20,7 @@ unless File.directory?(config)
     code <<-EOF
       subl --background &
       sleep 2
-      pkill subl
+      pkill -QUIT subl
     EOF
 
     returns 0

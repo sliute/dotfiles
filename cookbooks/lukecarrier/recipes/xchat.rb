@@ -13,7 +13,7 @@ unless File.directory?(config)
     code <<-EOF
       xchat --minimize=0 &
       sleep 2
-      pkill xchat
+      pkill -QUIT xchat
     EOF
 
     returns 0
