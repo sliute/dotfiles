@@ -74,3 +74,11 @@ directory File.join(node['user']['homedir'], 'Sites') do
   group node['user']['group']
   mode  0755
 end
+
+remote_file File.join(node['user']['homedir'], '.local', 'bin', 'composer') do
+  source 'http://getcomposer.org/composer.phar'
+
+  owner node['user']['login']
+  group node['user']['group']
+  mode  0755
+end
