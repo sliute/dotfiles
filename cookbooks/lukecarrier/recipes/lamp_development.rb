@@ -1,60 +1,58 @@
-packages = ['libapache2-mod-php5', 'libapache2-mod-suphp',
-            'mysql-client', 'mysql-server',
-            'php5', 'php5-cli', 'php5-curl', 'php5-intl', 'php5-mysql', 'php5-xmlrpc',
-            'phpmyadmin', 'w3m']
+packages = [
+  'httpd', 'mod_suphp',
+  'mariadb', 'mariadb-server',
+  'php', 'php-cli', 'php-curl', 'php-intl', 'php-mbstring', 'php-mcrypt', 'php-mysql', 'php-xmlrpc',
+  'phpmyadmin', 'w3m'
+]
 
 packages.each {|name| package name}
 
-execute 'enable mod_php5' do
-  command 'a2enmod php5'
+file '/etc/httpd/conf.d/welcome.conf' do
+  action :delete
 end
 
-execute 'enable mod_status' do
-  command 'a2enmod status'
-end
-
-execute 'enable mod_suphp' do
-  command 'a2enmod suphp'
-end
-
-execute 'enable mod_userdir' do
-  command 'a2enmod userdir'
-end
-
-cookbook_file '/etc/apache2/mods-available/php5.conf' do
-  source 'mod_php5.conf'
+cookbook_file '/etc/httpd/conf.d/mod_suphp.conf' do
+  source 'lamp_development_suphp.conf'
 
   owner 'root'
   group 'root'
   mode 0644
 end
 
-cookbook_file '/etc/suphp/suphp.conf' do
-  source 'suphp.conf'
+cookbook_file '/etc/httpd/conf.d/php.conf' do
+  source 'lamp_development_php.conf'
 
   owner 'root'
   group 'root'
   mode 0644
 end
 
-cookbook_file '/etc/apache2/mods-available/suphp.conf' do
-  source 'mod_suphp.conf'
+cookbook_file '/etc/httpd/conf.d/userdir.conf' do
+  source 'lamp_development_userdir.conf'
 
   owner 'root'
   group 'root'
   mode 0644
 end
 
-cookbook_file '/etc/apache2/mods-available/userdir.conf' do
-  source 'mod_userdir.conf'
-
-  owner 'root'
-  group 'root'
-  mode 644
+execute 'enable selinux httpd_enable_homedirs' do
+  command 'setsebool -P httpd_enable_homedirs true'
 end
 
-service 'apache2' do
-  action :restart
+execute 'enable selinux httpd_read_user_content' do
+  command 'setsebool -P httpd_read_user_content true'
+end
+
+execute 'enable selinux httpd_unified' do
+  command 'setsebool -P httpd_unified true'
+end
+
+service 'httpd' do
+  action [:enable, :start]
+end
+
+service 'mariadb' do
+  action [:enable, :start]
 end
 
 cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'a2status') do
@@ -68,7 +66,7 @@ end
 directory node['user']['homedir'] do
   owner node['user']['login']
   group node['user']['group']
-  mode  0701
+  mode  0711
 end
 
 directory File.join(node['user']['homedir'], 'Sites') do
