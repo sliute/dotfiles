@@ -1,11 +1,7 @@
-[legacy/profiles:]
-list=['0c87dd61-d56c-4c75-a8d0-005be7631d3e', 'b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
-default='0c87dd61-d56c-4c75-a8d0-005be7631d3e'
-
-[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+[legacy/profiles:/:8451e004-ee0f-496c-963b-0462dd1d60b3]
 foreground-color='rgb(192,197,206)'
 visible-name='Base16-Ocean'
-palette=['rgb(43,48,59)', 'rgb(52,61,70)', 'rgb(79,91,102)', 'rgb(101,115,126)', 'rgb(167,173,186)', 'rgb(192,197,206)', 'rgb(223,225,232)', 'rgb(239,241,245)', 'rgb(191,97,106)', 'rgb(208,135,112)', 'rgb(235,203,139)', 'rgb(163,190,140)', 'rgb(150,181,180)', 'rgb(143,161,179)', 'rgb(180,142,173)', 'rgb(171,121,103)']
+palette=['rgb(208,135,112)', 'rgb(191,97,106)', 'rgb(163,190,140)', 'rgb(235,203,139)', 'rgb(143,161,179)', 'rgb(180,142,173)', 'rgb(150,181,180)', 'rgb(239,241,245)', 'rgb(43,48,59)', 'rgb(43,48,59)', 'rgb(52,61,70)', 'rgb(79,91,102)', 'rgb(167,173,186)', 'rgb(150,181,180)', 'rgb(167,173,186)', 'rgb(171,121,103)']
 login-shell=true
 use-custom-command=false
 use-theme-colors=false
@@ -16,24 +12,9 @@ bold-color-same-as-fg=true
 title-mode='after'
 background-color='rgb(43,48,59)'
 
-[legacy/profiles:/:0c87dd61-d56c-4c75-a8d0-005be7631d3e]
-foreground-color='rgb(197,200,198)'
-visible-name='Tomorrow-Night'
-login-shell=true
-palette=['rgb(0,0,0)', 'rgb(204,102,102)', 'rgb(181,189,104)', 'rgb(222,147,95)', 'rgb(129,162,190)', 'rgb(178,148,187)', 'rgb(138,190,183)', 'rgb(146,149,147)', 'rgb(102,102,102)', 'rgb(204,102,102)', 'rgb(181,189,104)', 'rgb(222,147,95)', 'rgb(129,182,190)', 'rgb(178,148,187)', 'rgb(138,190,183)', 'rgb(236,235,236)']
-custom-command='screen -q '
-default-size-columns=86
-default-size-rows=26
-use-custom-command=false
-use-custom-default-size=true
-use-theme-colors=false
-update-records=true
-allow-bold=false
-scrollback-unlimited=true
-bold-color-same-as-fg=false
-bold-color='rgb(138,186,183)'
-background-color='rgb(29,31,33)'
-title-mode='after'
+[legacy/profiles:]
+list=['8451e004-ee0f-496c-963b-0462dd1d60b3']
+default='8451e004-ee0f-496c-963b-0462dd1d60b3'
 
 [legacy]
 schema-version=uint32 3
