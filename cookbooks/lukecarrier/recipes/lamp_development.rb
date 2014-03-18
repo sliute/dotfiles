@@ -64,12 +64,15 @@ service 'mariadb' do
   action [:enable, :start]
 end
 
-cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'a2status') do
-  source 'bash_profile_a2status'
+bash_profile_files = ['a2status', 'composer']
+bash_profile_files.each do |file|
+  cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', file) do
+    source "bash_profile_#{file}"
 
-  owner node['user']['login']
-  group node['user']['group']
-  mode  0644
+    owner node['user']['login']
+    group node['user']['group']
+    mode  0644
+  end
 end
 
 directory node['user']['homedir'] do
