@@ -13,10 +13,8 @@ unless File.directory?(config)
     code <<-EOF
       xchat --minimize=0 &
       sleep 2
-      pkill -QUIT xchat
+      pkill -QUIT xchat || true
     EOF
-
-    returns 0
   end
 end
 
