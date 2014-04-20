@@ -1,3 +1,5 @@
+include_recipe 'lukecarrier::node_development'
+
 git File.join(node['user']['applicationdir'], 'moosh') do
   repository 'https://github.com/tmuras/moosh.git'
   reference  'master'
