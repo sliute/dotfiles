@@ -57,11 +57,11 @@ execute 'enable selinux httpd_unified' do
 end
 
 service 'httpd' do
-  action [:enable, :start]
+  action [:enable, :restart]
 end
 
 service 'mariadb' do
-  action [:enable, :start]
+  action [:enable, :restart]
 end
 
 bash_profile_files = ['a2status', 'composer']
