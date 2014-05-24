@@ -31,12 +31,6 @@ end
 %w[cache prefix tmp].each do |key|
   path = File.join(node['user']['homedir'], '.npm', key)
 
-  directory path do
-    user  node['user']['login']
-    group node['user']['group']
-    mode  0750
-  end
-
   bash "npm config set #{key} #{path}" do
     code <<-EOF
       #{nvm_source}
