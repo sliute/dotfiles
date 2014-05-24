@@ -45,3 +45,18 @@ end
     group node['user']['group']
   end
 end
+
+# Work around for broken node-gyp and upstream gyp
+bash "npm config set python /usr/bin/python2" do
+  code <<-EOF
+    #{nvm_source}
+    nvm use #{nvm_node}
+    npm config set python /usr/bin/python2
+  EOF
+
+  environment({"USER" => node['user']['login'],
+               "HOME" => node['user']['homedir']})
+
+  user  node['user']['login']
+  group node['user']['group']
+end
