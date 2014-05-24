@@ -1,40 +1,27 @@
-package 'nodejs'
-package 'npm'
+nvm_dir = File.join(node['user']['homedir'], '.nvm')
 
-node_env = { "HOME" => node['user']['homedir'],
-             "USER" => node['user']['login'] }
-
-execute 'npm config set cache' do
-  command "npm config set cache #{node['user']['homedir']}/.npm/cache"
-
-  environment node_env
+git nvm_dir do
+  repository 'https://github.com/creationix/nvm.git'
+  reference 'master'
 
   user  node['user']['login']
   group node['user']['group']
 end
 
-execute 'npm config set prefix' do
-  command "npm config set prefix #{node['user']['homedir']}/.npm/prefix"
-
-  environment node_env
-
-  user  node['user']['login']
-  group node['user']['group']
-end
-
-execute 'npm config set tmp' do
-  command "npm config set tmp #{node['user']['homedir']}/.npm/tmp"
-
-  environment node_env
-
-  user  node['user']['login']
-  group node['user']['group']
-end
-
-cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'npm') do
-  source 'bash_profile_npm'
+cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'nvm') do
+  source 'bash_profile_nvm'
 
   owner node['user']['login']
   group node['user']['group']
   mode  0644
+end
+
+bash "nvm-exec install 0.10" do
+  code <<-EOF
+  	. #{nvm_dir}/nvm.sh
+  	nvm install 0.10
+  EOF
+
+  user  node['user']['login']
+  group node['user']['group']
 end
