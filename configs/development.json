@@ -8,7 +8,7 @@
         "recipe[lukecarrier::meld]",
         "recipe[lukecarrier::moodle_development]",
         "recipe[lukecarrier::node_development]",
-        "recipe[lukecarrier::rbenv]",
+        "recipe[lukecarrier::ruby_development]",
         "recipe[lukecarrier::sublime_text]",
         "recipe[lukecarrier::virtualbox]"
     ]
