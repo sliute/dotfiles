@@ -16,10 +16,10 @@ cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'nvm') do
   mode  0644
 end
 
-bash "nvm-exec install 0.10" do
+bash "nvm install 0.10" do
   code <<-EOF
-  	. #{nvm_dir}/nvm.sh
-  	nvm install 0.10
+    . #{nvm_dir}/nvm.sh
+    nvm install 0.10
   EOF
 
   user  node['user']['login']
