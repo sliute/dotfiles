@@ -1,6 +1,5 @@
 nvm_dir    = File.join(node['user']['homedir'], '.nvm')
 nvm_source = ". #{nvm_dir}/nvm.sh"
-nvm_node   = "0.10"
 
 git nvm_dir do
   repository 'https://github.com/creationix/nvm.git'
@@ -21,7 +20,7 @@ end
 bash "nvm install 0.10" do
   code <<-EOF
     #{nvm_source}
-    nvm install #{nvm_node}
+    nvm install #{node['node_development']['node_version']}
   EOF
 
   user  node['user']['login']
@@ -34,7 +33,7 @@ end
   bash "npm config set #{key} #{path}" do
     code <<-EOF
       #{nvm_source}
-      nvm use #{nvm_node}
+      nvm use #{node['node_development']['node_version']}
       npm config set #{key} #{path}
     EOF
 
@@ -50,7 +49,7 @@ end
 bash "npm config set python /usr/bin/python2" do
   code <<-EOF
     #{nvm_source}
-    nvm use #{nvm_node}
+    nvm use #{node['node_development']['node_version']}
     npm config set python /usr/bin/python2
   EOF
 

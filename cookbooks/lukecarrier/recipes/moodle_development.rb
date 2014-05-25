@@ -27,6 +27,13 @@ link File.join(node['user']['homedir'], '.local', 'bin', 'moosh') do
   group node['user']['group']
 end
 
-execute 'npm install -g shifter' do
-  command 'npm install -g shifter'
+bash 'npm install -g shifter' do
+  code <<-EOF
+    . #{node['user']['homedir']}/.nvm/nvm.sh
+    nvm use #{node['node_development']['node_version']}
+    npm install -g shifter
+  EOF
+
+  user  node['user']['login']
+  group node['user']['group']
 end
