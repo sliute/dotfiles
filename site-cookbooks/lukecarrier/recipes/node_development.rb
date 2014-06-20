@@ -1,6 +1,8 @@
 nvm_dir    = File.join(node['user']['homedir'], '.nvm')
 nvm_source = ". #{nvm_dir}/nvm.sh"
 
+package 'nodejs'
+
 git nvm_dir do
   repository 'https://github.com/creationix/nvm.git'
   reference 'master'
