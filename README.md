@@ -36,13 +36,16 @@ What's included
 Prerequisites
 -------------
 
-Just install Chef on your machine and make sure ```chef-solo``` is on your
-```$PATH```. Although it's a total cop out and Opscode's "engineers" ought to
-hang their heads in shame at their own laziness, the Omnibus installer is
-presently the easiest way to do this.
+Install Chef and Librarian-Chef on your machine and make sure ```chef-solo```
+is on your ```$PATH```.
 
     $ sudo yum install -y bash curl
     $ curl -L https://www.opscode.com/chef/install.sh | sudo bash
+    $ sudo /opt/chef/embedded/bin/gem install librarian-chef
+
+You'll then need to fetch the dependencies:
+
+    $ /opt/chef/embedded/bin/librarian-chef install
 
 You'll also want to ensure you've customised your attributes, as by default
 you'll end up impersonating me and attempting to download my configuration files
