@@ -1,7 +1,10 @@
-/bootstrap.gpg
-/bootstrap.log
+# Librarian-Chef managed dependencies
 /Cheffile.lock
 /cookbooks/
+
+# Chef's own temporary files
 /chef-client-running.pid
 /chef-stacktrace.out
 /remote_file/
+/tmp/
+
