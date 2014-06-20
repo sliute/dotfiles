@@ -8,13 +8,6 @@ configured as close to identically as possible. This set up enables me to be
 productive and avoid screwing around in terminals fixing configuration in paid
 time ;-)
 
-Warning
--------
-
-My configuration is presently in the process of being ported to Fedora 20 from
-Ubuntu 13.10. This repository therefore contains somewhat broken code, and is
-likely to blow up from time to time.
-
 What's included
 ---------------
 
