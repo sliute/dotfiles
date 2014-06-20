@@ -10,20 +10,11 @@ user_prefs = {
 
 package 'sublime-text-installer'
 
-unless File.directory?(config)
-  script 'subl --background' do
-    interpreter 'bash'
-    cwd         node['user']['homedir']
-    user        node['user']['login']
-    group       node['user']['group']
-
-    code <<-EOF
-      subl --background &
-      sleep 2
-      pkill -QUIT subl
-    EOF
-
-    returns 0
+[config, packages].each do |dir|
+  directory dir do
+    owner node['user']['login']
+    group node['user']['group']
+    mode  0750
   end
 end
 
