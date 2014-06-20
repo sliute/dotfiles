@@ -29,10 +29,12 @@ end
 
 bash 'npm install -g shifter' do
   code <<-EOF
-    . #{node['user']['homedir']}/.nvm/nvm.sh
-    nvm use #{node['node_development']['node_version']}
-    npm install -g shifter
+    export NODE_VERSION=#{node['node_development']['node_version']}
+    #{node['user']['homedir']}/.nvm/nvm-exec npm install -g shifter
   EOF
+
+  environment({"USER" => node['user']['login'],
+               "HOME" => node['user']['homedir']})
 
   user  node['user']['login']
   group node['user']['group']

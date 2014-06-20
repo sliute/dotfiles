@@ -29,8 +29,20 @@ bash "nvm install 0.10" do
   group node['user']['group']
 end
 
-%w[cache prefix tmp].each do |key|
-  path = File.join(node['user']['homedir'], '.npm', key)
+npm_dir  = File.join node['user']['homedir'], '.npm'
+npm_keys = %w[cache prefix tmp]
+
+npm_dirs = [npm_dir] + npm_keys.map {|key| File.join(npm_dir, key) }
+npm_dirs.each do |dir|
+  directory dir do
+    owner node['user']['login']
+    group node['user']['group']
+    mode  0750
+  end
+end
+
+npm_keys.each do |key|
+  path = File.join(npm_dir, key)
 
   bash "npm config set #{key} #{path}" do
     code <<-EOF
