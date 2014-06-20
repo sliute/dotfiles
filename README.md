@@ -26,6 +26,7 @@ What's included
 * Less - with added syntax highlighting!
 * Mosh - ideal if your employer's WiFi is way oversold
 * Meld - awesome diff tool
+* Moodle development environment (just Shifter for now)
 * Node - plus Shifter, purely for my own selfish needs
 * ```rbenv``` - for sane Rubyists
 * Redshift - your eyes are important, don't screw them up
