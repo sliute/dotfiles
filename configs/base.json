@@ -5,6 +5,7 @@
     "run_list": [
         "recipe[lukecarrier::bash]",
         "recipe[lukecarrier::carrier_repo]",
+        "recipe[lukecarrier::fedora-20-gnome-3-12]",
         "recipe[lukecarrier::gnome_terminal]",
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::mosh]",

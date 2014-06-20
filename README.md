@@ -21,6 +21,7 @@ What's included
 * Batteries ;-)
 * Bash - a microframework for loading configuration, pretty default prompt
 * Git - a few nifty aliases, also configures your identity
+* Gnome 3.12  - just a quick precursor to F21 :fast_forward:
 * Gnome Terminal - custom colour scheme, run as login shell
 * LAMP development environment - with ```mod_userdir``` and ```mod_suphp```
 * Less - with added syntax highlighting!
