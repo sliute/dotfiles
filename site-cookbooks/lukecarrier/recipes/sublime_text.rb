@@ -1,7 +1,9 @@
-config        = File.join(node['user']['homedir'], '.config', 'sublime-text-3')
-license       = File.join(config, 'Local', 'License.sublime_license')
-packages      = File.join(config, 'Installed Packages')
-user_packages = File.join(config, 'Packages', 'User')
+config             = File.join(node['user']['homedir'], '.config', 'sublime-text-3')
+local              = File.join(config,   'Local')
+license            = File.join(local,    'License.sublime_license')
+installed_packages = File.join(config,   'Installed Packages')
+packages           = File.join(config,   'Packages')
+user_packages      = File.join(packages, 'User')
 
 user_prefs = {
   'Preferences.sublime-settings'     => 'user',
@@ -10,7 +12,7 @@ user_prefs = {
 
 package 'sublime-text-installer'
 
-[config, packages].each do |dir|
+[config, installed_packages, local, packages, user_packages].each do |dir|
   directory dir do
     owner node['user']['login']
     group node['user']['group']
