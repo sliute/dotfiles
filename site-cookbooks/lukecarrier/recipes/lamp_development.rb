@@ -44,16 +44,10 @@ cookbook_file '/etc/suphp.conf' do
   mode  0644
 end
 
-execute 'enable selinux httpd_enable_homedirs' do
-  command 'setsebool -P httpd_enable_homedirs true'
-end
-
-execute 'enable selinux httpd_read_user_content' do
-  command 'setsebool -P httpd_read_user_content true'
-end
-
-execute 'enable selinux httpd_unified' do
-  command 'setsebool -P httpd_unified true'
+%w{ can_sendmail enable_homedirs read_user_content unified }.each do |key|
+  execute "enable selinux httpd_#{key}" do
+    command "setsebool -P httpd_#{key} true"
+  end
 end
 
 service 'httpd' do
