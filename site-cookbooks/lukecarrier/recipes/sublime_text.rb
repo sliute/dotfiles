@@ -20,7 +20,7 @@ package 'sublime-text-installer'
   end
 end
 
-remote_file File.join(packages, 'Package Control.sublime-package') do
+remote_file File.join(installed_packages, 'Package Control.sublime-package') do
   action :create_if_missing
   source 'http://sublime.wbond.net/Package%20Control.sublime-package'
 
