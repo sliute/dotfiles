@@ -13,19 +13,27 @@ What's included
 
 * Batteries ;-)
 * Bash - a microframework for loading configuration, pretty default prompt
+* Carrier Repo - a private Yum repo I'm hosting with handy packages (including
+  a wrapper around ST3)
+* DNF - configuration for the Yum-replacement package manager, including COPR
+  (like Ubuntu's PPAs)
 * Git - a few nifty aliases, also configures your identity
-* Gnome 3.12  - just a quick precursor to F21 :fast_forward:
 * Gnome Terminal - custom colour scheme, run as login shell
+* KeepassX - secure password management
 * LAMP development environment - with ```mod_userdir``` and ```mod_suphp```
 * Less - with added syntax highlighting!
-* Mosh - ideal if your employer's WiFi is way oversold
 * Meld - awesome diff tool
+* Mosh - ideal if your employer's WiFi is way oversold
 * Moodle development environment (just Shifter for now)
 * Node - plus Shifter, purely for my own selfish needs
-* ```rbenv``` - for sane Rubyists
+* OwnCloud client - file syncing and web apps on your own terms
+* Ruby - ```rbenv``` configuration
 * Redshift - your eyes are important, don't screw them up
+* Skype - handy for meetings with clients
 * Sublime Text - courtesy of my own RPM specs, with my preferred theme
-* VirtualBox - for stupid applications
+* Vim - I'm going to bring back my Vimrc soon
+* VirtualBox - run all your Windows apps and testing environments
+* VLC - play all the things
 * XChat - ```irssi``` just doesn't do it for me
 
 Prerequisites
