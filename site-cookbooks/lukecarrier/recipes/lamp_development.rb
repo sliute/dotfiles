@@ -1,9 +1,10 @@
 packages = [
   'httpd', 'mod_suphp',
   'mariadb', 'mariadb-server',
-  'php', 'php-cli', 'php-curl', 'php-intl', 'php-mbstring', 'php-mcrypt', 'php-mysql', 'php-opcache', 'php-soap', 'php-xmlrpc', 'php-zip',
+  'php', 'php-cli', 'php-curl', 'php-intl', 'php-mbstring', 'php-mcrypt', 'php-mysql', 'php-opcache', 'php-pgsql', 'php-soap', 'php-xmlrpc', 'php-zip',
   'php-pecl-xdebug',
   'phpmyadmin', 'w3m',
+  'postgresql', 'postgresql-server'
 ]
 
 packages.each {|name| package name}
@@ -44,18 +45,28 @@ cookbook_file '/etc/suphp.conf' do
   mode  0644
 end
 
+execute 'postgresql-setup initdb' do
+  not_if { ::File.exists? '/var/lib/pgsql/initdb.log' }
+end
+
+cookbook_file '/var/lib/pgsql/data/pg_hba.conf' do
+  source 'lamp_development_pg_hba.conf'
+
+  user  'root'
+  group 'root'
+  mode  0644
+end
+
 %w{ can_network_connect can_network_connect_db can_sendmail enable_homedirs read_user_content unified }.each do |key|
   execute "enable selinux httpd_#{key}" do
     command "setsebool -P httpd_#{key} true"
   end
 end
 
-service 'httpd' do
-  action [:enable, :restart]
-end
-
-service 'mariadb' do
-  action [:enable, :restart]
+%w{ httpd mariadb postgresql }.each do |service_name|
+  service service_name do
+    action [:enable, :restart]
+  end
 end
 
 bash_profile_files = ['a2status', 'composer']
@@ -87,4 +98,8 @@ remote_file File.join(node['user']['homedir'], '.local', 'bin', 'composer') do
   owner node['user']['login']
   group node['user']['group']
   mode  0755
+end
+
+log 'Now run mysql_secure_installation' do
+  level :warn
 end
