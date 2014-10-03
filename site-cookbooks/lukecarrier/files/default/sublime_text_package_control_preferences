@@ -2,7 +2,9 @@
 	"installed_packages":
 	[
 		"ColorSchemeSelector",
+		"GitGutter",
 		"GTKDarkThemeVariantSetter",
+		"Gutter Color",
 		"Project Manager",
 		"SublimeLinter",
 		"SublimeLinter-jscs",
