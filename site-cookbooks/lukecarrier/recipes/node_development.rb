@@ -59,6 +59,21 @@ npm_keys.each do |key|
   end
 end
 
+# Bump the log level so we know it's actually doing something
+bash "npm config set loglevel http" do
+  code <<-EOF
+    #{nvm_source}
+    nvm use #{node['node_development']['node_version']}
+    npm config set loglevel http
+  EOF
+
+  environment({"USER" => node['user']['login'],
+               "HOME" => node['user']['homedir']})
+
+  user  node['user']['login']
+  group node['user']['group']
+end
+
 # Work around for broken node-gyp and upstream gyp
 bash "npm config set python /usr/bin/python2" do
   code <<-EOF
