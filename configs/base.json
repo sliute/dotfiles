@@ -12,6 +12,7 @@
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::mosh]",
         "recipe[lukecarrier::owncloud_client]",
+        "recipe[lukecarrier::skype]",
         "recipe[lukecarrier::vim]",
         "recipe[lukecarrier::xchat]"
     ]
