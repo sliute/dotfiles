@@ -6,6 +6,7 @@
         "recipe[lukecarrier::bash]",
         "recipe[lukecarrier::carrier_repo]",
         "recipe[lukecarrier::dnf_copr]",
+        "recipe[lukecarrier::flash_plugin]",
         "recipe[lukecarrier::gnome_terminal]",
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::mosh]",
