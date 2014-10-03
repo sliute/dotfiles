@@ -2,6 +2,10 @@
 	"installed_packages":
 	[
 		"ColorSchemeSelector",
+		"GTKDarkThemeVariantSetter",
+		"SublimeLinter",
+		"SublimeLinter-jscs",
+		"SublimeLinter-php",
 		"Theme - Spacegray"
 	]
 }
