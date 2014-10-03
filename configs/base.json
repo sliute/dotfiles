@@ -14,6 +14,7 @@
         "recipe[lukecarrier::owncloud_client]",
         "recipe[lukecarrier::skype]",
         "recipe[lukecarrier::vim]",
+        "recipe[lukecarrier::vlc]",
         "recipe[lukecarrier::xchat]"
     ]
 }
