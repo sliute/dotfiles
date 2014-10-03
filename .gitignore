@@ -3,8 +3,8 @@
 /cookbooks/
 
 # Chef's own temporary files
+/cache/
 /chef-client-running.pid
 /chef-stacktrace.out
 /remote_file/
 /tmp/
-
