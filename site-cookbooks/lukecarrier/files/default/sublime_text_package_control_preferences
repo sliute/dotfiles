@@ -3,6 +3,7 @@
 	[
 		"ColorSchemeSelector",
 		"GTKDarkThemeVariantSetter",
+		"Project Manager",
 		"SublimeLinter",
 		"SublimeLinter-jscs",
 		"SublimeLinter-php",
