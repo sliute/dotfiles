@@ -3,6 +3,7 @@
     "description": "Base system",
 
     "run_list": [
+        "recipe[lukecarrier::adobe_source_fonts]",
         "recipe[lukecarrier::bash]",
         "recipe[lukecarrier::carrier_repo]",
         "recipe[lukecarrier::dnf_copr]",
