@@ -18,6 +18,8 @@ end
 remote_file phpbrew_global_app do
   source 'https://github.com/phpbrew/phpbrew/raw/master/phpbrew'
 
+  not_if { File.exists? phpbrew_global_app }
+
   user  'root'
   group 'root'
   mode  0755
