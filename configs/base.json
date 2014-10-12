@@ -16,6 +16,7 @@
         "recipe[lukecarrier::pv]",
         "recipe[lukecarrier::rpmfusion_repo]",
         "recipe[lukecarrier::skype]",
+        "recipe[lukecarrier::steam]",
         "recipe[lukecarrier::vim]",
         "recipe[lukecarrier::vlc]",
         "recipe[lukecarrier::xchat]"
