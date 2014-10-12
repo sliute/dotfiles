@@ -13,23 +13,29 @@ What's included
 
 * Batteries ;-)
 * Bash - a microframework for loading configuration, pretty default prompt
-* Carrier Repo - a private Yum repo I'm hosting with handy packages (including
-  a wrapper around ST3)
+* Repositories
+    * Carrier Repo - a private Yum repo I'm hosting with handy packages
+      (including a wrapper around ST3)
+    * RPM Fusion - a great resource for Fedora users with a bunch of driver
+      and software packages
 * DNF - configuration for the Yum-replacement package manager, including COPR
   (like Ubuntu's PPAs)
+* Flash Plugin - for websites stuck in the dark ages
 * Git - a few nifty aliases, also configures your identity
 * Gnome Terminal - custom colour scheme, run as login shell
 * KeepassX - secure password management
 * LAMP development environment - with ```mod_userdir``` and ```mod_suphp```
 * Less - with added syntax highlighting!
 * Meld - awesome diff tool
-* Mosh - ideal if your employer's WiFi is way oversold
 * Moodle development environment (just Shifter for now)
+* Mosh - ideal if your employer's WiFi is way oversold
 * Node - plus Shifter, purely for my own selfish needs
 * OwnCloud client - file syncing and web apps on your own terms
-* Ruby - ```rbenv``` configuration
+* phpbrew - allows testing applications against legacy/future PHP versions
 * Redshift - your eyes are important, don't screw them up
+* Ruby - ```rbenv``` configuration
 * Skype - handy for meetings with clients
+* Steam - for the #pcmasterrace
 * Sublime Text - courtesy of my own RPM specs, with my preferred theme
 * Vim - I'm going to bring back my Vimrc soon
 * VirtualBox - run all your Windows apps and testing environments
