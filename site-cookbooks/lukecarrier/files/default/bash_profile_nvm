@@ -2,4 +2,5 @@
 
 source "${HOME}/.nvm/nvm.sh"
 export PATH=$HOME/.npm/prefix/bin:$PATH
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
