@@ -19,7 +19,7 @@ cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'nvm') do
   mode  0644
 end
 
-bash "nvm install 0.10" do
+bash "nvm install #{node['node_development']['node_version']}" do
   code <<-EOF
     #{nvm_source}
     nvm install #{node['node_development']['node_version']}

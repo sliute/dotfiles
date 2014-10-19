@@ -15,7 +15,7 @@ default['user']['applicationdir'] = File.join(default['user']['homedir'], '.loca
 # when they run, so we need to tell them which version to use. You're of course
 # welcome to install additional nodes using NVM after the installation has
 # completed.
-default['node_development']['node_version'] = '0.10'
+default['node_development']['node_version'] = '0.11'
 
 # Path to files used for deployment.
 #
