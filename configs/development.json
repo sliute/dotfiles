@@ -4,6 +4,7 @@
 
     "run_list": [
         "recipe[lukecarrier::chromium]",
+        "recipe[lukecarrier::gimp]",
         "recipe[lukecarrier::git]",
         "recipe[lukecarrier::lamp_development]",
         "recipe[lukecarrier::meld]",
