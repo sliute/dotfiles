@@ -10,6 +10,7 @@
         "recipe[lukecarrier::flash_plugin]",
         "recipe[lukecarrier::gnome_terminal]",
         "recipe[lukecarrier::keepassx]",
+        "recipe[lukecarrier::htop]",
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::mosh]",
         "recipe[lukecarrier::owncloud_client]",
