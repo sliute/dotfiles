@@ -4,4 +4,7 @@ remote_file rpm_path do
   source 'http://download.skype.com/linux/skype-4.3.0.37-fedora.i586.rpm'
 end
 
-execute "dnf install -y #{rpm_path}"
+rpm_package "skype" do
+  source rpm_path
+end
+
