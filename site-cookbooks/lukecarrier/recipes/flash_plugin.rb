@@ -7,3 +7,6 @@ end
 rpm_package 'adobe-release' do
   source rpm_path
 end
+
+package 'flash-plugin'
+
