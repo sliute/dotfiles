@@ -1,6 +1,6 @@
-packages = %w[all cola]
+packages = %w[git-all git-cola gitg]
 
-packages.each {|name| package "git-#{name}"}
+packages.each { |name| package name }
 
 template File.join(node['user']['homedir'], '.gitconfig') do
   source 'gitconfig.erb'
@@ -26,3 +26,4 @@ end
 link '/etc/profile.d/git-prompt.sh' do
   to '/usr/share/git-core/contrib/completion/git-prompt.sh'
 end
+
