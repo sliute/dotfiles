@@ -8,6 +8,11 @@ configured as close to identically as possible. This set up enables me to be
 productive and avoid screwing around in terminals fixing configuration in paid
 time ;-)
 
+Currently targeting
+-------------------
+
+Fedora 21, and Fedora 21 only.
+
 What's included
 ---------------
 
