@@ -4,6 +4,7 @@ prompt_command_main () {
     local cmd_exit=$?
     [ -n "$1" ] && cmd_exit=$1
     local git_branch="$(__git_ps1 '%s')"
+    local git_sha1="$(git rev-parse --short HEAD 2>/dev/null)"
 
     local fg_black=$(tput setaf 0)
     local fg_red=$(tput setaf 1)
@@ -18,7 +19,7 @@ prompt_command_main () {
     [ $cmd_exit -eq 0 ] && cmd_exit='' \
                         || cmd_exit="# => \[${fg_red}\]${cmd_exit}\[${reset}\]\n\n"
     [ -z "${git_branch}" ] && git_branch='' \
-                           || git_branch="on \[${fg_yellow}\]${git_branch}\[${reset}\] "
+                           || git_branch="on \[${fg_yellow}\]${git_branch}@${git_sha1}\[${reset}\] "
     local user="\[${fg_cyan}\]\u\[${reset}\] "
     local host="at \[${fg_green}\]\h\[${reset}\] "
     dir="in \[${fg_magenta}\]\w\[${reset}\] "
