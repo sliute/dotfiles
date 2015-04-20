@@ -8,8 +8,9 @@ release = node['platform_version']
     source "http://download1.rpmfusion.org/#{variant}/fedora/#{package_name}.noarch.rpm"
   end
 
-  execute "dnf install #{package_name}" do
-    command "dnf install -y #{rpm_path}"
+  execute "rpm -Uvh #{rpm_path}" do
+    command "rpm -Uvh #{rpm_path}"
     not_if "rpm -qa | grep '#{package_name}'"
   end
 end
+
