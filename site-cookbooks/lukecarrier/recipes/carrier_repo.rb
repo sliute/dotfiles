@@ -9,4 +9,3 @@ script 'install carrier repo' do
     yum check-update || true
   EOF
 end
-

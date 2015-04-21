@@ -9,4 +9,3 @@ rpm_package 'adobe-release' do
 end
 
 package 'flash-plugin'
-
