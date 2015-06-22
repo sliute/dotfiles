@@ -5,7 +5,7 @@ prompt_command_main() {
     [ -n "$1" ] && cmd_exit=$1
     local git_ref="$(__git_ps1 '%s')"
     local git_dirty=""
-    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && git_dirty="*"
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && git_dirty="*"
     local git_sha1="$(git rev-parse --short HEAD 2>/dev/null)"
 
     local fg_black=$(tput setaf 0)
