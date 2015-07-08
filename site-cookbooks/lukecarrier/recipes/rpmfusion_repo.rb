@@ -13,4 +13,3 @@ release = node['platform_version']
     not_if "rpm -qa | grep '#{package_name}'"
   end
 end
-
