@@ -2,7 +2,7 @@
 
 prompt_command_main() {
     local cmd_exit=$?
-    [ -n "$1" ] && cmd_exit=$1
+    local is_first=$1
 
     local git_ref="$(__git_ps1 '%s')"
     if [ -n "$git_ref" ]; then
@@ -52,14 +52,10 @@ prompt_command_main() {
     local host="at \[${fg_green}\]\h\[${reset}\] "
     local dir="in \[${fg_magenta}\]\w\[${reset}\] "
 
-    export PROMPT_COMMAND=prompt_command_newline
+    if [ $is_first -eq 0 ]; then
+        export PROMPT_COMMAND="echo ''; ${PROMPT_COMMAND/prompt_command_main 0/prompt_command_main 1}"
+    fi
     export PS1="${cmd_exit}${user}${host}${dir}${git_status}\n~> "
 }
 
-prompt_command_newline() {
-    local cmd_exit=$?
-    echo ''
-    prompt_command_main $cmd_exit
-}
-
-PROMPT_COMMAND=prompt_command_main
+export PROMPT_COMMAND="${PROMPT_COMMAND}; prompt_command_main 0"
