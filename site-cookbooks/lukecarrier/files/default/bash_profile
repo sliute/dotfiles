@@ -3,6 +3,11 @@
 
 # Source local definitions
 [ -f "${HOME}/.bashrc" ] && . "${HOME}/.bashrc"
+
+# Clear existing definitions that interfere with our own
+export PROMPT_COMMAND=':'
+
+# Finally, source our customisations
 for f in ~/.bash_profile.d/*; do
     source $f
 done
