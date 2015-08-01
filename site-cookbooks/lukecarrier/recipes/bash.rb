@@ -1,4 +1,4 @@
-configs = %w[editor path prompt_command title]
+configs = %w[editor history path prompt_command title]
 
 cookbook_file File.join(node['user']['homedir'], '.bash_profile') do
   owner node['user']['login']
