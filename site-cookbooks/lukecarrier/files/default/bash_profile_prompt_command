@@ -6,6 +6,8 @@ prompt_command_main() {
 
     local git_ref="$(__git_ps1 '%s')"
     if [ -n "$git_ref" ]; then
+        local git_dir="$(git rev-parse --show-toplevel)"
+
         local git_dirty=""
         [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && git_dirty="*"
         local git_sha1="$(git rev-parse --short HEAD 2>/dev/null)"
@@ -25,6 +27,11 @@ prompt_command_main() {
             [ "$git_behind" -gt 0 ]                           && git_status+="<${git_behind}"
             [ "$git_behind" -gt 0 ] && [ "$git_ahead" -gt 0 ] && git_status+="|"
             [ "$git_ahead"  -gt 0 ]                           && git_status+="${git_ahead}>"
+        fi
+
+        if [ -s "${git_dir}/.git/refs/stash" ]; then
+            local git_stashed=$(git stash list 2>/dev/null | wc -l)
+            git_status+=" (${git_stashed} stashed)"
         fi
     fi
 
