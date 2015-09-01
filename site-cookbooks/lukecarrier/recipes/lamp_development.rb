@@ -100,6 +100,34 @@ remote_file File.join(node['user']['homedir'], '.local', 'bin', 'composer') do
   mode  0755
 end
 
+git File.join(node['user']['applicationdir'], 'psysh') do
+  repository 'https://github.com/bobthecow/psysh.git'
+  revision 'master'
+
+  user  node['user']['login']
+  group node['user']['group']
+end
+
+execute 'psysh composer install' do
+  command 'composer install'
+
+  environment({
+    "PATH" => "#{node['user']['homedir']}/.local/bin:#{ENV['PATH']}"
+  })
+
+  cwd   File.join(node['user']['applicationdir'], 'psysh')
+  user  node['user']['login']
+  group node['user']['group']
+end
+
+cookbook_file File.join(node['user']['homedir'], '.bash_profile.d', 'psysh') do
+  source 'bash_profile_psysh'
+
+  owner node['user']['login']
+  group node['user']['group']
+  mode 0644
+end
+
 log 'Now run mysql_secure_installation' do
   level :warn
 end
