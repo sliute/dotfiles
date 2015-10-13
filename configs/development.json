@@ -13,6 +13,7 @@
         "recipe[lukecarrier::moodle_development]",
         "recipe[lukecarrier::node_development]",
         "recipe[lukecarrier::phpbrew]",
+        "recipe[lukecarrier::python_development]",
         "recipe[lukecarrier::ruby_development]",
         "recipe[lukecarrier::sublime_text]"
     ]
