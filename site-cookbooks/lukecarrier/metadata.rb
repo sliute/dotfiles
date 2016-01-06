@@ -8,5 +8,5 @@ version           '0.0.1'
 
 supports 'fedora'
 
-depends 'yum'
+depends 'dnf'
 

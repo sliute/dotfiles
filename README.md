@@ -53,7 +53,7 @@ Prerequisites
 Install Chef and Librarian-Chef on your machine and make sure ```chef-solo```
 is on your ```$PATH```.
 
-    $ sudo yum install -y bash curl
+    $ sudo yum install -y bash curl python2-dnf
     $ curl -L https://www.opscode.com/chef/install.sh | sudo bash
     $ sudo /opt/chef/embedded/bin/gem install librarian-chef
 
