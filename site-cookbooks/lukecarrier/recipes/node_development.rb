@@ -30,7 +30,7 @@ bash "nvm install #{node['node_development']['node_version']}" do
 end
 
 npm_dir  = File.join node['user']['homedir'], '.npm'
-npm_keys = %w[cache prefix tmp]
+npm_keys = %w[cache tmp]
 
 npm_dirs = [npm_dir] + npm_keys.map {|key| File.join(npm_dir, key) }
 npm_dirs.each do |dir|
