@@ -1,9 +1,9 @@
 packages = [
   'httpd', 'mod_suphp',
   'mariadb', 'mariadb-server',
-  'php', 'php-cli', 'php-curl', 'php-intl', 'php-mbstring', 'php-mcrypt', 'php-mysql', 'php-opcache', 'php-pgsql', 'php-soap', 'php-xmlrpc', 'php-zip',
+  'php', 'php-cli', 'php-intl', 'php-mbstring', 'php-mcrypt', 'php-mysqlnd', 'php-opcache', 'php-pgsql', 'php-soap', 'php-xmlrpc', 'php-pecl-zip',
   'php-pecl-xdebug',
-  'phpmyadmin', 'w3m',
+  'phpMyAdmin', 'w3m',
   'postgresql', 'postgresql-server'
 ]
 
