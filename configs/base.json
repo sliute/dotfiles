@@ -13,7 +13,6 @@
         "recipe[lukecarrier::htop]",
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::mosh]",
-        "recipe[lukecarrier::owncloud_client]",
         "recipe[lukecarrier::pv]",
         "recipe[lukecarrier::rpmfusion_repo]",
         "recipe[lukecarrier::skype]",
