@@ -45,8 +45,8 @@ cookbook_file '/etc/suphp.conf' do
   mode  0644
 end
 
-execute 'postgresql-setup initdb' do
-  not_if { ::File.exists? '/var/lib/pgsql/initdb.log' }
+execute 'postgresql-setup --initdb --unit postgresql' do
+  not_if { ::File.exists? '/var/lib/pgsql/initdb_postgresql.log' }
 end
 
 cookbook_file '/var/lib/pgsql/data/pg_hba.conf' do
