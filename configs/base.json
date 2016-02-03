@@ -4,8 +4,6 @@
 
     "run_list": [
         "recipe[lukecarrier::bash]",
-        "recipe[lukecarrier::carrier_repo]",
-        "recipe[lukecarrier::dnf_copr]",
         "recipe[lukecarrier::flash_plugin]",
         "recipe[lukecarrier::gnome_terminal]",
         "recipe[lukecarrier::keepass]",
@@ -13,7 +11,6 @@
         "recipe[lukecarrier::less]",
         "recipe[lukecarrier::mosh]",
         "recipe[lukecarrier::pv]",
-        "recipe[lukecarrier::rpmfusion_repo]",
         "recipe[lukecarrier::skype]",
         "recipe[lukecarrier::vim]",
         "recipe[lukecarrier::vlc]",
