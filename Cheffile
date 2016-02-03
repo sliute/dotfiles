@@ -1,4 +1,0 @@
-site 'http://community.opscode.com/api/v1'
-
-cookbook 'dnf', git: 'https://github.com/pantheon-cookbooks/dnf.git'
-

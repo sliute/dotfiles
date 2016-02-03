@@ -1,6 +1,6 @@
-# Librarian-Chef managed dependencies
-/Cheffile.lock
-/cookbooks/
+# Berksfile managed dependencies
+/Berksfile.lock
+/berks-cookbooks/
 
 # Chef's own temporary files
 /cache/
