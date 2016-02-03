@@ -14,7 +14,7 @@ cookbooks.
 
 ## Overview
 
-I'll list the recipes here as I update them.
+* [Atom](http://atom.io/), GitHub's modern take on a text editor
 
 ## Prerequisites
 

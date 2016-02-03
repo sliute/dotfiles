@@ -2,3 +2,5 @@ source "https://supermarket.chef.io"
 
 metadata
 
+cookbook 'atom', '~> 0.1.1'
+
