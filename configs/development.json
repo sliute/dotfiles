@@ -3,6 +3,7 @@
     "description": "Complete development environment",
 
     "run_list": [
+        "recipe[lukecarrier::atom]",
         "recipe[lukecarrier::chromium]",
         "recipe[lukecarrier::gimp]",
         "recipe[lukecarrier::git]",
