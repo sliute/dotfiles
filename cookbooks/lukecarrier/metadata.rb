@@ -8,5 +8,6 @@ version           '0.0.1'
 
 depends 'atom'
 depends 'steam'
+depends 'virtualbox'
 
 supports 'ubuntu'
