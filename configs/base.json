@@ -4,6 +4,7 @@
 
     "run_list": [
         "recipe[lukecarrier::bash]",
+        "recipe[lukecarrier::chromium]",
         "recipe[lukecarrier::gnome_terminal]",
         "recipe[lukecarrier::keepass]",
         "recipe[lukecarrier::skype]",

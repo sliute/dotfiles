@@ -1,4 +1,3 @@
-include_recipe 'lukecarrier::dnf_copr'
+# Chromium browser
 
-execute 'dnf copr enable -y churchyard/chromium-russianfedora'
-package 'chromium'
+package 'chromium-browser'

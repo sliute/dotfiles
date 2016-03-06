@@ -16,6 +16,7 @@ cookbooks.
 
 * ```base``` configuration:
     * Flexible [Bash shell](https://www.gnu.org/software/bash/) profile
+    * [Chromium](https://www.chromium.org/) web browser
     * [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration
     * [KeePassX](http://keepassx.info/) password manager
     * [Skype](http://skype.com/) client for communication
