@@ -27,6 +27,7 @@ cookbooks.
     * [GIMP](https://www.gimp.org/) image editor
     * [Git](https://git-scm.com/) source code management tools, including
       [gitg](https://wiki.gnome.org/action/show/Apps/Gitg)
+    * [Inkscape](https://inkscape.org/) vector image editor
 * ```gaming``` configuration:
     * [Steam](http://store.steampowered.com/) client for gaming
 

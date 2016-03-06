@@ -1,3 +1,3 @@
-packages = %w[ inkscape inkscape-table ]
+# Inkscape vector image editor
 
-packages.each { |package_name| package package_name }
+package 'inkscape'
