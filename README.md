@@ -24,6 +24,8 @@ cookbooks.
 * ```development``` configuration:
     * [Atom](http://atom.io/), GitHub's modern take on a text editor
     * [GIMP](https://www.gimp.org/) image editor
+    * [Git](https://git-scm.com/) source code management tools, including
+      [gitg](https://wiki.gnome.org/action/show/Apps/Gitg)
 * ```gaming``` configuration:
     * [Steam](http://store.steampowered.com/) client for gaming
 

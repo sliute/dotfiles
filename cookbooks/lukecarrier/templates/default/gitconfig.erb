@@ -13,18 +13,15 @@ local = yellow
 remote = green
 
 [color "diff"]
-meta = yellow bold
-frag = magenta bold
-old = red bold
-new = green bold
+meta = yellow
+frag = magenta
+old = red
+new = green
 
 [color "status"]
 added = green
 changed = yellow
 untracked = red
-
-[gui]
-fontdiff = -family \"Droid Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 
 [core]
 excludesfile = <%= @user_homedir %>/.gitignore
@@ -36,11 +33,4 @@ tool = meld
 default = upstream
 
 [alias]
-a = add
-c = commit
-d = pull
-l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-m = diff
-s = status -su
-u = push
-
+graph = log --color --decorate=short --graph --oneline

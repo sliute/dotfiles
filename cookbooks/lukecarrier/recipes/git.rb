@@ -1,5 +1,6 @@
-packages = %w[git-all git-cola gitg]
+# Git SCM
 
+packages = %w[git git-hub gitg]
 packages.each { |name| package name }
 
 template File.join(node['user']['homedir'], '.gitconfig') do
