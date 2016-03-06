@@ -23,6 +23,7 @@ cookbooks.
     * [Virtualbox](http://virtualbox.org/) for desktop virtualisation
 * ```development``` configuration:
     * [Atom](http://atom.io/), GitHub's modern take on a text editor
+    * [GIMP](https://www.gimp.org/) image editor
 * ```gaming``` configuration:
     * [Steam](http://store.steampowered.com/) client for gaming
 

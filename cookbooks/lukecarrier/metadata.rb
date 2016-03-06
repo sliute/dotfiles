@@ -7,6 +7,7 @@ long_description  File.join(File.dirname(__FILE__), 'README.md')
 version           '0.0.1'
 
 depends 'atom'
+depends 'gimp'
 depends 'skype-app'
 depends 'steam'
 depends 'virtualbox'

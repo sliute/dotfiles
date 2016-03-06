@@ -1,1 +1,3 @@
-package 'gimp'
+# GIMP image editor
+
+gimp_app 'default'
