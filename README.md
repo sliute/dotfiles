@@ -37,7 +37,6 @@ Install Chef and ChefDK on your machine. The Development Kit brings in
 [Berkshelf](http://berkshelf.com/), with which I manage the community cookbooks:
 
     $ sudo apt-get install -y bash curl
-    $ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chef
     $ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
 
 ## Execution
