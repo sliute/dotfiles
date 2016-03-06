@@ -14,7 +14,14 @@ cookbooks.
 
 ## Overview
 
-* [Atom](http://atom.io/), GitHub's modern take on a text editor
+* ```base``` configuration:
+    * [KeePassX](http://keepassx.info/) password manager
+    * [Skype](http://skype.com/) client for communication
+    * [Virtualbox](http://virtualbox.org/) for desktop virtualisation
+* ```development``` configuration:
+    * [Atom](http://atom.io/), GitHub's modern take on a text editor
+* ```gaming``` configuration:
+    * [Steam](http://store.steampowered.com/) client for gaming
 
 ## Prerequisites
 
@@ -38,4 +45,3 @@ Then run either a specific configuration:
 Or a specific recipe:
 
     $ sudo chef-solo -c solo.rb -o <name>
-
