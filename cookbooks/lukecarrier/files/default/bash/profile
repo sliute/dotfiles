@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Source global definitions
 [ -f /etc/bashrc ] && . /etc/bashrc
 
@@ -8,6 +10,6 @@
 export PROMPT_COMMAND=':'
 
 # Finally, source our customisations
-for f in ~/.bash_profile.d/*; do
+for f in $HOME/.bash_profile.d/*; do
     source $f
 done

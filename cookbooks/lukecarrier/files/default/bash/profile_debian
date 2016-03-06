@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export EMAIL="luke@carrier.im"
+export DEBFULLNAME="Luke Carrier"
