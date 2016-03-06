@@ -23,7 +23,6 @@ default['node_development']['node_version'] = '0.11'
 # in this repository:
 #
 # - redshift/redshift.conf (contains latitude/longitude information)
-# - sublime_text/License.sublime-license (get your own)
 # - xchat/servlist.conf (IRC server credentials)
 #
 # These URLs can be in any format that Chef's remote_file resource will
@@ -31,7 +30,6 @@ default['node_development']['node_version'] = '0.11'
 default['deploy_baseurl']  = 'http://deploy.lukecarrier.me/lukecarrier'
 
 default['redshift']['config'] = "#{default['deploy_baseurl']}/redshift/redshift.conf"
-default['sublime_text']['license'] = "#{default['deploy_baseurl']}/sublime_text/License.sublime_license"
 default['xchat']['servlist'] = "#{default['deploy_baseurl']}/xchat/servlist.conf"
 
 # Install VirtualBox 5.0 from the Oracle repository.
