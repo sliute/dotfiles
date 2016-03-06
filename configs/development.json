@@ -3,19 +3,6 @@
     "description": "Complete development environment",
 
     "run_list": [
-        "recipe[lukecarrier::atom]",
-        "recipe[lukecarrier::chromium]",
-        "recipe[lukecarrier::gimp]",
-        "recipe[lukecarrier::git]",
-        "recipe[lukecarrier::inkscape]",
-        "recipe[lukecarrier::inotify_watches]",
-        "recipe[lukecarrier::lamp_development]",
-        "recipe[lukecarrier::meld]",
-        "recipe[lukecarrier::moodle_development]",
-        "recipe[lukecarrier::node_development]",
-        "recipe[lukecarrier::phpbrew]",
-        "recipe[lukecarrier::python_development]",
-        "recipe[lukecarrier::ruby_development]",
-        "recipe[lukecarrier::sublime_text]"
+        "recipe[lukecarrier::atom]"
     ]
 }
