@@ -18,6 +18,7 @@ cookbooks.
     * Flexible [Bash shell](https://www.gnu.org/software/bash/) profile
     * [Chromium](https://www.chromium.org/) web browser
     * [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration
+    * [htop](http://hisham.hm/htop/) for inspecting running processes
     * [KeePassX](http://keepassx.info/) password manager
     * [Skype](http://skype.com/) client for communication
     * [Virtualbox](http://virtualbox.org/) for desktop virtualisation
