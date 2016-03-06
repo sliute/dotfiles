@@ -15,6 +15,7 @@ cookbooks.
 ## Overview
 
 * ```base``` configuration:
+    * [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration
     * [KeePassX](http://keepassx.info/) password manager
     * [Skype](http://skype.com/) client for communication
     * [Virtualbox](http://virtualbox.org/) for desktop virtualisation

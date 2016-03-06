@@ -1,3 +1,5 @@
+# Gnome Terminal
+
 dconf_dump = File.join(run_context.cookbook_collection[cookbook_name].root_dir,
                        'files', 'default', 'gnome_terminal')
 dconf_root = '/org/gnome/terminal'

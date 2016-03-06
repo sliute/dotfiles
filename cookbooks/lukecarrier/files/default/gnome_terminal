@@ -1,20 +1,19 @@
-[legacy/profiles:/:8451e004-ee0f-496c-963b-0462dd1d60b3]
-foreground-color='rgb(192,197,206)'
-visible-name='Base16-Ocean'
-palette=['#2b303b', '#bf616a', '#a3be8c', '#ebcb8b', '#8fa1b3', '#b48ead', '#96b5b4', '#c0c5ce', '#65737e', '#bf616a', '#a3be8c', '#ebcb8b', '#8fa1b3', '#b48ead', '#96b5b4', '#eff1f5']
-login-shell=true
-use-custom-command=false
-use-theme-colors=false
-update-records=true
-allow-bold=false
-scrollback-unlimited=true
-bold-color-same-as-fg=true
-title-mode='after'
-background-color='rgb(43,48,59)'
-
 [legacy/profiles:]
-list=['8451e004-ee0f-496c-963b-0462dd1d60b3']
-default='8451e004-ee0f-496c-963b-0462dd1d60b3'
+list=['39ad1861-bb92-4c15-9466-44d848f8a03e']
+default='39ad1861-bb92-4c15-9466-44d848f8a03e'
+
+[legacy/profiles:/:39ad1861-bb92-4c15-9466-44d848f8a03e]
+foreground-color='#c0c5ce'
+visible-name='Base 16 Ocean Dark'
+login-shell=true
+palette=['#2b303b', '#bf616a', '#a3be8c', '#ebcb8b', '#8fa1b3', '#b48ead', '#96b5b4', '#c0c5ce', '#65737e', '#bf616a', '#a3be8c', '#ebcb8b', '#8fa1b3', '#b48ead', '#96b5b4', '#eff1f5']
+use-theme-colors=false
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#c0c5ce'
+background-color='#2b303b'
 
 [legacy]
 schema-version=uint32 3
+default-show-menubar=false
