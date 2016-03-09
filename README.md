@@ -30,6 +30,7 @@ Basic system configuration and every day applications.
 | [Bash shell](https://www.gnu.org/software/bash/) profile | :thumbsup: | :thumbsdown: |
 | [Chromium](https://www.chromium.org/) web browser | :thumbsup: | :thumbsdown: |
 | [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration | :thumbsup: | :thumbsdown: |
+| [Google Chrome](https://www.google.com/chrome/) | :thumbsdown: | :thumbsup: |
 | [htop](http://hisham.hm/htop/) for inspecting running processes | :thumbsup: | :thumbsdown: |
 | [KeePassX](http://keepassx.info/) password manager | :thumbsup: | :thumbsdown: |
 | [Skype](http://skype.com/) client for communication | :thumbsup: | :thumbsdown: |

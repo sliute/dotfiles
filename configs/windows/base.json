@@ -3,5 +3,6 @@
     "description": "Base system",
 
     "run_list": [
+        "recipe[chrome::default]"
     ]
 }
