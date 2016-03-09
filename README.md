@@ -1,16 +1,21 @@
 # Dotfiles
 
-Luke's extraordinarily opinionated Chef configuration for Ubuntu Gnome 15.10.
-I'd strongly advise not using this configuration directly, but it might might be
-an ideal starting point for your own configuration.
+Luke's extraordinarily opinionated Chef configuration. I'd strongly advise not
+using this configuration directly, but it might might be an ideal starting point
+for your own.
 
 * * *
 
 ## Warning
 
-This branch is an in-progress migration from Fedora to Ubuntu. I'm also
-modernising some of the older recipes and migrating to some community-maintained
-cookbooks.
+This branch is a work in progress migration from Fedora to Ubuntu and Windows.
+I'm also modernising some of the older recipes and migrating to some
+community-maintained cookbooks.
+
+## Supported platforms
+
+* Ubuntu Gnome 15.04
+* Windows 7 SP1
 
 ## Overview
 
@@ -34,10 +39,21 @@ cookbooks.
 ## Prerequisites
 
 Install Chef and ChefDK on your machine. The Development Kit brings in
-[Berkshelf](http://berkshelf.com/), with which I manage the community cookbooks:
+[Berkshelf](http://berkshelf.com/), with which I manage the community cookbooks.
 
-    $ sudo apt-get install -y bash curl
-    $ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
+### Linux
+
+$ sudo apt-get install -y bash curl
+$ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
+
+### Windows
+
+[WMF 3.0](https://www.microsoft.com/en-gb/download/details.aspx?id=34595) is
+required for the ```Invoke-WebRequest``` PowerShell cmdlet. Once installed,
+reboot Windows and launch PowerShell as an administrator:
+
+    > . { Invoke-WebRequest -UseBasicParsing https://omnitruck.chef.io/install.ps1 } `
+            | Invoke-Expression; install -channel current -project chefdk
 
 ## Execution
 
