@@ -19,22 +19,41 @@ community-maintained cookbooks.
 
 ## Overview
 
-* ```base``` configuration:
-    * Flexible [Bash shell](https://www.gnu.org/software/bash/) profile
-    * [Chromium](https://www.chromium.org/) web browser
-    * [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration
-    * [htop](http://hisham.hm/htop/) for inspecting running processes
-    * [KeePassX](http://keepassx.info/) password manager
-    * [Skype](http://skype.com/) client for communication
-    * [Virtualbox](http://virtualbox.org/) for desktop virtualisation
-* ```development``` configuration:
-    * [Atom](http://atom.io/), GitHub's modern take on a text editor
-    * [GIMP](https://www.gimp.org/) image editor
-    * [Git](https://git-scm.com/) source code management tools, including
-      [gitg](https://wiki.gnome.org/action/show/Apps/Gitg)
-    * [Inkscape](https://inkscape.org/) vector image editor
-* ```gaming``` configuration:
-    * [Steam](http://store.steampowered.com/) client for gaming
+Configuration is divided into three key roles.
+
+### ```base```
+
+Basic system configuration and every day applications.
+
+| Recipe | Linux | Windows |
+| --- | --- | --- |
+| [Bash shell](https://www.gnu.org/software/bash/) profile | :thumbsup: | :thumbsdown: |
+| [Chromium](https://www.chromium.org/) web browser | :thumbsup: | :thumbsdown: |
+| [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration | :thumbsup: | :thumbsdown: |
+| [htop](http://hisham.hm/htop/) for inspecting running processes | :thumbsup: | :thumbsdown: |
+| [KeePassX](http://keepassx.info/) password manager | :thumbsup: | :thumbsdown: |
+| [Skype](http://skype.com/) client for communication | :thumbsup: | :thumbsdown: |
+| [Virtualbox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | :thumbsdown: |
+
+### ```development```
+
+All of the runtimes and tools I need for development.
+
+| Recipe | Linux | Windows |
+| --- | --- | --- |
+| [Atom](http://atom.io/), GitHub's modern take on a text editor | :thumbsup: | :thumbsdown: |
+| [GIMP](https://www.gimp.org/) image editor | :thumbsup: | :thumbsdown: |
+| [Git](https://git-scm.com/) source code management tools, | :thumbsup: | :thumbsdown: |
+| [gitg](https://wiki.gnome.org/action/show/Apps/Gitg) | :thumbsup: | :thumbsdown: |
+| [Inkscape](https://inkscape.org/) vector image editor | :thumbsup: | :thumbsdown: |
+
+### ```gaming```
+
+Just in case I one day run out of GitHub issues...
+
+| Recipe | Linux | Windows |
+| --- | --- | --- |
+| [Steam](http://store.steampowered.com/) client for gaming | :thumbsup: | :thumbsdown: |
 
 ## Prerequisites
 
