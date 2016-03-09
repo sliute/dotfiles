@@ -1,0 +1,7 @@
+{
+    "name":        "base",
+    "description": "Base system",
+
+    "run_list": [
+    ]
+}

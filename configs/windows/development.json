@@ -1,0 +1,7 @@
+{
+    "name":        "development",
+    "description": "Complete development environment",
+
+    "run_list": [
+    ]
+}
