@@ -62,8 +62,10 @@ Install Chef and ChefDK on your machine. The Development Kit brings in
 
 ### Linux
 
-$ sudo apt-get install -y bash curl
-$ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
+Assuming ```bash``` and ```curl``` are installed and on ```PATH```:
+
+    $ sudo apt-get install -y bash curl
+    $ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
 
 ### Windows
 
