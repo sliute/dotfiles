@@ -33,7 +33,7 @@ Basic system configuration and every day applications.
 | [htop](http://hisham.hm/htop/) for inspecting running processes | :thumbsup: | :thumbsdown: |
 | [KeePassX](http://keepassx.info/) password manager | :thumbsup: | :thumbsdown: |
 | [Skype](http://skype.com/) client for communication | :thumbsup: | :thumbsdown: |
-| [Virtualbox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | :thumbsdown: |
+| [VirtualBox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | :thumbsdown: |
 
 ### ```development```
 
