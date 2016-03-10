@@ -6,6 +6,7 @@
         "recipe[chrome::default]",
         "recipe[lukecarrier::keepassx]",
         "recipe[winbox::console]",
-        "recipe[winbox::powershell_dev]"
+        "recipe[winbox::powershell_dev]",
+        "recipe[winbox::readline]"
     ]
 }

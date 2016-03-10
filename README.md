@@ -43,7 +43,7 @@ All of the runtimes and tools I need for development.
 
 | Recipe | Linux | Windows |
 | --- | --- | --- |
-| [Atom](http://atom.io/), GitHub's modern take on a text editor | :thumbsup: | |
+| [Atom](http://atom.io/), GitHub's modern take on a text editor | :thumbsup: | :thumbsup: |
 | [GIMP](https://www.gimp.org/) image editor | :thumbsup: | |
 | [Git](https://git-scm.com/) source code management tools, | :thumbsup: | :thumbsup: |
 | [gitg](https://wiki.gnome.org/action/show/Apps/Gitg) | :thumbsup: | |
