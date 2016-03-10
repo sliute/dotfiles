@@ -1,7 +1,10 @@
 # Atom text editor
 
 include_recipe 'atom'
-package 'atom'
+
+if node['platform_family'] == 'debian'
+  package 'atom'
+end
 
 atom_packages = [
   'atom-ctags',
