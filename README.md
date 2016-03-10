@@ -33,6 +33,7 @@ Basic system configuration and every day applications.
 | [Google Chrome](https://www.google.com/chrome/) | | :thumbsup: |
 | [htop](http://hisham.hm/htop/) for inspecting running processes | :thumbsup: | |
 | [KeePassX](http://keepassx.info/) password manager | :thumbsup: | :thumbsup: |
+| [PowerShell](https://msdn.microsoft.com/en-us/powershell/) configuration | | :thumbsup: |
 | [Skype](http://skype.com/) client for communication | :thumbsup: | |
 | [VirtualBox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | |
 
