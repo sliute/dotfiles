@@ -38,5 +38,9 @@ default['deploy_baseurl']  = 'http://deploy.lukecarrier.me/lukecarrier'
 default['redshift']['config'] = "#{default['deploy_baseurl']}/redshift/redshift.conf"
 default['xchat']['servlist'] = "#{default['deploy_baseurl']}/xchat/servlist.conf"
 
+# KeePassX version to install (Windows only)
+default['keepassx']['version'] = '2.0.2'
+default['keepassx']['install_dir'] = 'C:\Program Files (x86)\KeePassX'
+
 # Install VirtualBox 5.0 from the Oracle repository.
 default['virtualbox']['version'] = '5.0'

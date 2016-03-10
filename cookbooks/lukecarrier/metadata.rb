@@ -12,5 +12,7 @@ depends 'gimp'
 depends 'skype-app'
 depends 'steam'
 depends 'virtualbox'
+depends 'windows'
 
 supports 'ubuntu'
+supports 'windows'
