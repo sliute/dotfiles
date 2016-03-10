@@ -5,6 +5,7 @@ metadata
 cookbook 'atom', '~> 0.1.1'
 cookbook 'chrome', '~> 1.1.1'
 cookbook 'gimp', '~> 1.1.0'
+cookbook 'git', '~> 4.3.7'
 cookbook 'skype-app', '~> 0.2.0'
 cookbook 'steam', '~> 2.0.0'
 cookbook 'virtualbox', '~> 0.6.1'

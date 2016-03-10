@@ -15,6 +15,12 @@ if node['platform_family'] == 'windows'
   default['user']['homedir'] = 'C:\Users\lcarrier'
 end
 
+# The version of Git to install (Windows only)
+default['git']['version']      = '2.7.2'
+default['git']['architecture'] = '64'
+default['git']['checksum']     = 'ec4009b36ce855ab262f999030fff5471de73cf0071202138d395648756c7e8b'
+default['git']['cmd_path']     = 'C:\Program Files\Git\cmd'
+
 # The version of NodeJS to install and use by default.
 #
 # Some recipes (i.e. moodle_development) require Node and NPM to be available

@@ -6,6 +6,7 @@
         "recipe[lukecarrier::atom]",
         "recipe[lukecarrier::gimp]",
         "recipe[lukecarrier::git]",
+        "recipe[lukecarrier::gitg]",
         "recipe[lukecarrier::inkscape]"
     ]
 }

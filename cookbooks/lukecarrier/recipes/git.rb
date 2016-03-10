@@ -1,7 +1,6 @@
 # Git SCM
 
-packages = %w[git git-hub gitg]
-packages.each { |name| package name }
+include_recipe 'git'
 
 template File.join(node['user']['homedir'], '.gitconfig') do
   source 'gitconfig.erb'
@@ -24,6 +23,13 @@ cookbook_file File.join(node['user']['homedir'], '.gitignore') do
   mode  0644
 end
 
-link '/etc/profile.d/git-prompt.sh' do
-  to '/usr/share/git-core/contrib/completion/git-prompt.sh'
+case node['platform_family']
+when 'debian'
+  link '/etc/profile.d/git-prompt.sh' do
+    to '/usr/share/git-core/contrib/completion/git-prompt.sh'
+  end
+when 'windows'
+  windows_path node['git']['cmd_path'] do
+    action :add
+  end
 end
