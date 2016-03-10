@@ -9,6 +9,12 @@ default['user']['login']          = 'luke'
 default['user']['group']          = 'luke'
 default['user']['applicationdir'] = File.join(default['user']['homedir'], '.local', 'applications')
 
+if node['platform_family'] == 'windows'
+  default['user']['login']   = 'lcarrier'
+  default['user']['group']   = 'lcarrier'
+  default['user']['homedir'] = 'C:\Users\lcarrier'
+end
+
 # The version of NodeJS to install and use by default.
 #
 # Some recipes (i.e. moodle_development) require Node and NPM to be available
