@@ -27,14 +27,14 @@ Basic system configuration and every day applications.
 
 | Recipe | Linux | Windows |
 | --- | --- | --- |
-| [Bash shell](https://www.gnu.org/software/bash/) profile | :thumbsup: | :thumbsdown: |
-| [Chromium](https://www.chromium.org/) web browser | :thumbsup: | :thumbsdown: |
-| [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration | :thumbsup: | :thumbsdown: |
-| [Google Chrome](https://www.google.com/chrome/) | :thumbsdown: | :thumbsup: |
-| [htop](http://hisham.hm/htop/) for inspecting running processes | :thumbsup: | :thumbsdown: |
-| [KeePassX](http://keepassx.info/) password manager | :thumbsup: | :thumbsdown: |
-| [Skype](http://skype.com/) client for communication | :thumbsup: | :thumbsdown: |
-| [VirtualBox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | :thumbsdown: |
+| [Bash shell](https://www.gnu.org/software/bash/) profile | :thumbsup: | |
+| [Chromium](https://www.chromium.org/) web browser | :thumbsup: | |
+| [Gnome Terminal](https://wiki.gnome.org/Apps/Terminal) configuration | :thumbsup: | |
+| [Google Chrome](https://www.google.com/chrome/) | | :thumbsup: |
+| [htop](http://hisham.hm/htop/) for inspecting running processes | :thumbsup: | |
+| [KeePassX](http://keepassx.info/) password manager | :thumbsup: | :thumbsup: |
+| [Skype](http://skype.com/) client for communication | :thumbsup: | |
+| [VirtualBox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | |
 
 ### ```development```
 
@@ -42,11 +42,11 @@ All of the runtimes and tools I need for development.
 
 | Recipe | Linux | Windows |
 | --- | --- | --- |
-| [Atom](http://atom.io/), GitHub's modern take on a text editor | :thumbsup: | :thumbsdown: |
-| [GIMP](https://www.gimp.org/) image editor | :thumbsup: | :thumbsdown: |
-| [Git](https://git-scm.com/) source code management tools, | :thumbsup: | :thumbsdown: |
-| [gitg](https://wiki.gnome.org/action/show/Apps/Gitg) | :thumbsup: | :thumbsdown: |
-| [Inkscape](https://inkscape.org/) vector image editor | :thumbsup: | :thumbsdown: |
+| [Atom](http://atom.io/), GitHub's modern take on a text editor | :thumbsup: | |
+| [GIMP](https://www.gimp.org/) image editor | :thumbsup: | |
+| [Git](https://git-scm.com/) source code management tools, | :thumbsup: | :thumbsup: |
+| [gitg](https://wiki.gnome.org/action/show/Apps/Gitg) | :thumbsup: | |
+| [Inkscape](https://inkscape.org/) vector image editor | :thumbsup: | |
 
 ### ```gaming```
 
@@ -54,7 +54,7 @@ Just in case I one day run out of GitHub issues...
 
 | Recipe | Linux | Windows |
 | --- | --- | --- |
-| [Steam](http://store.steampowered.com/) client for gaming | :thumbsup: | :thumbsdown: |
+| [Steam](http://store.steampowered.com/) client for gaming | :thumbsup: | |
 
 ## Prerequisites
 
