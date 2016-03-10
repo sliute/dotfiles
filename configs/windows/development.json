@@ -3,5 +3,7 @@
     "description": "Complete development environment",
 
     "run_list": [
+        "recipe[lukecarrier::git]"
+        "recipe[winbox::readline]"
     ]
 }

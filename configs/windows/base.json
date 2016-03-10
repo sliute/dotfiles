@@ -3,6 +3,9 @@
     "description": "Base system",
 
     "run_list": [
-        "recipe[chrome::default]"
+        "recipe[chrome::default]",
+        "recipe[lukecarrier::keepassx]",
+        "recipe[winbox::console]",
+        "recipe[winbox::powershell_dev]"
     ]
 }

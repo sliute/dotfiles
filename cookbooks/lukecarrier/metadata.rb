@@ -13,6 +13,7 @@ depends 'git'
 depends 'skype-app'
 depends 'steam'
 depends 'virtualbox'
+depends 'winbox'
 depends 'windows'
 
 supports 'ubuntu'
