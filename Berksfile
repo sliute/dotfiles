@@ -9,6 +9,8 @@ cookbook 'atom', git: 'https://github.com/LukeCarrier/atom-cookbook.git',
 cookbook 'virtualbox', git: 'https://github.com/LukeCarrier/virtualbox-cookbook.git',
                        branch: 'master'
 
+# Community cookbooks
+cookbook 'chocolatey', '~> 1.0.0'
 cookbook 'chrome', '~> 1.1.1'
 cookbook 'git', '~> 4.3.7'
 cookbook 'skype-app', '~> 0.2.0'
