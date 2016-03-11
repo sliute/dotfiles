@@ -49,6 +49,7 @@ All of the runtimes and tools I need for development.
 | [Git](https://git-scm.com/) source code management tools, | :thumbsup: | :thumbsup: |
 | [gitg](https://wiki.gnome.org/action/show/Apps/Gitg) | :thumbsup: | |
 | [Inkscape](https://inkscape.org/) vector image editor | :thumbsup: | |
+| [Vagrant](https://www.vagrantup.com/) | :thumbsup: | :thumbsup: |
 
 ### ```gaming```
 
