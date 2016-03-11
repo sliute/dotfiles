@@ -8,6 +8,7 @@
         "recipe[lukecarrier::rdcman]",
         "recipe[winbox::console]",
         "recipe[winbox::powershell_dev]",
-        "recipe[winbox::readline]"
+        "recipe[winbox::readline]",
+        "recipe[virtualbox::default]"
     ]
 }

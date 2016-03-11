@@ -48,5 +48,10 @@ default['xchat']['servlist'] = "#{default['deploy_baseurl']}/xchat/servlist.conf
 default['keepassx']['version'] = '2.0.2'
 default['keepassx']['install_dir'] = 'C:\Program Files (x86)\KeePassX'
 
-# Install VirtualBox 5.0 from the Oracle repository.
-default['virtualbox']['version'] = '5.0'
+# VirtualBox installation source
+case node['platform_family']
+when 'debian'
+  default['virtualbox']['version'] = '5.0'
+when 'windows'
+  default['virtualbox']['url'] = 'http://download.virtualbox.org/virtualbox/5.0.16/VirtualBox-5.0.16-105871-Win.exe'
+end
