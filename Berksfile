@@ -6,6 +6,8 @@ cookbook 'lukecarrier', path: 'cookbooks/lukecarrier'
 # Patched community cookbooks
 cookbook 'atom', git: 'https://github.com/LukeCarrier/chef-atom.git',
                  branch: 'master'
+cookbook 'nvm-ng', git: 'https://github.com/LukeCarrier/chef-nvm-ng.git',
+                   branch: 'master'
 cookbook 'virtualbox', git: 'https://github.com/LukeCarrier/chef-virtualbox.git',
                        branch: 'master'
 

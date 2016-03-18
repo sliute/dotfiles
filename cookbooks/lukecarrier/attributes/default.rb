@@ -21,13 +21,13 @@ default['git']['architecture'] = '64'
 default['git']['checksum']     = 'ec4009b36ce855ab262f999030fff5471de73cf0071202138d395648756c7e8b'
 default['git']['cmd_path']     = 'C:\Program Files\Git\cmd'
 
-# The version of NodeJS to install and use by default.
-#
-# Some recipes (i.e. moodle_development) require Node and NPM to be available
-# when they run, so we need to tell them which version to use. You're of course
-# welcome to install additional nodes using NVM after the installation has
-# completed.
-default['node_development']['node_version'] = '0.11'
+# Install nvm under the user account, with these node versions
+default['node_development']['directory']     = File.join(default['user']['homedir'], '.nvm')
+default['node_development']['profile_file']  = File.join(default['user']['homedir'], '.bash_profile.d', 'nvm')
+default['node_development']['node_versions'] = [
+  '0.12.12',
+  '5.8.0',
+]
 
 # Path to files used for deployment.
 #
