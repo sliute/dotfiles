@@ -12,7 +12,8 @@ atom_packages = [
   'editorconfig',
   'language-cmake', 'language-glsl', 'language-powershell',
   'linter', 'linter-alex',
-  'minimap',
+  'minimap', 'minimap-autohide', 'minimap-codeglance', 'minimap-cursorline',
+  'minimap-find-and-replace', 'minimap-git-diff', 'minimap-linter',
   'Zen',
 ]
 atom_packages.each {|atom_package| atom_apm atom_package}
