@@ -10,6 +10,7 @@ atom_packages = [
   'atom-ctags',
   'autocomplete-clang',
   'editorconfig',
+  'file-icons',
   'language-cmake', 'language-glsl', 'language-powershell',
   'linter', 'linter-alex',
   'minimap', 'minimap-autohide', 'minimap-codeglance', 'minimap-cursorline',
