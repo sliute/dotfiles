@@ -46,7 +46,7 @@ All of the runtimes and tools I need for development.
 | --- | --- | --- |
 | [Atom](http://atom.io/), GitHub's modern take on a text editor | :thumbsup: | :thumbsup: |
 | [GIMP](https://www.gimp.org/) image editor | :thumbsup: | |
-| [Git](https://git-scm.com/) source code management tools, | :thumbsup: | :thumbsup: |
+| [Git](https://git-scm.com/) source code management tools | :thumbsup: | :thumbsup: |
 | [gitg](https://wiki.gnome.org/action/show/Apps/Gitg) | :thumbsup: | |
 | [Inkscape](https://inkscape.org/) vector image editor | :thumbsup: | |
 | [Vagrant](https://www.vagrantup.com/) | :thumbsup: | :thumbsup: |
