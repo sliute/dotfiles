@@ -3,6 +3,6 @@
     "description": "Additional packages for gaming",
 
     "run_list": [
-        "recipe[lukecarrier::steam]"
+        "recipe[steam::default]"
     ]
 }

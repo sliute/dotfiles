@@ -57,7 +57,7 @@ Just in case I one day run out of GitHub issues...
 
 | Recipe | Linux | Windows |
 | --- | --- | --- |
-| [Steam](http://store.steampowered.com/) client for gaming | :thumbsup: | |
+| [Steam](http://store.steampowered.com/) client for gaming | :thumbsup: | :thumbsup: |
 
 ## Prerequisites
 

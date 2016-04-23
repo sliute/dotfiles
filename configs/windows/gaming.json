@@ -3,5 +3,6 @@
     "description": "Additional packages for gaming",
 
     "run_list": [
+        "recipe[steam::default]"
     ]
 }
