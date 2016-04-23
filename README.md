@@ -68,8 +68,10 @@ Install Chef and ChefDK on your machine. The Development Kit brings in
 
 Assuming ```bash``` and ```curl``` are installed and on ```PATH```:
 
-    $ sudo apt-get install -y bash curl
-    $ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
+```
+$ sudo apt-get install -y bash curl
+$ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
+```
 
 ### Windows
 
@@ -77,8 +79,20 @@ Assuming ```bash``` and ```curl``` are installed and on ```PATH```:
 required for the ```Invoke-WebRequest``` PowerShell cmdlet. Once installed,
 reboot Windows and launch PowerShell as an administrator:
 
-    > . { Invoke-WebRequest -UseBasicParsing https://omnitruck.chef.io/install.ps1 } `
-            | Invoke-Expression; install -channel current -project chefdk
+```
+> . { Invoke-WebRequest -UseBasicParsing https://omnitruck.chef.io/install.ps1 } `
+        | Invoke-Expression; install -channel current -project chefdk
+```
+
+On a Windows client in a domain setting, ensure that your profile directory is
+on a local disk. In PowerShell, the following in your profile should do the
+trick:
+
+```powershell
+$env:HOME      = "C:\Users\<username>"
+$env:HOMEDRIVE = "C:"
+$env:HOMEPATH  = "\Users\<username>"
+```
 
 ## Execution
 
