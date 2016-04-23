@@ -8,7 +8,7 @@
         "recipe[lukecarrier::gnome_terminal]",
         "recipe[lukecarrier::htop]",
         "recipe[lukecarrier::keepassx]",
-        "recipe[lukecarrier::skype]",
+        "recipe[skype-app::default]",
         "recipe[virtualbox::default]"
     ]
 }

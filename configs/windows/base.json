@@ -6,6 +6,7 @@
         "recipe[chrome::default]",
         "recipe[lukecarrier::keepassx]",
         "recipe[lukecarrier::rdcman]",
+        "recipe[skype-app::default]",
         "recipe[winbox::console]",
         "recipe[winbox::powershell_dev]",
         "recipe[winbox::readline]",

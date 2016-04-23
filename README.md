@@ -35,7 +35,7 @@ Basic system configuration and every day applications.
 | [KeePassX](http://keepassx.info/) password manager | :thumbsup: | :thumbsup: |
 | [PowerShell](https://msdn.microsoft.com/en-us/powershell/) configuration | | :thumbsup: |
 | [Remote Desktop Connection Manager](https://www.microsoft.com/en-gb/download/details.aspx?id=44989) | | :thumbsup: |
-| [Skype](http://skype.com/) client for communication | :thumbsup: | |
+| [Skype](http://skype.com/) client for communication | :thumbsup: | :thumbsup: |
 | [VirtualBox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | :thumbsup: |
 
 ### ```development```

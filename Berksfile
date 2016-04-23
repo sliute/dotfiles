@@ -8,6 +8,8 @@ cookbook 'atom', git: 'https://github.com/LukeCarrier/chef-atom.git',
                  branch: 'master'
 cookbook 'nvm-ng', git: 'https://github.com/LukeCarrier/chef-nvm-ng.git',
                    branch: 'master'
+cookbook 'skype-app', git: 'https://github.com/LukeCarrier/chef-skype-app.git',
+                      branch: 'windows-remote-file'
 cookbook 'virtualbox', git: 'https://github.com/LukeCarrier/chef-virtualbox.git',
                        branch: 'master'
 
@@ -15,7 +17,6 @@ cookbook 'virtualbox', git: 'https://github.com/LukeCarrier/chef-virtualbox.git'
 cookbook 'chocolatey', '~> 1.0.0'
 cookbook 'chrome', '~> 1.1.1'
 cookbook 'git', '~> 4.3.7'
-cookbook 'skype-app', '~> 0.2.0'
 cookbook 'steam', '~> 2.0.0'
 cookbook 'vagrant', '~> 0.5.0'
 cookbook 'winbox', '~> 0.9.101'
