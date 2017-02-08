@@ -113,3 +113,24 @@ Or a specific recipe:
 ```
 $ sudo chef-solo -c solo.rb -o <name>
 ```
+
+## Customising attributes and runlists
+
+Create a `nodes/<hostname>.json` file for the machine you're provisioning with contents like the following:
+
+```json
+{
+    "name": "<hostname>",
+    "user": {
+        "login": "<user>",
+        "group": "<user>",
+        "homedir": "C:\Users\<user>"
+    }
+}
+```
+
+When running Chef, instruct it to read properties from the file:
+
+```
+$ sudo chef-solo -c solo.rb -j configs/<hostname>.json
+```
