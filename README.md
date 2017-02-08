@@ -21,7 +21,7 @@ community-maintained cookbooks.
 
 Configuration is divided into three key roles.
 
-### ```base```
+### `base`
 
 Basic system configuration and every day applications.
 
@@ -38,7 +38,7 @@ Basic system configuration and every day applications.
 | [Skype](http://skype.com/) client for communication | :thumbsup: | :thumbsup: |
 | [VirtualBox](http://virtualbox.org/) for desktop virtualisation | :thumbsup: | :thumbsup: |
 
-### ```development```
+### `development`
 
 All of the runtimes and tools I need for development.
 
@@ -51,7 +51,7 @@ All of the runtimes and tools I need for development.
 | [Inkscape](https://inkscape.org/) vector image editor | :thumbsup: | |
 | [Vagrant](https://www.vagrantup.com/) | :thumbsup: | :thumbsup: |
 
-### ```gaming```
+### `gaming`
 
 Just in case I one day run out of GitHub issues...
 
@@ -66,7 +66,7 @@ Install Chef and ChefDK on your machine. The Development Kit brings in
 
 ### Linux
 
-Assuming ```bash``` and ```curl``` are installed and on ```PATH```:
+Assuming `bash` and `curl` are installed and on `PATH`:
 
 ```
 $ sudo apt-get install -y bash curl
@@ -76,8 +76,8 @@ $ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P c
 ### Windows
 
 [WMF 3.0](https://www.microsoft.com/en-gb/download/details.aspx?id=34595) is
-required for the ```Invoke-WebRequest``` PowerShell cmdlet. Once installed,
-reboot Windows and launch PowerShell as an administrator:
+required for the `Invoke-WebRequest` PowerShell cmdlet. Once installed, reboot
+Windows and launch PowerShell as an administrator:
 
 ```
 > . { Invoke-WebRequest -UseBasicParsing https://omnitruck.chef.io/install.ps1 } `
@@ -98,12 +98,18 @@ $env:HOMEPATH  = "\Users\<username>"
 
 First, allow Berkshelf to install our dependencies:
 
-    $ berks vendor
+```
+$ berks vendor
+```
 
 Then run either a specific configuration:
 
-    $ sudo chef-solo -c solo.rb -j configs/<name>.json
+```
+$ sudo chef-solo -c solo.rb -j configs/<name>.json
+```
 
 Or a specific recipe:
 
-    $ sudo chef-solo -c solo.rb -o <name>
+```
+$ sudo chef-solo -c solo.rb -o <name>
+```
