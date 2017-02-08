@@ -2,6 +2,9 @@
 /Berksfile.lock
 /berks-cookbooks/
 
+# Per-node configuration
+/nodes/
+
 # Chef's own temporary files
 /cache/
 /chef-client-running.pid
