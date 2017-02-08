@@ -4,14 +4,12 @@
 # permissions when altering your configuration files.
 default['user']['name']    = 'Luke Carrier'
 default['user']['email']   = 'luke@carrier.im'
-default['user']['homedir'] = '/home/luke'
 default['user']['login']   = 'luke'
 default['user']['group']   = 'luke'
+default['user']['homedir'] = "/home/#{default['user']['login']}"
 
 if node['platform_family'] == 'windows'
-  default['user']['login']   = 'lcarrier'
-  default['user']['group']   = 'lcarrier'
-  default['user']['homedir'] = 'C:\Users\lcarrier'
+  default['user']['homedir'] = "C:\Users\#{default['user']['login']}"
 end
 
 # The version of Git to install (Windows only)
