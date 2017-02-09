@@ -1,1 +1,1 @@
-package 'vim-enhanced'
+package 'vim'
