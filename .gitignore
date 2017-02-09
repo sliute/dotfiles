@@ -9,5 +9,6 @@
 /cache/
 /chef-client-running.pid
 /chef-stacktrace.out
+/local-mode-cache/
 /remote_file/
 /tmp/
