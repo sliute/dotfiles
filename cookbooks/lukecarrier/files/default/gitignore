@@ -1,1 +1,3 @@
+# Editor and IDE files
+.idea/
 *.sublime-*
