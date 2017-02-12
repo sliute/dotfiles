@@ -1,4 +1,5 @@
 [legacy/profiles:/:87f7eb7f-b7d1-4841-908f-d3f3ae29fa99]
+login-shell=true
 use-theme-colors=true
 palette=['rgb(43,48,59)', 'rgb(191,97,106)', 'rgb(163,190,140)', 'rgb(235,203,139)', 'rgb(143,161,179)', 'rgb(180,142,173)', 'rgb(150,181,180)', 'rgb(192,197,206)', 'rgb(101,115,126)', 'rgb(191,97,106)', 'rgb(163,190,140)', 'rgb(235,203,139)', 'rgb(143,161,179)', 'rgb(180,142,173)', 'rgb(150,181,180)', 'rgb(239,241,245)']
 visible-name='Base 16 Ocean Dark'
