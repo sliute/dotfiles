@@ -8,10 +8,12 @@ dconf_dump = cookbook.preferred_filename_on_disk_location(run_context.node, :fil
 dconf_root = '/org/gnome/terminal'
 
 bash 'dconf reset -f && dconf load' do
-  cwd node['user']['homedir']
+  user  node['user']['login']
+  group node['user']['group']
+  cwd   node['user']['homedir']
 
   code <<-EOF
-    su -c 'dconf reset -f #{dconf_root}/' #{node['user']['login']}
-    su -c 'cat #{dconf_dump} | dconf load #{dconf_root}/' #{node['user']['group']}
+    dconf reset -f #{dconf_root}/'
+    cat #{dconf_dump} | dconf load #{dconf_root}/'
   EOF
 end
