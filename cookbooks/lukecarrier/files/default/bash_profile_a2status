@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-alias a2status='w3m -dump http://localhost/server-status'

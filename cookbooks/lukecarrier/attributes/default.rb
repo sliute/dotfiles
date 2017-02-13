@@ -2,11 +2,13 @@
 #
 # Used to generate paths to things, your Git configuration and a bunch of
 # permissions when altering your configuration files.
-default['user']['name']    = 'Luke Carrier'
-default['user']['email']   = 'luke@carrier.im'
-default['user']['login']   = 'luke'
-default['user']['group']   = 'luke'
-default['user']['homedir'] = "/home/#{default['user']['login']}"
+default['user']['name']           = 'Luke Carrier'
+default['user']['email']          = 'luke@carrier.im'
+default['user']['login']          = 'luke'
+default['user']['group']          = 'luke'
+default['user']['homedir']        = "/home/#{default['user']['login']}"
+default['user']['applicationdir'] = "#{default['user']['homedir']}/.local/applications"
+default['user']['bindir']         = "#{default['user']['homedir']}/.local/bin"
 
 if node['platform_family'] == 'windows'
   default['user']['homedir'] = "C:\Users\#{default['user']['login']}"
