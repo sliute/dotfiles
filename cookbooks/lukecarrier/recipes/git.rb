@@ -2,6 +2,8 @@
 
 include_recipe 'git'
 
+package 'git-gui'
+
 template File.join(node['user']['homedir'], '.gitconfig') do
   source 'gitconfig.erb'
   variables ({
