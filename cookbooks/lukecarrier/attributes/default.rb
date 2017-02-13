@@ -7,11 +7,11 @@ default['user']['email']          = 'luke@carrier.im'
 default['user']['login']          = 'luke'
 default['user']['group']          = 'luke'
 default['user']['homedir']        = "/home/#{default['user']['login']}"
-default['user']['applicationdir'] = "#{default['user']['homedir']}/.local/applications"
-default['user']['bindir']         = "#{default['user']['homedir']}/.local/bin"
+default['user']['applicationdir'] = "#{node['user']['homedir']}/.local/applications"
+default['user']['bindir']         = "#{node['user']['homedir']}/.local/bin"
 
 if node['platform_family'] == 'windows'
-  default['user']['homedir'] = "C:\Users\#{default['user']['login']}"
+  default['user']['homedir'] = "C:\Users\#{node['user']['login']}"
 end
 
 # The version of Git to install (Windows only)
