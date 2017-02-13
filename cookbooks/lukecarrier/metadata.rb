@@ -6,6 +6,7 @@ description       'Configures Ubuntu systems with no additional effort necessary
 long_description  File.join(File.dirname(__FILE__), 'README.md')
 version           '0.0.1'
 
+depends 'ark'
 depends 'atom'
 depends 'chocolatey'
 depends 'chrome'

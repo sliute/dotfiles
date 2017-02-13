@@ -14,6 +14,7 @@ cookbook 'virtualbox', git: 'https://github.com/LukeCarrier/chef-virtualbox.git'
                        branch: 'master'
 
 # Community cookbooks
+cookbook 'ark', '~> 2.2.1'
 cookbook 'chocolatey', '~> 1.0.0'
 cookbook 'chrome', '~> 1.1.1'
 cookbook 'git', '~> 4.3.7'

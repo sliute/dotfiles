@@ -22,6 +22,15 @@ if node['platform_family'] == 'windows'
   default['git']['cmd_path']     = 'C:\Program Files\Git\cmd'
 end
 
+# Jetbrains Toolbox app
+default['jetbrains_toolbox']['version'] = '1.1.2143'
+if node['platform_family'] == 'debian'
+  default['jetbrains_toolbox']['url']      = "https://download-cf.jetbrains.com/toolbox/jetbrains-toolbox-#{node['jetbrains_toolbox']['version']}.tar.gz"
+  default['jetbrains_toolbox']['checksum'] = "74ca89a1b97367e909075e53c67ee093ca316ecb8124bb39e7318750634552a3"
+elsif node['platform_family'] == 'windows'
+  default['jetbrains_toolbox']['url'] = "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{node['jetbrains_toolbox']['version']}.exe"
+end
+
 # Install nvm under the user account, with these node versions
 if node['platform_family'] == 'debian'
   default['node_development']['directory']     = File.join(default['user']['homedir'], '.nvm')
