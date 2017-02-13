@@ -47,6 +47,12 @@ if node['platform_family'] == 'windows'
   default['keepassx']['install_dir'] = 'C:\Program Files (x86)\KeePassX'
 end
 
+# Vagrant
+default['vagrant']['plugins'] = [
+  'vagrant-dsc',
+  'vagrant-group',
+]
+
 # VirtualBox installation source
 case node['platform_family']
 when 'debian'
