@@ -45,9 +45,3 @@ when 'debian'
 when 'windows'
   default['virtualbox']['url'] = 'http://download.virtualbox.org/virtualbox/5.0.16/VirtualBox-5.0.16-105871-Win.exe'
 end
-
-# Options we're removing
-default['deploy_baseurl']  = 'http://deploy.lukecarrier.me/lukecarrier'
-default['user']['applicationdir'] = File.join(default['user']['homedir'], '.local', 'applications')
-default['redshift']['config'] = "#{default['deploy_baseurl']}/redshift/redshift.conf"
-default['xchat']['servlist'] = "#{default['deploy_baseurl']}/xchat/servlist.conf"
