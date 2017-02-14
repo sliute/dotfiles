@@ -33,8 +33,8 @@ end
 
 # Install nvm under the user account, with these node versions
 if node['platform_family'] == 'debian'
-  default['node_development']['directory']     = File.join(default['user']['homedir'], '.nvm')
-  default['node_development']['profile_file']  = File.join(default['user']['homedir'], '.bash_profile.d', 'nvm')
+  default['node_development']['directory']     = File.join(node['user']['homedir'], '.nvm')
+  default['node_development']['profile_file']  = File.join(node['user']['homedir'], '.bash_profile.d', 'nvm')
   default['node_development']['node_versions'] = [
     '6.9.5',
     '7.5.0',
