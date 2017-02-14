@@ -51,6 +51,8 @@ end
 default['vagrant']['plugins'] = [
   'vagrant-dsc',
   'vagrant-group',
+  'vagrant-scp',
+  'vagrant-vbguest',
 ]
 
 # VirtualBox installation source
