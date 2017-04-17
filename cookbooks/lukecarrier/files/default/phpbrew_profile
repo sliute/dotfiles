@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-export PATH=$PATH:/opt/phpbrew/bin
-. $HOME/.phpbrew/bashrc
-
-phpbrewsudo() {
-    sudo -i /opt/phpbrew/bin/phpbrew $@
-}
