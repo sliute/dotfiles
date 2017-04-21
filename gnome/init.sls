@@ -4,3 +4,8 @@ gnome.gsettings.org.gnome.desktop.interface.clock-show-date:
     - name: clock-show-date
     - value: True
     - runas: {{ pillar['user']['name'] }}
+
+gnome.gtk.~/.config/gtk-3.0/settings.ini:
+  file.managed:
+    - name: {{ pillar['user']['home'] }}/.config/gtk-3.0/settings.ini
+    - source: salt://gnome/gtk/settings.ini
