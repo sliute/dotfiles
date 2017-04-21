@@ -1,4 +1,5 @@
 base:
   '*':
     - gnome
+    - atom
     - git

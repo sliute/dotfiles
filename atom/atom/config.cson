@@ -1,0 +1,35 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-ocean-dark-syntax-theme"
+    ]
+  minimap:
+    plugins:
+      codeglance: true
+      codeglanceDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+  pigments:
+    filetypesForColorWords: [
+      "css"
+      "less"
+      "styl"
+      "stylus"
+      "sass"
+      "scss"
+      "sls"
+    ]
+    markerType: "native-dot"
+  welcome:
+    showOnStartup: false
