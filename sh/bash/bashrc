@@ -1,0 +1,24 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# Keep LINES and COLUMNS in sync with window size
+shopt -s checkwinsize
+
+# Enable shell completion
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
+
+# Finally, source customisations
+shopt -s failglob
+for f in $HOME/.shrc.d/*.{ba,}sh; do
+    . $f
+done
+shopt -u failglob
