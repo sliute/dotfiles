@@ -1,0 +1,4 @@
+# Editor and IDE files
+*.sublime-*
+.idea/
+.vscode/
