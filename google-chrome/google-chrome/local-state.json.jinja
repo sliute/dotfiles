@@ -1,0 +1,28 @@
+{
+  "profile" : {
+    "info_cache" : {
+{% for profile in pillar['google_chrome']['profiles'] %}
+      "{{ profile['slug'] }}" : {
+        "active_time" : 0.0,
+        "avatar_icon" : "{{ profile['avatar'] }}",
+        "background_apps" : false,
+        "gaia_id" : "",
+        "is_ephemeral" : false,
+        "is_omitted_from_profile_list" : false,
+        "is_using_default_avatar" : false,
+        "is_using_default_name" : false,
+        "managed_user_id" : "",
+        "name" : "{{ profile['comment'] }}",
+        "stats_bookmarks" : 0,
+        "stats_browsing_history" : 0,
+        "stats_passwords" : 0,
+        "stats_settings" : 0,
+        "user_name" : ""
+      }
+{% if loop.index != loop.length %}
+,
+{% endif %}
+{% endfor %}
+    }
+  }
+}

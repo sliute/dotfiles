@@ -8,4 +8,5 @@ base:
   '*':
     - atom
     - git
+    - google-chrome
     - vim
