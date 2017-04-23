@@ -5,6 +5,13 @@ gnome.gsettings.org.gnome.settings-daemon.plugins.color.night-light-enabled:
     - value: True
     - runas: {{ pillar['user']['name'] }}
 
+gnome.gsettings.org.gnome.shell.app-picker-view:
+  gsettings.managed:
+    - schema: org.gnome.shell
+    - name: app-picker-view
+    - value: 1
+    - runas: {{ pillar['user']['name'] }}
+
 gnome.gsettings.org.gnome.desktop.interface.clock-show-date:
   gsettings.managed:
     - schema: org.gnome.desktop.interface
