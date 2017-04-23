@@ -8,3 +8,4 @@ base:
   '*':
     - atom
     - git
+    - vim
