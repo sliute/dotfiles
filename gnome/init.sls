@@ -23,3 +23,17 @@ gnome.gtk.~/.config/gtk-3.0/settings.ini:
   file.managed:
     - name: {{ pillar['user']['home'] }}/.config/gtk-3.0/settings.ini
     - source: salt://gnome/gtk/settings.ini
+
+gnome.gsettings.org.gnome.books.night-mode:
+  gsettings.managed:
+    - schema: org.gnome.books
+    - name: night-mode
+    - value: True
+    - runas: {{ pillar['user']['name'] }}
+
+gnome.gsettings.org.gnome.documents.night-mode:
+  gsettings.managed:
+    - schema: org.gnome.documents
+    - name: night-mode
+    - value: True
+    - runas: {{ pillar['user']['name'] }}
