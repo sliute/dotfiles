@@ -37,3 +37,13 @@ gnome.gsettings.org.gnome.documents.night-mode:
     - name: night-mode
     - value: True
     - runas: {{ pillar['user']['name'] }}
+
+gnome.gsettings.org.gnome.shell.favorite-apps:
+  gsettings.managed:
+    - schema: org.gnome.shell
+    - name: favorite-apps
+    - value:
+      - google-chrome.desktop
+      - nautilus.desktop
+      - gnome-terminal.desktop
+    - runas: {{ pillar['user']['name'] }}
