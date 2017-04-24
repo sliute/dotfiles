@@ -11,3 +11,4 @@ base:
     - git
     - google-chrome
     - vim
+    - virtualbox
