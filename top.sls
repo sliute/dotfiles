@@ -10,5 +10,6 @@ base:
     - atom
     - git
     - google-chrome
+    - vagrant
     - vim
     - virtualbox
