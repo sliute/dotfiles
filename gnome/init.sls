@@ -47,3 +47,17 @@ gnome.gsettings.org.gnome.shell.favorite-apps:
       - nautilus.desktop
       - gnome-terminal.desktop
     - runas: {{ pillar['user']['name'] }}
+
+gnome.gsettings.org.gnome.gnome-system-monitor.show-dependencies:
+  gsettings.managed:
+    - schema: org.gnome.gnome-system-monitor
+    - name: show-dependencies
+    - value: True
+    - runas: {{ pillar['user']['name'] }}
+
+gnome.gsettings.org.gnome.gnome-system-monitor.show-whose-processes:
+  gsettings.managed:
+    - schema: org.gnome.gnome-system-monitor
+    - name: show-whose-processes
+    - value: all
+    - runas: {{ pillar['user']['name'] }}
