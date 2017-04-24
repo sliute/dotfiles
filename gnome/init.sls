@@ -61,3 +61,17 @@ gnome.gsettings.org.gnome.gnome-system-monitor.show-whose-processes:
     - name: show-whose-processes
     - value: all
     - runas: {{ pillar['user']['name'] }}
+
+gnome.gsettings.org.gnome.nautilus.preferences.default-folder-viewer:
+  gsettings.managed:
+    - schema: org.gnome.nautilus.preferences
+    - name: default-folder-viewer
+    - value: list-view
+    - runas: {{ pillar['user']['name'] }}
+
+gnome.gsettings.org.gnome.nautilus.list-view.use-tree-view:
+  gsettings.managed:
+    - schema: org.gnome.nautilus.list-view
+    - name: use-tree-view
+    - value: true
+    - runas: {{ pillar['user']['name'] }}
