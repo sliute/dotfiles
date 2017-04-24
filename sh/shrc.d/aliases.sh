@@ -1,5 +1,5 @@
 # Make some common commands a little more colourful
-alias less=/usr/share/vim/vim74/macros/less.sh
+alias less=/usr/share/vim/vim80/macros/less.sh
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
