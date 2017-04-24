@@ -4,6 +4,7 @@ base:
     - sh
     - gnome
     - gnome-terminal
+    - remmina
 
   '*':
     - atom
