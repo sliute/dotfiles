@@ -10,6 +10,7 @@ base:
     - atom
     - git
     - google-chrome
+    - terraform
     - vagrant
     - vim
     - virtualbox
