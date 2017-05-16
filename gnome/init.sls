@@ -44,8 +44,9 @@ gnome.gsettings.org.gnome.shell.favorite-apps:
     - name: favorite-apps
     - value:
       - google-chrome.desktop
-      - nautilus.desktop
-      - gnome-terminal.desktop
+      - org.gnome.Nautilus.desktop
+      - com.gexperts.Tilix.desktop
+      - virtualbox.desktop
     - runas: {{ pillar['user']['name'] }}
 
 gnome.gsettings.org.gnome.desktop.wm.keybindings.show-desktop:
