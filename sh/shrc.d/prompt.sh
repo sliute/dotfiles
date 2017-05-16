@@ -3,6 +3,11 @@
 #     debian_chroot=$(cat /etc/debian_chroot)
 # fi
 
+# VTE provides enhanced integration between the shell and the hosting terminal
+# via escape sequences. This file appears to be installed by default on Ubuntu
+# installations.
+. /etc/profile.d/vte-2.91.sh
+
 fg_black=$(tput setaf 0)
 fg_red=$(tput setaf 1)
 fg_green=$(tput setaf 2)
@@ -68,6 +73,8 @@ prompt_command_main() {
         export PROMPT_COMMAND="prompt_command_main 0"
     fi
     export PS1="${cmd_exit}${user}${host}${dir}${git_status}\n> "
+
+    __vte_prompt_command
 }
 
 export PROMPT_COMMAND="prompt_command_main 1"
