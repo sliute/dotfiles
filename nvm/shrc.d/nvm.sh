@@ -1,0 +1,1 @@
+. "${HOME}/.nvm/nvm.sh"

@@ -6,6 +6,7 @@ base:
     - gnome-terminal
     - tilix
     - remmina
+    - nvm
 
   '*':
     - atom
