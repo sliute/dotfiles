@@ -48,6 +48,13 @@ gnome.gsettings.org.gnome.shell.favorite-apps:
       - gnome-terminal.desktop
     - runas: {{ pillar['user']['name'] }}
 
+gnome.gsettings.org.gnome.desktop.wm.keybindings.show-desktop:
+  gsettings.managed:
+    - schema: org.gnome.desktop.wm.keybindings
+    - name: show-desktop
+    - value: []
+    - runas: {{ pillar['user']['name'] }}
+
 gnome.gsettings.org.gnome.gnome-system-monitor.show-dependencies:
   gsettings.managed:
     - schema: org.gnome.gnome-system-monitor
