@@ -7,6 +7,7 @@ base:
     - tilix
     - remmina
     - nvm
+    - docker
 
   '*':
     - atom
