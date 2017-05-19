@@ -34,3 +34,11 @@ docker.group:
       - docker
     - require:
       - pkg: docker.pkg
+
+docker.sh:
+  file.managed:
+    - name: {{ pillar['user']['home'] }}/.shrc.d/docker.sh
+    - source: salt://docker/shrc.d/docker.sh
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['name'] }}
+    - mode: 0640
