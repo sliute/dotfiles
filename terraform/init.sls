@@ -22,4 +22,12 @@ terraform.binary:
     - if_missing: {{ binary | yaml_dquote }}
     - require:
       - file: user.bin_dir
+
+terraform.binary.mode:
+  file.managed:
+    - name: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}/terraform
+    - mode: 0750
+    - replace: False
+    - require:
+      - archive: terraform.binary
 {% endif %}

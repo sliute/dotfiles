@@ -14,4 +14,12 @@ packer.binary:
     - if_missing: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}/packer
     - require:
       - file: user.bin_dir
+
+packer.binary.mode:
+  file.managed:
+    - name: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}/packer
+    - mode: 0750
+    - replace: False
+    - require:
+      - archive: packer.binary
 {% endif %}
