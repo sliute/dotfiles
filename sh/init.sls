@@ -30,3 +30,12 @@ sh.~/.shrc.d:
     - group: {{ pillar['user']['name'] }}
     - dir_mode: 0750
     - file_mode: 0640
+
+sh.~/.shrc.d/path.sh:
+  file.managed:
+    - name: {{ pillar['user']['home'] }}/.shrc.d/path.sh
+    - source: salt://sh/sh/path.sh.jinja
+    - template: jinja
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['name'] }}
+    - mode: 0640
