@@ -1,12 +1,20 @@
 {% if grains['kernel'] == 'Linux' %}
+{% set binary = pillar['user']['home'] + "/.local/bin/terraform" %}
+terraform.remove-previous:
+  cmd.run:
+    - name: rm -f {{ binary | yaml_dquote }}
+    - unless: |
+        {{ binary | yaml_dquote }} version \
+                | head -n1 \
+                | grep v{{ pillar['terraform']['version'] | yaml_dquote }}
+
 terraform.binary:
   archive.extracted:
     - name: {{ pillar['user']['home'] }}/.local/bin
     - enforce_toplevel: False
-    - source: {{ pillar['terraform']['source_url'] }}
-    - source_hash: {{ pillar['terraform']['source_hash'] }}
-    - source_hash_update: True
+    - source: https://releases.hashicorp.com/terraform/{{ pillar['terraform']['version'] }}/terraform_{{ pillar['terraform']['version'] }}_linux_amd64.zip
+    - source_hash: https://releases.hashicorp.com/terraform/{{ pillar['terraform']['version'] }}/terraform_{{ pillar['terraform']['version'] }}_SHA256SUMS
     - user: {{ pillar['user']['name'] }}
     - group: {{ pillar['user']['name'] }}
-    - if_missing: {{ pillar['user']['home'] }}/.local/bin/terraform
+    - if_missing: {{ binary | yaml_dquote }}
 {% endif %}
