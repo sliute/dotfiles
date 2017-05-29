@@ -3,6 +3,7 @@ git.pkgs:
     - pkgs:
       - git
       - git-gui
+      - meld
 
 git.~/.gitconfig:
   file.managed:
