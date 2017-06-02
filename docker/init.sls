@@ -1,3 +1,6 @@
+include:
+  - user
+
 docker.linux-headers:
   pkg.latest:
     - pkgs:
@@ -25,6 +28,17 @@ docker.pkg:
       - pkg: docker.linux-headers
       - pkg: docker.apt
       - pkgrepo: docker.pkgrepo
+
+docker.compose:
+  file.managed:
+    - name: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}/docker-compose
+    - source: https://github.com/docker/compose/releases/download/{{ pillar['docker']['compose']['version'] }}/docker-compose-{{ grains['kernel'] }}-{{ grains['cpuarch'] }}
+    - skip_verify: True
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['name'] }}
+    - mode: 0750
+    - require:
+      - file: user.bin_dir
 
 docker.group:
   user.present:
