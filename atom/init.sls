@@ -27,6 +27,7 @@ atom.pkgs:
   atompkg.latest:
     - runas: {{ pillar['user']['name'] }}
     - pkgs:
+      - advanced-open-file
       - base16-ocean-dark-syntax-theme
       - clang-format
       - editorconfig
