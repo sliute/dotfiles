@@ -11,6 +11,7 @@ base:
 
   '*':
     - atom
+    - emmet
     - git
     - google-chrome
     - packer
