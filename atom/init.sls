@@ -31,6 +31,7 @@ atom.pkgs:
       - base16-ocean-dark-syntax-theme
       - clang-format
       - editorconfig
+      - emmet
       - file-icons
       - language-cmake
       - language-docker

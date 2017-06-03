@@ -6,6 +6,8 @@
       "one-dark-ui"
       "base16-ocean-dark-syntax-theme"
     ]
+  emmet:
+    extensionsPath: "~/.emmet"
   minimap:
     plugins:
       codeglance: true
