@@ -3,7 +3,7 @@ sh.~/.profile:
     - name: {{ pillar['user']['home'] }}/.profile
     - source: salt://sh/sh/profile
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
 
 sh.~/.inputrc:
@@ -11,7 +11,7 @@ sh.~/.inputrc:
     - name: {{ pillar['user']['home'] }}/.inputrc
     - source: salt://sh/bash/inputrc
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
 
 sh.~/.bashrc:
@@ -19,7 +19,7 @@ sh.~/.bashrc:
     - name: {{ pillar['user']['home'] }}/.bashrc
     - source: salt://sh/bash/bashrc
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
 
 sh.~/.shrc.d:
@@ -27,7 +27,7 @@ sh.~/.shrc.d:
     - name: {{ pillar['user']['home'] }}/.shrc.d
     - source: salt://sh/shrc.d
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - dir_mode: 0750
     - file_mode: 0640
 
@@ -37,5 +37,5 @@ sh.~/.shrc.d/path.sh:
     - source: salt://sh/sh/path.sh.jinja
     - template: jinja
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640

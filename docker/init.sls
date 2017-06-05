@@ -35,7 +35,7 @@ docker.compose:
     - source: https://github.com/docker/compose/releases/download/{{ pillar['docker']['compose']['version'] }}/docker-compose-{{ grains['kernel'] }}-{{ grains['cpuarch'] }}
     - skip_verify: True
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0750
     - require:
       - file: user.bin_dir
@@ -54,5 +54,5 @@ docker.sh:
     - name: {{ pillar['user']['home'] }}/.shrc.d/docker.sh
     - source: salt://docker/shrc.d/docker.sh
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640

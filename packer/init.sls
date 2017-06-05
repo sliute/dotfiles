@@ -10,7 +10,7 @@ packer.binary:
     - source_hash: {{ pillar['packer']['source_hash'] }}
     - source_hash_update: True
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - if_missing: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}/packer
     - require:
       - file: user.bin_dir

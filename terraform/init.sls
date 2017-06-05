@@ -18,7 +18,7 @@ terraform.binary:
     - source: https://releases.hashicorp.com/terraform/{{ pillar['terraform']['version'] }}/terraform_{{ pillar['terraform']['version'] }}_linux_amd64.zip
     - source_hash: https://releases.hashicorp.com/terraform/{{ pillar['terraform']['version'] }}/terraform_{{ pillar['terraform']['version'] }}_SHA256SUMS
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - if_missing: {{ binary | yaml_dquote }}
     - require:
       - file: user.bin_dir

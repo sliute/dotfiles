@@ -12,7 +12,7 @@ atom.~/.atom:
   file.directory:
     - name: {{ pillar['user']['home'] }}/.atom
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0750
 
 atom.~/.atom/config.cson:
@@ -20,7 +20,7 @@ atom.~/.atom/config.cson:
     - name: {{ pillar['user']['home'] }}/.atom/config.cson
     - source: salt://atom/atom/config.cson
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
 
 atom.pkgs:

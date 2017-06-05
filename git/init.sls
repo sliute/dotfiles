@@ -11,7 +11,7 @@ git.~/.gitconfig:
     - source: salt://git/git/config.jinja
     - template: jinja
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
 
 git.~/.gitignore:
@@ -19,5 +19,5 @@ git.~/.gitignore:
     - name: {{ pillar['user']['home'] }}/.gitignore
     - source: salt://git/git/ignore
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640

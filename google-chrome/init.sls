@@ -14,7 +14,7 @@ google-chrome.~/.config/google-chrome:
   file.directory:
     - name: {{ pillar['user']['home'] }}/.config/google-chrome
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0750
 
 google-chrome.~/.config/google-chrome/local-state:
@@ -24,7 +24,7 @@ google-chrome.~/.config/google-chrome/local-state:
     - template: jinja
     - replace: False
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
 
 {% for profile in pillar['google_chrome']['profiles'] if profile['slug'] != 'Default' %}
@@ -36,6 +36,6 @@ google-chrome.profile.{{ profile['slug'] }}:
     - context:
       profile: {{ profile | yaml }}
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
 {% endfor %}

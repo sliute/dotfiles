@@ -9,5 +9,5 @@ nvm.shell:
     - name: {{ pillar['user']['home'] }}/.shrc.d/nvm.sh
     - source: salt://nvm/shrc.d/nvm.sh
     - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
     - mode: 0640
