@@ -2,7 +2,7 @@ include:
   - user
 
 {% if grains['kernel'] == 'Linux' %}
-{% set binary = pillar['user']['home'] + "{{ pillar['user']['bin_dir'] }}/terraform" %}
+{% set binary = pillar['user']['home'] + pillar['user']['bin_dir'] + "/terraform" %}
 terraform.remove-previous:
   cmd.run:
     - name: rm -f {{ binary | yaml_dquote }}
@@ -22,6 +22,7 @@ terraform.binary:
     - if_missing: {{ binary | yaml_dquote }}
     - require:
       - file: user.bin_dir
+      - cmd: terraform.remove-previous
 
 terraform.binary.mode:
   file.managed:
