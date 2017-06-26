@@ -27,7 +27,11 @@ atom.pkgs:
   atompkg.latest:
     - runas: {{ pillar['user']['name'] }}
     - pkgs:
+      - Zen
       - advanced-open-file
+      - atom-ctags
+      - atom-jinja2
+      - autocomplete-clang
       - base16-ocean-dark-syntax-theme
       - clang-format
       - editorconfig
@@ -35,7 +39,9 @@ atom.pkgs:
       - file-icons
       - language-cmake
       - language-docker
+      - language-glsl
       - language-hcl
+      - language-nginx
       - language-powershell
       - linter
       - linter-alex
@@ -47,4 +53,7 @@ atom.pkgs:
       - minimap-find-and-replace
       - minimap-git-diff
       - minimap-linter
+      - minimap-split-diff
       - pigments
+      - sort-all-the-things
+      - split-diff
