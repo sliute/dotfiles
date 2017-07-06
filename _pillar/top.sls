@@ -1,6 +1,7 @@
 base:
   '*':
     - user
+    - abricotine
     - docker
     - google-chrome
     - packer
