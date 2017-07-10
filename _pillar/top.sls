@@ -4,6 +4,7 @@ base:
     - abricotine
     - docker
     - google-chrome
+    - jetbrains-toolbox
     - packer
     - terraform
     - vagrant
