@@ -21,3 +21,11 @@ user.local_share_dir:
     - user: {{ pillar['user']['name'] }}
     - group: {{ pillar['user']['group'] }}
     - mode: 0700
+
+user.code_dir:
+  file.directory:
+    - name: {{ pillar['user']['home'] }}{{ pillar['user']['code_dir'] }}
+    - makedirs: True
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
+    - mode: 0700
