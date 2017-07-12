@@ -1,6 +1,10 @@
 include:
   - user
 
+php.snmp.pkgs:
+  pkg.installed:
+    - name: snmp-mibs-downloader
+
 php.sapis:
   pkg.installed:
     - pkgs:
