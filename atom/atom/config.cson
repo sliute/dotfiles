@@ -6,6 +6,9 @@
       "one-dark-ui"
       "base16-ocean-dark-syntax-theme"
     ]
+  editor:
+    fontFamily: "Ubuntu Mono"
+    fontSize: 16
   emmet:
     extensionsPath: "~/.emmet"
   minimap:
