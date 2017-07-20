@@ -1,1 +1,2 @@
-export PATH="${PATH}:${HOME}/.config/composer/vendor/bin"
+export COMPOSER_HOME="${HOME}/.config/composer"
+export PATH="${PATH}:${COMPOSER_HOME}/vendor/bin"
