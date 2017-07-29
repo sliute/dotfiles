@@ -2,6 +2,12 @@ user:
   name: luke
   home: /home/luke
   group: luke
+  groups:
+    - adm
+    - sudo
+    - lpadmin
+    - docker
+    - sambashare
   bin_dir: /.local/bin
   config_dir: /.config
   local_share_dir: /.local/share

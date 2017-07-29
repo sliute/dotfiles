@@ -1,3 +1,14 @@
+user.user:
+  user.present:
+    - name: {{ pillar['user']['name'] }}
+    - groups:
+      - {{ pillar['user']['group'] }}
+    - optional_groups:
+{% for group in salt['pillar.get']('user:groups', []) %}
+      - {{ group }}
+{% endfor %}
+    - remove_groups: False
+
 user.bin_dir:
   file.directory:
     - name: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}
