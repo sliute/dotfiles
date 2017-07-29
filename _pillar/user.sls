@@ -6,6 +6,7 @@ user:
     - adm
     - sudo
     - lpadmin
+    - plugdev
     - docker
     - sambashare
   bin_dir: /.local/bin

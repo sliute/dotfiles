@@ -1,4 +1,6 @@
+{% from 'android-sdk/macros.sls' import install_sdk_package %}
 {% set sdk_dir = pillar['user']['home'] + '/.android' %}
+{% set udev_dir = '/opt/android-udev-rules' %}
 
 android-sdk.remove-previous:
   cmd.run:
@@ -35,13 +37,25 @@ android-sdk.licenses:
     - require:
       - android-sdk.sdk
 
+{{ install_sdk_package(sdk_dir, 'platform-tools') }}
+
 {% for platform in pillar['android-sdk']['platforms'] %}
-android-sdk.platform.{{ platform }}:
-  cmd.run:
-    - name: {{ sdk_dir }}/tools/bin/sdkmanager 'platforms;{{ platform }}'
-    - user: {{ pillar['user']['name'] }}
-    - group: {{ pillar['user']['group'] }}
-    - require:
-      - android-sdk.sdk
-      - android-sdk.licenses
+{{ install_sdk_package(sdk_dir, 'platforms;' + platform) }}
 {% endfor %}
+
+android-sdk.udev.repo:
+  git.latest:
+    - name: https://github.com/M0Rf30/android-udev-rules.git
+    - target: {{ udev_dir }}
+    - rev: master
+    - user: root
+
+android-sdk.udev.udev:
+  file.symlink:
+    - name: /etc/udev/rules.d/51-android.rules
+    - target: {{ udev_dir }}/51-android.rules
+
+android-sdk.udev.adb-usb:
+  file.symlink:
+    - name: {{ sdk_dir }}/adb_usb.ini
+    - target: {{ udev_dir }}/adb_usb.ini
