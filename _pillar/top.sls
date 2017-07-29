@@ -1,13 +1,13 @@
 base:
   '*':
     - user
-    - abricotine
+    - virtualbox
     - android-sdk
     - java
     - docker
-    - google-chrome
-    - jetbrains-toolbox
     - packer
     - terraform
     - vagrant
-    - virtualbox
+    - abricotine
+    - google-chrome
+    - jetbrains-toolbox
