@@ -2,6 +2,7 @@ base:
   '*':
     - user
     - abricotine
+    - java
     - docker
     - google-chrome
     - jetbrains-toolbox
