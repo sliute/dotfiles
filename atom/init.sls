@@ -40,6 +40,7 @@ atom.pkgs:
       - language-cmake
       - language-docker
       - language-glsl
+      - language-gradle
       - language-hcl
       - language-nginx
       - language-powershell
