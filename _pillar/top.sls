@@ -2,6 +2,7 @@ base:
   '*':
     - user
     - abricotine
+    - android-sdk
     - java
     - docker
     - google-chrome
