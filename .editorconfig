@@ -10,7 +10,7 @@ indent_style = space
 indent_size = 4
 trim_trailing_whitespace = false
 
-[*.{sh,py}]
+[*.{sh,py,xml}]
 indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
