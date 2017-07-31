@@ -1,0 +1,10 @@
+<application>
+  <component name="LineMarkerSettings">
+    <option name="providers">
+      <map>
+        <entry key="com.goide.go.GoGotoSuperHandler$GoSuperMarkerProvider" value="false" />
+        <entry key="com.goide.go.GoInheritorsSearch$GoInheritorMarkerProvider" value="false" />
+      </map>
+    </option>
+  </component>
+</application>
