@@ -1,7 +1,7 @@
 <scheme name="One Dark" version="142">
-  <option name="FONT_SCALE" value="2.4166667" />
+  <option name="FONT_SCALE" value="1.25" />
   <option name="LINE_SPACING" value="1.5" />
-  <option name="EDITOR_FONT_SIZE" value="31" />
+  <option name="EDITOR_FONT_SIZE" value="16" />
   <option name="EDITOR_FONT_NAME" value="Ubuntu Mono" />
   <option name="CONSOLE_FONT_NAME" value="Ubuntu Mono" />
   <option name="CONSOLE_LINE_SPACING" value="1.5" />
@@ -9,6 +9,7 @@
     <option name="CARET_COLOR" value="eff1f5" />
     <option name="GUTTER_BACKGROUND" value="2b303b" />
     <option name="LINE_NUMBERS_COLOR" value="c0c5ce" />
+    <option name="SELECTION_BACKGROUND" value="4f5b66" />
   </colors>
   <attributes>
     <option name="BAD_CHARACTER">
