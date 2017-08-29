@@ -34,7 +34,7 @@ sh.~/.shrc.d:
 sh.~/.shrc.d/path.sh:
   file.managed:
     - name: {{ pillar['user']['home'] }}/.shrc.d/path.sh
-    - source: salt://sh/sh/path.sh.jinja
+    - source: salt://sh/shrc.d/path.sh.jinja
     - template: jinja
     - user: {{ pillar['user']['name'] }}
     - group: {{ pillar['user']['group'] }}
