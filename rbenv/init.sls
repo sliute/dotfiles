@@ -12,6 +12,22 @@ rbenv.bash-extension:
     - cwd: {{ rbenv_root }}
     - runas: {{ pillar['user']['name'] }}
 
+rbenv.plugin.ruby-build.deps:
+  pkg.latest:
+    - pkgs:
+      - gcc-6
+      - autoconf
+      - bison
+      - build-essential
+      - libssl-dev
+      - libyaml-dev
+      - libreadline6-dev
+      - zlib1g-dev
+      - libncurses5-dev
+      - libffi-dev
+      - libgdbm3
+      - libgdbm-dev
+
 rbenv.plugin.ruby-build:
   git.latest:
     - name: https://github.com/rbenv/ruby-build.git
