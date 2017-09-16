@@ -37,6 +37,7 @@ atom.pkgs:
       - editorconfig
       - emmet
       - file-icons
+      - highlight-line
       - language-cmake
       - language-docker
       - language-glsl
