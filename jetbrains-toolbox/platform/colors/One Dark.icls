@@ -7,6 +7,7 @@
   <option name="CONSOLE_LINE_SPACING" value="1.5" />
   <colors>
     <option name="CARET_COLOR" value="eff1f5" />
+    <option name="CARET_ROW_COLOR" value="343d46" />
     <option name="GUTTER_BACKGROUND" value="2b303b" />
     <option name="LINE_NUMBERS_COLOR" value="c0c5ce" />
     <option name="SELECTION_BACKGROUND" value="4f5b66" />
