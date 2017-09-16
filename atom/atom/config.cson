@@ -1,6 +1,10 @@
 "*":
   core:
     autoHideMenuBar: true
+    disabledPackages: [
+      "symbols-view"
+      "linter"
+    ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"

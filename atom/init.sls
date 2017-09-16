@@ -30,6 +30,7 @@ atom.pkgs:
       - Zen
       - advanced-open-file
       - atom-ctags
+      - atom-ide-ui
       - atom-jinja2
       - autocomplete-clang
       - base16-ocean-dark-syntax-theme
@@ -38,6 +39,10 @@ atom.pkgs:
       - emmet
       - file-icons
       - highlight-line
+      - ide-csharp
+      - ide-java
+      - ide-php
+      - ide-typescript
       - language-cmake
       - language-docker
       - language-glsl
