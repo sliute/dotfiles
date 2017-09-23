@@ -83,3 +83,21 @@ gnome.gsettings.org.gnome.nautilus.list-view.use-tree-view:
     - name: use-tree-view
     - value: true
     - runas: {{ pillar['user']['name'] }}
+
+gnome.arc-theme:
+  pkg.latest:
+    - name: arc-theme
+
+gnome.arc-theme.gtk-theme:
+  gsettings.managed:
+    - schema: org.gnome.desktop.interface
+    - name: gtk-theme
+    - value: Arc-Darker
+    - runas: {{ pillar['user']['name'] }}
+
+gnome.arc-theme.shell-theme:
+  gsettings.managed:
+    - schema: org.gnome.shell.extensions.user-theme
+    - name: name
+    - value: Arc-Dark
+    - runas: {{ pillar['user']['name'] }}
