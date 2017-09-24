@@ -84,6 +84,11 @@ gnome.gsettings.org.gnome.nautilus.list-view.use-tree-view:
     - value: true
     - runas: {{ pillar['user']['name'] }}
 
+gnome.gdm.theme:
+  alternatives.set:
+    - name: gdm3.css
+    - path: /usr/share/gnome-shell/theme/gnome-shell.css
+
 gnome.shell.extensions:
   gnomeshellpkg.installed:
     - uuids:
