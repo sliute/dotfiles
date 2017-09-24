@@ -84,6 +84,26 @@ gnome.gsettings.org.gnome.nautilus.list-view.use-tree-view:
     - value: true
     - runas: {{ pillar['user']['name'] }}
 
+gnome.shell.extensions:
+  gnomeshellpkg.installed:
+    - uuids:
+      - alternate-tab@gnome-shell-extensions.gcampax.github.com
+      - appindicatorsupport@rgcjonas.gmail.com
+      - user-theme@gnome-shell-extensions.gcampax.github.com
+    - runas: {{ pillar['user']['name'] }}
+
+gnome.gsettings.org.gnome.shell.enabled-extensions:
+  gsettings.managed:
+    - schema: org.gnome.shell
+    - name: enabled-extensions
+    - value:
+      - alternate-tab@gnome-shell-extensions.gcampax.github.com
+      - appindicatorsupport@rgcjonas.gmail.com
+      - user-theme@gnome-shell-extensions.gcampax.github.com
+    - runas: {{ pillar['user']['name'] }}
+    - require:
+      - gnome.shell.extensions
+
 gnome.arc-theme:
   pkg.latest:
     - name: arc-theme
@@ -94,6 +114,8 @@ gnome.arc-theme.gtk-theme:
     - name: gtk-theme
     - value: Arc-Darker
     - runas: {{ pillar['user']['name'] }}
+    - require:
+      - gnome.arc-theme
 
 gnome.arc-theme.shell-theme:
   gsettings.managed:
@@ -101,3 +123,6 @@ gnome.arc-theme.shell-theme:
     - name: name
     - value: Arc-Dark
     - runas: {{ pillar['user']['name'] }}
+    - require:
+      - gnome.arc-theme
+      - gnome.gsettings.org.gnome.shell.enabled-extensions
