@@ -94,6 +94,7 @@ gnome.shell.extensions:
     - uuids:
       - alternate-tab@gnome-shell-extensions.gcampax.github.com
       - appindicatorsupport@rgcjonas.gmail.com
+      - caffeine@patapon.info
       - user-theme@gnome-shell-extensions.gcampax.github.com
     - runas: {{ pillar['user']['name'] }}
 
@@ -104,6 +105,7 @@ gnome.gsettings.org.gnome.shell.enabled-extensions:
     - value:
       - alternate-tab@gnome-shell-extensions.gcampax.github.com
       - appindicatorsupport@rgcjonas.gmail.com
+      - caffeine@patapon.info
       - user-theme@gnome-shell-extensions.gcampax.github.com
     - runas: {{ pillar['user']['name'] }}
     - require:
