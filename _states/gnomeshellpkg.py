@@ -7,7 +7,7 @@ def installed(runas, name, uuids=None):
     ret = {
         'name': name,
         'result': False,
-        'changes': None,
+        'changes': {},
         'comment': '',
     }
 
@@ -33,7 +33,6 @@ def installed(runas, name, uuids=None):
         ret['result'] = True
 
     post_installed = __salt__['gnomeshellpkg.list_pkgs'](runas)
-    ret['changes'] = {}
     for uuid in changed:
         ret['changes'][uuid] = {
             'old': None,
@@ -46,7 +45,7 @@ def latest(name, runas, uuids=None):
     ret = {
         'name': name,
         'result': False,
-        'changes': None,
+        'changes': {},
         'comment': '',
     }
 
@@ -81,7 +80,6 @@ def latest(name, runas, uuids=None):
         ret['result'] = True
 
     post_installed = __salt__['gnomeshellpkg.list_pkgs'](runas)
-    ret['changes'] = {}
     for uuid in changed:
         ret['changes'][uuid] = {
             'old': None if name in missing else pre_installed['name'],

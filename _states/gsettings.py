@@ -14,7 +14,7 @@ def managed(name, runas, schema, value, path=None):
     ret = {
         'name': name,
         'result': False,
-        'changes': None,
+        'changes': {},
         'comment': '',
     }
 

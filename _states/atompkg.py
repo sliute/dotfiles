@@ -7,7 +7,7 @@ def installed(name, runas, pkgs=None):
     ret = {
         'name': name,
         'result': False,
-        'changes': None,
+        'changes': {},
         'comment': '',
     }
 
@@ -33,7 +33,6 @@ def installed(name, runas, pkgs=None):
         ret['result'] = True
 
     post_installed = __salt__['atompkg.list_pkgs'](runas)
-    ret['changes'] = {}
     for name in changed:
         ret['changes'][name] = {
             'old': None,
@@ -46,7 +45,7 @@ def latest(name, runas, pkgs=None):
     ret = {
         'name': name,
         'result': False,
-        'changes': None,
+        'changes': {},
         'comment': '',
     }
 
@@ -81,7 +80,6 @@ def latest(name, runas, pkgs=None):
         ret['result'] = True
 
     post_installed = __salt__['atompkg.list_pkgs'](runas)
-    ret['changes'] = {}
     for name in changed:
         ret['changes'][name] = {
             'old': None if name in missing else pre_installed[name],
