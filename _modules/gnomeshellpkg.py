@@ -112,7 +112,7 @@ def install(runas, uuid):
             '-R',
             '{0}:{1}'.format(runas, group['name']),
             target,
-        ])
+        ], runas='root')
     finally:
         os.unlink(filename)
 
