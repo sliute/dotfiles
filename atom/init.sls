@@ -15,13 +15,15 @@ atom.~/.atom:
     - group: {{ pillar['user']['group'] }}
     - mode: 0750
 
-atom.~/.atom/config.cson:
+{% for file in ['config.cson', 'keymap.cson'] %}
+atom.~/.atom/{{ file }}:
   file.managed:
-    - name: {{ pillar['user']['home'] }}/.atom/config.cson
-    - source: salt://atom/atom/config.cson
+    - name: {{ pillar['user']['home'] }}/.atom/{{ file }}
+    - source: salt://atom/atom/{{ file }}
     - user: {{ pillar['user']['name'] }}
     - group: {{ pillar['user']['group'] }}
     - mode: 0640
+{% endfor %}
 
 atom.pkgs:
   atompkg.latest:
