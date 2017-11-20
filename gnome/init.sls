@@ -43,6 +43,7 @@ gnome.gsettings.org.gnome.shell.favorite-apps:
     - schema: org.gnome.shell
     - name: favorite-apps
     - value:
+      - firefox.desktop
       - google-chrome.desktop
       - org.gnome.Nautilus.desktop
       - com.gexperts.Tilix.desktop
