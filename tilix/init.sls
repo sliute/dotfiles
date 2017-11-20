@@ -6,6 +6,11 @@ tilix.pkg:
   pkg.latest:
     - name: tilix
 
+tilix.default:
+  alternatives.set:
+    - name: x-terminal-emulator
+    - path: /usr/bin/tilix.wrapper
+
 tilix.com.gexperts.Tilix.profiles.list:
   gsettings.managed:
     - schema: com.gexperts.Tilix.ProfilesList
