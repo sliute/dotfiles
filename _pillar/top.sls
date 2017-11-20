@@ -1,5 +1,6 @@
 base:
   '*':
+    - alternatives
     - user
     - virtualbox
     - android-sdk
