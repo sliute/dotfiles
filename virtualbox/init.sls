@@ -7,7 +7,7 @@ virtualbox.repo:
 
 virtualbox.pkg:
   pkg.latest:
-    - name: virtualbox-5.1
+    - name: virtualbox-{{ pillar['virtualbox']['version'] }}
 {% endif %}
 
 {% if grains['kernel'] == 'Linux' %}
