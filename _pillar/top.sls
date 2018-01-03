@@ -4,6 +4,7 @@ base:
     - user
     - virtualbox
     - android-sdk
+    - dotnet
     - java
     - docker
     - packer
