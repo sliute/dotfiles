@@ -90,6 +90,13 @@ gnome.gdm.theme:
     - name: gdm3.css
     - path: /usr/share/gnome-shell/theme/gnome-shell.css
 
+gnome.shell.extension-dir:
+  file.directory:
+    - name: {{ pillar['user']['home'] }}/.local/share/gnome-shell/extensions
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
+    - mode: 0700
+
 gnome.shell.extensions:
   gnomeshellpkg.installed:
     - uuids:
