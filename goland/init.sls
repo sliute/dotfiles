@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.GoLand1.0' %}
+{% set config_dir = pillar['user']['home'] + '/.GoLand'
+    + pillar['jetbrains-toolbox']['versions']['goland'] %}
 
 {{ config_dirs('goland', config_dir) }}
 

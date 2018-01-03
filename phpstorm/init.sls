@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
     import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.PhpStorm2017.2' %}
+{% set config_dir = pillar['user']['home'] + '/.PhpStorm'
+    + pillar['jetbrains-toolbox']['versions']['phpstorm'] %}
 
 {{ config_dirs('phpstorm', config_dir) }}
 

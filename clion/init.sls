@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.CLion2017.2' %}
+{% set config_dir = pillar['user']['home'] + '/.CLion'
+    + pillar['jetbrains-toolbox']['versions']['clion'] %}
 
 {{ config_dirs('clion', config_dir) }}
 

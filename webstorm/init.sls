@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.WebStorm2017.2' %}
+{% set config_dir = pillar['user']['home'] + '/.WebStorm'
+    + pillar['jetbrains-toolbox']['versions']['webstorm'] %}
 
 {{ config_dirs('webstorm', config_dir) }}
 

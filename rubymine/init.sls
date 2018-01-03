@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.RubyMine2017.2' %}
+{% set config_dir = pillar['user']['home'] + '/.RubyMine'
+    + pillar['jetbrains-toolbox']['versions']['rubymine'] %}
 
 {{ config_dirs('rubymine', config_dir) }}
 

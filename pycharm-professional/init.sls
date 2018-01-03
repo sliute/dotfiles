@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.PyCharm2017.2' %}
+{% set config_dir = pillar['user']['home'] + '/.PyCharm'
+    + pillar['jetbrains-toolbox']['versions']['pycharm-professional'] %}
 
 {{ config_dirs('pycharm-professional', config_dir) }}
 

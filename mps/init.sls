@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.MPS2017.1' %}
+{% set config_dir = pillar['user']['home'] + '/.MPS'
+    + pillar['jetbrains-toolbox']['versions']['mps'] %}
 
 {{ config_dirs('mps', config_dir) }}
 

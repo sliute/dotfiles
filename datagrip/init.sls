@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.DataGrip2017.2' %}
+{% set config_dir = pillar['user']['home'] + '/.DataGrip'
+    + pillar['jetbrains-toolbox']['versions']['datagrip'] %}
 
 {{ config_dirs('datagrip', config_dir) }}
 

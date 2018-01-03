@@ -1,6 +1,7 @@
 {% from 'jetbrains-toolbox/macros.sls'
 import config_dirs, install_colors, install_plugins %}
-{% set config_dir = pillar['user']['home'] + '/.Rider2017.1' %}
+{% set config_dir = pillar['user']['home'] + '/.Rider'
+    + pillar['jetbrains-toolbox']['versions']['rider'] %}
 
 include:
   - dotnet
