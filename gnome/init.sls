@@ -1,3 +1,8 @@
+gnome.pkgs:
+  pkg.latest:
+    - pkgs:
+      - gnome-documents
+
 gnome.gsettings.org.gnome.settings-daemon.plugins.color.night-light-enabled:
   gsettings.managed:
     - schema: org.gnome.settings-daemon.plugins.color
