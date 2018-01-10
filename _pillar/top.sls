@@ -6,6 +6,7 @@ base:
     - android-sdk
     - dotnet
     - java
+    - php
     - docker
     - packer
     - terraform

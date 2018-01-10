@@ -8,49 +8,49 @@ php.snmp.pkgs:
 php.sapis:
   pkg.installed:
     - pkgs:
-      - php7.0-cli
+      - php{{ pillar['php']['version'] }}-cli
 
 php.extensions:
   pkg.installed:
     - pkgs:
-      - php7.0-bcmath
-      - php7.0-bz2
-      - php7.0-curl
-      - php7.0-dba
-      - php7.0-enchant
-      - php7.0-gd
-      - php7.0-gmp
-      - php7.0-imap
-      - php7.0-interbase
-      - php7.0-intl
-      - php7.0-json
-      - php7.0-ldap
-      - php7.0-mbstring
-      - php7.0-mcrypt
-      - php7.0-mysql
-      - php7.0-odbc
-      - php7.0-opcache
-      - php7.0-pgsql
-      - php7.0-phpdbg
-      - php7.0-pspell
-      - php7.0-readline
-      - php7.0-recode
-      - php7.0-snmp
-      - php7.0-soap
-      - php7.0-sqlite3
-      - php7.0-sybase
-      - php7.0-tidy
-      - php7.0-xml
-      - php7.0-xmlrpc
-      - php7.0-xsl
-      - php7.0-zip
+      - php{{ pillar['php']['version'] }}-bcmath
+      - php{{ pillar['php']['version'] }}-bz2
+      - php{{ pillar['php']['version'] }}-curl
+      - php{{ pillar['php']['version'] }}-dba
+      - php{{ pillar['php']['version'] }}-enchant
+      - php{{ pillar['php']['version'] }}-gd
+      - php{{ pillar['php']['version'] }}-gmp
+      - php{{ pillar['php']['version'] }}-imap
+      - php{{ pillar['php']['version'] }}-interbase
+      - php{{ pillar['php']['version'] }}-intl
+      - php{{ pillar['php']['version'] }}-json
+      - php{{ pillar['php']['version'] }}-ldap
+      - php{{ pillar['php']['version'] }}-mbstring
+      - php{{ pillar['php']['version'] }}-mcrypt
+      - php{{ pillar['php']['version'] }}-mysql
+      - php{{ pillar['php']['version'] }}-odbc
+      - php{{ pillar['php']['version'] }}-opcache
+      - php{{ pillar['php']['version'] }}-pgsql
+      - php{{ pillar['php']['version'] }}-phpdbg
+      - php{{ pillar['php']['version'] }}-pspell
+      - php{{ pillar['php']['version'] }}-readline
+      - php{{ pillar['php']['version'] }}-recode
+      - php{{ pillar['php']['version'] }}-snmp
+      - php{{ pillar['php']['version'] }}-soap
+      - php{{ pillar['php']['version'] }}-sqlite3
+      - php{{ pillar['php']['version'] }}-sybase
+      - php{{ pillar['php']['version'] }}-tidy
+      - php{{ pillar['php']['version'] }}-xml
+      - php{{ pillar['php']['version'] }}-xmlrpc
+      - php{{ pillar['php']['version'] }}-xsl
+      - php{{ pillar['php']['version'] }}-zip
     - require:
       - pkg: php.sapis
 
 php.utils:
   pkg.installed:
     - pkgs:
-      - php7.0-dev
+      - php{{ pillar['php']['version'] }}-dev
       - php-pear
     - require:
       - pkg: php.sapis
