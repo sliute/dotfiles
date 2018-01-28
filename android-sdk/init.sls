@@ -59,3 +59,6 @@ android-sdk.udev.adb-usb:
   file.symlink:
     - name: {{ sdk_dir }}/adb_usb.ini
     - target: {{ udev_dir }}/adb_usb.ini
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
+    - mode: 0640
