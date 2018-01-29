@@ -9,7 +9,7 @@ tilix.pkg:
 tilix.default:
   alternatives.set:
     - name: x-terminal-emulator
-    - path: /usr/bin/tilix.wrapper
+    - path: /usr/bin/tilix
 
 tilix.com.gexperts.Tilix.profiles.list:
   gsettings.managed:
