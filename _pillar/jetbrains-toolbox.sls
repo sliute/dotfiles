@@ -19,9 +19,9 @@ jetbrains-toolbox:
     plugins:
       editorconfig:
         name: editorconfig
-        source: https://download.plugins.jetbrains.com/7294/35419/editorconfig-172.2465.2.zip?updateId=35419&pluginId=7294
-        source_hash: 4dfb0ca695ab0b25e03af9d65e529065eebfb84b24a494fbdccd8c6205c4a9bc
+        source: https://plugins.jetbrains.com/files/7294/42390/editorconfig-181.2784.29.zip?updateId=42390&pluginId=7294
+        source_hash: 6fb47812a104bfdf16b82bc5845bef6ee48730a840b245dcfcecb7f42dd635b1
       material-theme:
         name: Material Theme
-        source: https://raw.githubusercontent.com/ChrisRM/material-theme-jetbrains/v0.5.3.4/Material%20Theme.zip
-        source_hash: 8bfadaaa3f7296cee345efee1154698b9af59be7e139293b13c89462d6f997bf
+        source: https://plugins.jetbrains.com/files/8006/42490/Material_Theme-1.7.0.3.zip?updateId=42490&pluginId=8006
+        source_hash: 3ba0dfdf1547751ff823572ad9afb86e4a4eb5baf91c74830048ce905aec1d00
