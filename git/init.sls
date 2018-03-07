@@ -14,10 +14,12 @@ git.~/.gitconfig:
     - group: {{ pillar['user']['group'] }}
     - mode: 0640
 
-git.~/.gitignore:
+{% for file in ['attributes', 'ignore'] %}
+git.~/.git{{ file }}:
   file.managed:
-    - name: {{ pillar['user']['home'] }}/.gitignore
-    - source: salt://git/git/ignore
+    - name: {{ pillar['user']['home'] }}/.git{{ file }}
+    - source: salt://git/git/{{ file }}
     - user: {{ pillar['user']['name'] }}
     - group: {{ pillar['user']['group'] }}
     - mode: 0640
+{% endfor %}
