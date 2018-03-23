@@ -1,2 +1,2 @@
 terraform:
-  version: 0.10.4
+  version: 0.11.5
