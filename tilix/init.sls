@@ -1,7 +1,3 @@
-tilix.repo:
-  pkgrepo.managed:
-    - ppa: webupd8team/terminix
-
 tilix.pkg:
   pkg.latest:
     - name: tilix
