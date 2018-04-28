@@ -1,2 +1,2 @@
 dotnet:
-  sdk_version: 2.1.3
+  sdk_version: 2.1.105
