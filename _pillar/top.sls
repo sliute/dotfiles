@@ -7,6 +7,7 @@ base:
     - dotnet
     - java
     - php
+    - rust
     - docker
     - packer
     - terraform
