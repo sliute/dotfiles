@@ -16,3 +16,4 @@ base:
     - google-chrome
     - jetbrains-toolbox
     - tilix
+    - vim
