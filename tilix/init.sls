@@ -1,3 +1,31 @@
+{% set config_dir = pillar['user']['home'] + '/.config/tilix' %}
+{% set scheme_dir = config_dir + '/schemes' %}
+
+{%
+  set scheme_profile_option_map = {
+    'use-theme-colors':           'use-theme-colors',
+    'palette':                    'palette',
+    'background-color':           'background-color',
+    'foreground-color':           'foreground-color',
+    'use-cursor-color':           'cursor-colors-set',
+    'cursor-background-color':    'cursor-background-color',
+    'cursor-foreground-color':    'cursor-foreground-color',
+    'use-highlight-color':        'highlight-colors-set',
+    'highlight-background-color': 'highlight-background-color',
+    'highlight-foreground-color': 'highlight-foreground-color',
+  }
+%}
+
+{% macro tilix_profile_option(profile, option, value, runas) %}
+tilix.profile.{{ profile }}.{{ option }}:
+  gsettings.managed:
+    - schema: com.gexperts.Tilix.Profile
+    - path: /com/gexperts/Tilix/profiles/{{ profile }}/
+    - name: {{ option }}
+    - value: {{ value }}
+    - runas: {{ runas }}
+{% endmacro %}
+
 tilix.pkg:
   pkg.latest:
     - name: tilix
@@ -7,58 +35,68 @@ tilix.default:
     - name: x-terminal-emulator
     - path: /usr/bin/tilix
 
-tilix.com.gexperts.Tilix.profiles.list:
+tilix.config:
+  file.directory:
+    - name: {{ config_dir }}
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
+    - mode: 0750
+
+tilix.config.schemes:
+  file.directory:
+    - name: {{ scheme_dir }}
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
+    - mode: 0750
+
+{% for scheme in salt['pillar.get']('tilix:schemes', {}).keys() %}
+tilix.config.schemes.{{ scheme }}:
+  file.managed:
+    - name: {{ scheme_dir }}/{{ scheme }}.json
+    - source: salt://tilix/tilix/scheme.json.jinja
+    - template: jinja
+    - context:
+      scheme: {{ scheme }}
+    - user: {{ pillar['user']['name'] }}
+    - group: {{ pillar['user']['group'] }}
+    - mode: 0640
+{% endfor %}
+
+tilix.profiles.list:
   gsettings.managed:
     - schema: com.gexperts.Tilix.ProfilesList
     - name: list
     - value:
-      - 2b7c4080-0ddd-46c5-8f23-563fd3ba789d
-      - 8624eae2-809a-4ed6-b26b-4311e37e34c0
+{% for profile in pillar['tilix']['profiles'].keys() %}
+      - {{ profile }}
+{% endfor %}
     - runas: {{ pillar['user']['name'] }}
 
-tilix.com.gexperts.Tilix.profiles.default:
+{% for profile, values in pillar['tilix']['profiles'].items() %}
+  {% for option, value in values.items() %}
+    {% if option == 'scheme' %}
+      {% set scheme = pillar['tilix']['schemes'][value] %}
+      {% for scheme_option, profile_option in scheme_profile_option_map.items() %}
+        {% if scheme_option in scheme %}
+        {% set scheme_value = scheme[scheme_option] %}
+        {% if scheme_value is string %}
+          {% set scheme_value = scheme_value | yaml_squote %}
+        {% endif %}
+{{ tilix_profile_option(
+    profile, profile_option, scheme_value,
+    pillar['user']['name']) }}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+{{ tilix_profile_option(
+    profile, option, value, pillar['user']['name']) }}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+tilix.default_profile:
   gsettings.managed:
     - schema: com.gexperts.Tilix.ProfilesList
     - name: default
-    - value: 8624eae2-809a-4ed6-b26b-4311e37e34c0
-    - runas: {{ pillar['user']['name'] }}
-
-tilix.com.gexperts.Tilix.profile.base16-ocean-dark.palette:
-  gsettings.managed:
-    - schema: com.gexperts.Tilix.Profile
-    - path: /com/gexperts/Tilix/profiles/8624eae2-809a-4ed6-b26b-4311e37e34c0/
-    - name: palette
-    - value:
-      - rgb(43,48,59)
-      - rgb(191,97,106)
-      - rgb(163,190,140)
-      - rgb(235,203,139)
-      - rgb(143,161,179)
-      - rgb(180,142,173)
-      - rgb(150,181,180)
-      - rgb(192,197,206)
-      - rgb(101,115,126)
-      - rgb(191,97,106)
-      - rgb(163,190,140)
-      - rgb(235,203,139)
-      - rgb(143,161,179)
-      - rgb(180,142,173)
-      - rgb(150,181,180)
-      - rgb(239,241,245)
-    - runas: {{ pillar['user']['name'] }}
-
-tilix.com.gexperts.Tilix.profile.base16-ocean-dark.scrollback-unlimited:
-  gsettings.managed:
-    - schema: com.gexperts.Tilix.Profile
-    - path: /com/gexperts/Tilix/profiles/8624eae2-809a-4ed6-b26b-4311e37e34c0/
-    - name: scrollback-unlimited
-    - value: True
-    - runas: {{ pillar['user']['name'] }}
-
-tilix.com.gexperts.Tilix.profile.base16-ocean-dark.visible-name:
-  gsettings.managed:
-    - schema: com.gexperts.Tilix.Profile
-    - path: /com/gexperts/Tilix/profiles/8624eae2-809a-4ed6-b26b-4311e37e34c0/
-    - name: visible-name
-    - value: Base16 (Ocean Dark)
+    - value: {{ pillar['tilix']['default_profile'] }}
     - runas: {{ pillar['user']['name'] }}

@@ -15,3 +15,4 @@ base:
     - abricotine
     - google-chrome
     - jetbrains-toolbox
+    - tilix
