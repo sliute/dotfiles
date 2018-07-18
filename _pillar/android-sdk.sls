@@ -1,7 +1,7 @@
 # https://developer.android.com/studio/index.html#command-tools
 android-sdk:
-  version: 3859397
-  source_hash: 444e22ce8ca0f67353bda4b85175ed3731cae3ffa695ca18119cbacef1c1bea0
+  version: 4333796
+  source_hash: 92ffee5a1d98d856634e8b71132e8a95d96c83a63fde1099be3d86df3106def9
   platforms:
     - android-19
     - android-20
