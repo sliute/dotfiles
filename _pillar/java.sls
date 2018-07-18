@@ -1,5 +1,4 @@
 java:
   versions:
-    - openjdk-8-jdk
-    - openjdk-9-jdk
-  default: java-8-openjdk-amd64
+    - openjdk-11-jdk
+  default: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
