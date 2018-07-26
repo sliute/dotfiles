@@ -20,6 +20,10 @@ vim:
       let &t_SR = "\<Esc>[4 q"
       let &t_EI = "\<Esc>[2 q"
 
+      " Don't be irritating
+      set title
+      set visualbell
+
       " Don't write temporary files
       set nobackup
       set noswapfile
