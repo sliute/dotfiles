@@ -36,6 +36,10 @@ vim:
       autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
       autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
+      " Highlight search results
+      set hlsearch
+      set incsearch
+
       " Save as root
       cmap w!! w !sudo tee >/dev/null %
     airline: |
