@@ -53,9 +53,19 @@ vim:
       let g:airline#extensions#tabline#enabled = 1
       let g:airline#extensions#tabline#buffer_idx_mode = 1
     nerdtree: |
-      " Show hidden files
+      " Configuration
       let g:NERDTreeShowHidden = 1
+      let g:NERDTreeQuitOnOpen = 1
+      let g:NERDTreeMinimalUI = 1
+      let g:NERDTreeDirArrows = 1
 
       " Show NERDTree unless path specified on CLI
       autocmd StdinReadPre * let s:std_in = 1
       autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+      " Close tab if NERDTree is the last window
+      autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+      " Useful keybindings
+      nnoremap <Leader>ft :NERDTreeToggle<Enter>
+      nnoremap <silent> <Leader>ff :NERDTreeFind<Enter>
