@@ -14,7 +14,7 @@ vim:
       " Base16 colour theme
       set termguicolors
       let base16colorspace = 256
-      colorscheme base16-default-dark
+      colorscheme base16-ocean
 
       " IBeam in insert, underline in replace and block in normal
       let &t_SI = "\<Esc>[6 q"
@@ -55,7 +55,7 @@ vim:
       cmap w!! w !sudo tee >/dev/null %
     airline: |
       " Colour scheme
-      let g:airline_theme = 'base16color'
+      let g:airline_theme = 'base16_ocean'
 
       " Tabline (buffer list)
       let g:airline#extensions#tabline#enabled = 1
