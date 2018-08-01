@@ -40,11 +40,6 @@ vim:
       " Enable mouse across all modes
       set mouse=a
 
-      " File types
-      autocmd FileType sls setlocal ts=2 sts=2 sw=2 expandtab
-      autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-      autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
-
       " Mimic shell path completion
       set wildmode=list:longest
 
@@ -54,6 +49,11 @@ vim:
 
       " Save as root
       cmap w!! w !sudo tee >/dev/null %
+
+      " File types
+      autocmd FileType sls setlocal ts=2 sts=2 sw=2 expandtab
+      autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+      autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
     airline: |
       " Colour scheme
       let g:airline_theme = 'base16_ocean'
