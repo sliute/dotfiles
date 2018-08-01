@@ -82,6 +82,10 @@ vim:
       " Save as root
       cmap w!! w !sudo tee >/dev/null %
 
+      " Make leader and ex-commands more accessible
+      let mapleader=","
+      nnoremap ; :
+
       " Tab management and switching
       nnoremap <Leader>ti :tabedit<Enter>
       nnoremap <Leader>tx :tabclose<Enter>
