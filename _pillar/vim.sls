@@ -3,6 +3,7 @@ vim:
     - VundleVim/vundle.vim
     - chriskempson/base16-vim
     - ctrlpvim/ctrlp.vim
+    - editorconfig/editorconfig-vim
     - rking/ag.vim
     - saltstack/salt-vim
     - scrooloose/nerdtree
