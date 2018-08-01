@@ -25,6 +25,7 @@ vim:
       " Don't be irritating
       set title
       set visualbell
+      set noerrorbells
 
       " Don't write temporary files
       set nobackup
