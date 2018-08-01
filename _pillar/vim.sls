@@ -31,9 +31,29 @@ vim:
       set nobackup
       set noswapfile
 
+      " Disable F1 for help
+      nmap <F1> <Nop>
+
       " Hybrid line numbering
       set number
       set relativenumber
+
+      " Allow wrapping lines, but don't break mid-word
+      set wrap
+      set linebreak
+
+      " Draw a ruler at 80 characters
+      set colorcolumn=80
+
+      " Highlight matching bracket
+      set showmatch
+
+      " Automatically indent according to previous line
+      set autoindent
+      set copyindent
+
+      " Indent in multiples of shiftwidth
+      set shiftround
 
       " Enable syntax highlighting
       syntax on
