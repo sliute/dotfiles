@@ -64,6 +64,17 @@ vim:
       " Mimic shell path completion
       set wildmode=list:longest
 
+      " Get closer to PCRE semantics
+      nnoremap / /\v
+      vnoremap / /\v
+
+      " Perform searches globally by default
+      set gdefault
+
+      " Ignore case during searching if pattern contains no capitals
+      set ignorecase
+      set smartcase
+
       " Highlight search results
       set hlsearch
       set incsearch
