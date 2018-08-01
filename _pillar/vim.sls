@@ -101,6 +101,8 @@ vim:
       autocmd FileType sls setlocal ts=2 sts=2 sw=2 expandtab
       autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
       autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+    ag: |
+      nnoremap <Leader>/ :Ag<Space>
     airline: |
       " Colour scheme
       let g:airline_theme = 'base16_ocean'
