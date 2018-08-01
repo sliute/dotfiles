@@ -94,6 +94,9 @@ vim:
       nnoremap <Leader>tj :tabprevious<Enter>
       nnoremap <Leader>tn :tabnext<Enter>
 
+      " Save all buffers on loss of focus
+      autocmd FocusLost * :wa
+
       " File types
       autocmd FileType sls setlocal ts=2 sts=2 sw=2 expandtab
       autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
