@@ -50,6 +50,14 @@ vim:
       " Save as root
       cmap w!! w !sudo tee >/dev/null %
 
+      " Tab management and switching
+      nnoremap <Leader>ti :tabedit<Enter>
+      nnoremap <Leader>tx :tabclose<Enter>
+      nnoremap <Leader>th :tabfirst<Enter>
+      nnoremap <Leader>tl :tablast<Enter>
+      nnoremap <Leader>tj :tabprevious<Enter>
+      nnoremap <Leader>tn :tabnext<Enter>
+
       " File types
       autocmd FileType sls setlocal ts=2 sts=2 sw=2 expandtab
       autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
