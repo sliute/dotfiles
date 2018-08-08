@@ -38,4 +38,5 @@ default = upstream
 
 [alias]
 graph = log --color --decorate=short --graph --oneline
+reset-upstream = !git reset --hard "$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"
 tags = show-ref --tags
