@@ -18,9 +18,9 @@ vim:
       colorscheme base16-ocean
 
       " IBeam in insert, underline in replace and block in normal
-      let &t_SI = "\<Esc>[6 q"
-      let &t_SR = "\<Esc>[4 q"
-      let &t_EI = "\<Esc>[2 q"
+      let &t_SI = "\<Esc>[5 q"
+      let &t_SR = "\<Esc>[3 q"
+      let &t_EI = "\<Esc>[1 q"
 
       " Don't be irritating
       set title
