@@ -31,5 +31,4 @@ php:
     - tidy
     - xml
     - xmlrpc
-    - xsl
     - zip
