@@ -42,6 +42,7 @@ php.composer.binary:
     - name: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}/composer
     - source: https://getcomposer.org/composer.phar
     - skip_verify: True
+    - show_changes: False
     - user: {{ pillar['user']['name'] }}
     - group: {{ pillar['user']['group'] }}
     - mode: 0750
