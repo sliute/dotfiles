@@ -1,17 +1,17 @@
 jetbrains-toolbox:
-  version: 1.6.2914
-  source_hash: b634aeec655044a02361ca2541ea891a0b34019cc6ccfbef7a39824a00be5a10
+  version: 1.8.3678
+  source_hash: bb98b94fa714ca07db31ac5bb42fbba2eac610c360541848e59adf0f8d84cefb
   versions:
-    clion: '2017.3'
-    datagrip: '2017.3'
-    goland: '2017.3'
-    intellij-idea-ultimate: '2017.3'
-    mps: '2017.3'
-    phpstorm: '2017.3'
-    pycharm-professional: '2017.3'
-    rider: '2017.3'
-    rubymine: '2017.3'
-    webstorm: '2017.3'
+    clion: '2018.1'
+    datagrip: '2018.1'
+    goland: '2018.1'
+    intellij-idea-ultimate: '2018.1'
+    mps: '2018.1'
+    phpstorm: '2018.1'
+    pycharm-professional: '2018.1'
+    rider: '2018.1'
+    rubymine: '2018.1'
+    webstorm: '2018.1'
   common:
     colors:
       one-dark:

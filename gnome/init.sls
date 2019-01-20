@@ -2,6 +2,7 @@ gnome.pkgs:
   pkg.latest:
     - pkgs:
       - gnome-documents
+      - gnome-system-monitor
 
 gnome.gsettings.org.gnome.settings-daemon.plugins.color.night-light-enabled:
   gsettings.managed:

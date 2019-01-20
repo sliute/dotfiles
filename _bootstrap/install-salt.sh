@@ -8,7 +8,7 @@ bootstrap_root_dir="$(dirname "$(dirname "$(readlink -fn "$0")")")"
 apt-get install -y curl
 
 # -X doesn't work under Ubuntu as services are started by default
-curl -L https://bootstrap.saltstack.com/develop | sh
+curl -L https://bootstrap.saltstack.com/develop | sh -s -- git develop
 systemctl stop salt-minion
 systemctl disable salt-minion
 

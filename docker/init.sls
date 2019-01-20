@@ -1,12 +1,6 @@
 include:
   - user
 
-docker.linux-headers:
-  pkg.latest:
-    - pkgs:
-      - linux-image-extra-{{ grains['kernelrelease'] }}
-      - linux-image-extra-virtual
-
 docker.apt:
   pkg.latest:
     - pkgs:
@@ -25,7 +19,6 @@ docker.pkg:
   pkg.latest:
     - name: docker-ce
     - require:
-      - pkg: docker.linux-headers
       - pkg: docker.apt
       - pkgrepo: docker.pkgrepo
 

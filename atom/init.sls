@@ -1,3 +1,7 @@
+atom.hunspell.en-gb:
+  pkg.latest:
+    - name: hunspell-en-gb
+
 atom.core:
   pkgrepo.managed:
     - ppa: webupd8team/atom

@@ -6,6 +6,7 @@ import shutil
 import urllib
 
 from salt.exceptions import CommandExecutionError
+from salt.utils.http import query
 
 log = logging.getLogger(__name__)
 
@@ -28,8 +29,10 @@ def _extension_info(uuid):
     url = EXTENSION_BASE_URL + EXTENSION_INFO_URL.format(
             urllib.quote_plus(uuid), shell_version)
     log.debug('Looking up extension {0} at URL {1}'.format(uuid, url))
+    info = query(url, decode=False)
+    log.debug('Got extension info {0}'.format(info))
 
-    return json.load(urllib.urlopen(url))
+    return json.loads(info['body'].strip())
 
 def _primary_group(user):
     user = __salt__['user.info'](user)

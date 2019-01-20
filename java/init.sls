@@ -8,4 +8,4 @@ java.jdks:
 java.default:
   alternatives.set:
     - name: java
-    - path: /usr/lib/jvm/{{ pillar['java']['default'] }}/jre/bin/java
+    - path: {{ pillar['java']['default'] }}

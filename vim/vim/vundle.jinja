@@ -1,0 +1,10 @@
+filetype off
+set rtp+=~/.vim/bundle/vundle.vim
+call vundle#begin()
+
+{% for plugin in salt['pillar.get']('vim:plugins', []) %}
+Plugin {{ plugin | yaml_squote }}
+{% endfor %}
+
+call vundle#end()
+filetype plugin indent on

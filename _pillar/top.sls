@@ -7,6 +7,7 @@ base:
     - dotnet
     - java
     - php
+    - rust
     - docker
     - packer
     - terraform
@@ -14,3 +15,5 @@ base:
     - abricotine
     - google-chrome
     - jetbrains-toolbox
+    - tilix
+    - vim

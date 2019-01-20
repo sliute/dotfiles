@@ -1,0 +1,8 @@
+" Be iMproved
+set nocompatible
+
+" Source configuration
+source ~/.vim/vundle
+{% for config in salt['pillar.get']('vim:config', []) %}
+source ~/.vim/config/{{ config }}
+{% endfor %}

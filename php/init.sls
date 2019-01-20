@@ -8,42 +8,16 @@ php.snmp.pkgs:
 php.sapis:
   pkg.installed:
     - pkgs:
-      - php{{ pillar['php']['version'] }}-cli
+{% for sapi in salt['pillar.get']('php:sapis', []) %}
+      - php{{ pillar['php']['version'] }}-{{ sapi }}
+{% endfor %}
 
 php.extensions:
   pkg.installed:
     - pkgs:
-      - php{{ pillar['php']['version'] }}-bcmath
-      - php{{ pillar['php']['version'] }}-bz2
-      - php{{ pillar['php']['version'] }}-curl
-      - php{{ pillar['php']['version'] }}-dba
-      - php{{ pillar['php']['version'] }}-enchant
-      - php{{ pillar['php']['version'] }}-gd
-      - php{{ pillar['php']['version'] }}-gmp
-      - php{{ pillar['php']['version'] }}-imap
-      - php{{ pillar['php']['version'] }}-interbase
-      - php{{ pillar['php']['version'] }}-intl
-      - php{{ pillar['php']['version'] }}-json
-      - php{{ pillar['php']['version'] }}-ldap
-      - php{{ pillar['php']['version'] }}-mbstring
-      - php{{ pillar['php']['version'] }}-mcrypt
-      - php{{ pillar['php']['version'] }}-mysql
-      - php{{ pillar['php']['version'] }}-odbc
-      - php{{ pillar['php']['version'] }}-opcache
-      - php{{ pillar['php']['version'] }}-pgsql
-      - php{{ pillar['php']['version'] }}-phpdbg
-      - php{{ pillar['php']['version'] }}-pspell
-      - php{{ pillar['php']['version'] }}-readline
-      - php{{ pillar['php']['version'] }}-recode
-      - php{{ pillar['php']['version'] }}-snmp
-      - php{{ pillar['php']['version'] }}-soap
-      - php{{ pillar['php']['version'] }}-sqlite3
-      - php{{ pillar['php']['version'] }}-sybase
-      - php{{ pillar['php']['version'] }}-tidy
-      - php{{ pillar['php']['version'] }}-xml
-      - php{{ pillar['php']['version'] }}-xmlrpc
-      - php{{ pillar['php']['version'] }}-xsl
-      - php{{ pillar['php']['version'] }}-zip
+{% for extension in salt['pillar.get']('php:extensions', []) %}
+      - php{{ pillar['php']['version'] }}-{{ extension }}
+{% endfor %}
     - require:
       - pkg: php.sapis
 
@@ -68,6 +42,7 @@ php.composer.binary:
     - name: {{ pillar['user']['home'] }}{{ pillar['user']['bin_dir'] }}/composer
     - source: https://getcomposer.org/composer.phar
     - skip_verify: True
+    - show_changes: False
     - user: {{ pillar['user']['name'] }}
     - group: {{ pillar['user']['group'] }}
     - mode: 0750

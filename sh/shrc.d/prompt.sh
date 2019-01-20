@@ -74,7 +74,9 @@ prompt_command_main() {
     fi
     export PS1="${cmd_exit}${user}${host}${dir}${git_status}\n> "
 
-    __vte_prompt_command
+    if typeset -f __vte_prompt_command >/dev/null; then
+        __vte_prompt_command
+    fi
 }
 
 export PROMPT_COMMAND="prompt_command_main 1"
