@@ -1,7 +1,7 @@
 user:
-  name: luke
-  home: /home/luke
-  group: luke
+  name: stefan
+  home: /home/stefan
+  group: stefan
   groups:
     - adm
     - sudo
@@ -13,5 +13,5 @@ user:
   config_dir: /.config
   local_share_dir: /.local/share
   code_dir: /Code
-  email: luke@carrier.im
-  full_name: Luke Carrier
+  email: stefanliute@gmail.com
+  full_name: Stefan Liute

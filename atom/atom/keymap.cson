@@ -1,5 +1,0 @@
-'body, atom-text-editor:not([mini])':
-  'alt-left': 'window:focus-pane-on-left'
-  'alt-right': 'window:focus-pane-on-right'
-  'alt-up': 'window:focus-pane-above'
-  'alt-down': 'window:focus-pane-below'

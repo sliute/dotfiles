@@ -10,7 +10,6 @@ base:
     - docker
 
   '*':
-    - atom
     - emmet
     - git
     - google-chrome

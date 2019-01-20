@@ -40,4 +40,4 @@ tilix:
       scheme: base16-ocean-dark
       dim-transparency-percent: 20
       scrollback-unlimited: true
-      visible-name: Luke
+      visible-name: Stefan
